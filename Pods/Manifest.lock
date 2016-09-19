@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (3.5.0)
+  - EZSwiftExtensions (1.5)
+  - OMGHTTPURLRQ (3.2.0):
+    - OMGHTTPURLRQ/RQ (= 3.2.0)
+  - OMGHTTPURLRQ/FormURLEncode (3.2.0)
+  - OMGHTTPURLRQ/RQ (3.2.0):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.2.0)
+  - PromiseKit (3.5.1):
+    - PromiseKit/Foundation (= 3.5.1)
+    - PromiseKit/QuartzCore (= 3.5.1)
+    - PromiseKit/UIKit (= 3.5.1)
+  - PromiseKit/CorePromise (3.5.1)
+  - PromiseKit/Foundation (3.5.1):
+    - OMGHTTPURLRQ (~> 3.2.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (3.5.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (3.5.1):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - Alamofire (~> 3.5)
+  - EZSwiftExtensions (from `git@github.com:goktugyil/EZSwiftExtensions.git`, branch `Swift2.3`)
+  - PromiseKit (~> 3.5)
+
+EXTERNAL SOURCES:
+  EZSwiftExtensions:
+    :branch: Swift2.3
+    :git: git@github.com:goktugyil/EZSwiftExtensions.git
+
+CHECKOUT OPTIONS:
+  EZSwiftExtensions:
+    :commit: d67d2107e43b7ee9095f68b41f40530789965f60
+    :git: git@github.com:goktugyil/EZSwiftExtensions.git
+
+SPEC CHECKSUMS:
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
+  OMGHTTPURLRQ: 1e54807cb7d5dbb506926e53498e1e9ac5720c79
+  PromiseKit: 99ea973444a4bff6c38ffb97fa1bb175e619bcf0
+
+PODFILE CHECKSUM: c04b18894ee86f57d9fb62c833e0519e8e0e1cfd
+
+COCOAPODS: 1.0.1

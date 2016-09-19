@@ -76,13 +76,54 @@
 		F5D60DDF1D90A831003E8F4A /* GateKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				F5D60DF91D90B092003E8F4A /* Supporting Files */,
+				F5D60DF81D90B07E003E8F4A /* Sections */,
+				F5D60DF71D90B06F003E8F4A /* Models */,
+				F5D60DF61D90B05F003E8F4A /* Data Synchronization */,
 				F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */,
-				F5D60DE41D90A831003E8F4A /* Main.storyboard */,
-				F5D60DEC1D90A831003E8F4A /* LaunchScreen.storyboard */,
+				F5D60DF51D90B022003E8F4A /* Storyboards */,
 				F5D60DEA1D90A831003E8F4A /* Assets.xcassets */,
 				F5D60DEF1D90A831003E8F4A /* Info.plist */,
 			);
 			path = GateKeeper;
+			sourceTree = "<group>";
+		};
+		F5D60DF51D90B022003E8F4A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F5D60DE41D90A831003E8F4A /* Main.storyboard */,
+				F5D60DEC1D90A831003E8F4A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5D60DF61D90B05F003E8F4A /* Data Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Synchronization";
+			sourceTree = "<group>";
+		};
+		F5D60DF71D90B06F003E8F4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5D60DF81D90B07E003E8F4A /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sections;
+			path = Secions;
+			sourceTree = "<group>";
+		};
+		F5D60DF91D90B092003E8F4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +263,7 @@
 				F5D60DE51D90A831003E8F4A /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F5D60DEC1D90A831003E8F4A /* LaunchScreen.storyboard */ = {
@@ -230,6 +272,7 @@
 				F5D60DED1D90A831003E8F4A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
