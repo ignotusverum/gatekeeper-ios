@@ -12,6 +12,11 @@
 		F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DE41D90A831003E8F4A /* Main.storyboard */; };
 		F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DEA1D90A831003E8F4A /* Assets.xcassets */; };
 		F5D60DEE1D90A831003E8F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DEC1D90A831003E8F4A /* LaunchScreen.storyboard */; };
+		F5D60DFF1D90B130003E8F4A /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DFB1D90B130003E8F4A /* ProximaNova-Bold.ttf */; };
+		F5D60E001D90B130003E8F4A /* ProximaNova-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DFC1D90B130003E8F4A /* ProximaNova-Light.ttf */; };
+		F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DFD1D90B130003E8F4A /* ProximaNova-Reg.ttf */; };
+		F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DFE1D90B130003E8F4A /* ProximaNova-Sbold.ttf */; };
+		F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +26,16 @@
 		F5D60DDD1D90A831003E8F4A /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAppDelegate.swift; sourceTree = "<group>"; };
 		F5D60DE51D90A831003E8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F5D60DEA1D90A831003E8F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5D60DEA1D90A831003E8F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		F5D60DED1D90A831003E8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F5D60DEF1D90A831003E8F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D60DEF1D90A831003E8F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		F5D60DFB1D90B130003E8F4A /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
+		F5D60DFC1D90B130003E8F4A /* ProximaNova-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.ttf"; sourceTree = "<group>"; };
+		F5D60DFD1D90B130003E8F4A /* ProximaNova-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Reg.ttf"; sourceTree = "<group>"; };
+		F5D60DFE1D90B130003E8F4A /* ProximaNova-Sbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Sbold.ttf"; sourceTree = "<group>"; };
+		F5D60E051D90B183003E8F4A /* GMDCircleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDCircleLoader.h; sourceTree = "<group>"; };
+		F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDCircleLoader.m; sourceTree = "<group>"; };
+		F5D60E0B1D90B23B003E8F4A /* GateKeeper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GateKeeper-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +88,13 @@
 		F5D60DDF1D90A831003E8F4A /* GateKeeper */ = {
 			isa = PBXGroup;
 			children = (
-				F5D60DF91D90B092003E8F4A /* Supporting Files */,
-				F5D60DF81D90B07E003E8F4A /* Sections */,
-				F5D60DF71D90B06F003E8F4A /* Models */,
-				F5D60DF61D90B05F003E8F4A /* Data Synchronization */,
 				F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */,
+				F5D60DF61D90B05F003E8F4A /* Data Synchronization */,
+				F5D60DF71D90B06F003E8F4A /* Models */,
+				F5D60DF81D90B07E003E8F4A /* Sections */,
 				F5D60DF51D90B022003E8F4A /* Storyboards */,
-				F5D60DEA1D90A831003E8F4A /* Assets.xcassets */,
-				F5D60DEF1D90A831003E8F4A /* Info.plist */,
+				F5D60E031D90B16D003E8F4A /* UIComponents */,
+				F5D60DF91D90B092003E8F4A /* Supporting Files */,
 			);
 			path = GateKeeper;
 			sourceTree = "<group>";
@@ -122,8 +133,40 @@
 		F5D60DF91D90B092003E8F4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5D60DFA1D90B130003E8F4A /* Fonts */,
+				F5D60DEA1D90A831003E8F4A /* Assets.xcassets */,
+				F5D60DEF1D90A831003E8F4A /* Info.plist */,
+				F5D60E0B1D90B23B003E8F4A /* GateKeeper-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5D60DFA1D90B130003E8F4A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5D60DFB1D90B130003E8F4A /* ProximaNova-Bold.ttf */,
+				F5D60DFC1D90B130003E8F4A /* ProximaNova-Light.ttf */,
+				F5D60DFD1D90B130003E8F4A /* ProximaNova-Reg.ttf */,
+				F5D60DFE1D90B130003E8F4A /* ProximaNova-Sbold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F5D60E031D90B16D003E8F4A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F5D60E041D90B183003E8F4A /* Loader */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		F5D60E041D90B183003E8F4A /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				F5D60E051D90B183003E8F4A /* GMDCircleLoader.h */,
+				F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +232,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D60E001D90B130003E8F4A /* ProximaNova-Light.ttf in Resources */,
 				F5D60DEE1D90A831003E8F4A /* LaunchScreen.storyboard in Resources */,
 				F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */,
+				F5D60DFF1D90B130003E8F4A /* ProximaNova-Bold.ttf in Resources */,
+				F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */,
+				F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */,
 				F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */,
+				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +371,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "GateKeeper/Supporting Files/GateKeeper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 			};
@@ -365,6 +414,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "GateKeeper/Supporting Files/GateKeeper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
@@ -381,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GK.GateKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GateKeeper/Supporting Files/GateKeeper-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
@@ -395,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GK.GateKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GateKeeper/Supporting Files/GateKeeper-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
