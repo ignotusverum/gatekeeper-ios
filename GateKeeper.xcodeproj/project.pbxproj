@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF16FF6EC5CAD51C4F5BC486 /* Pods_GateKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */; };
 		F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */; };
 		F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DE41D90A831003E8F4A /* Main.storyboard */; };
 		F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DEA1D90A831003E8F4A /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GateKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF541CB01210DD2ABFAC560 /* Pods-GateKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GateKeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper.debug.xcconfig"; sourceTree = "<group>"; };
+		B16FE3D58661F1F52ACAA3BE /* Pods-GateKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GateKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		F5D60DDD1D90A831003E8F4A /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAppDelegate.swift; sourceTree = "<group>"; };
 		F5D60DE51D90A831003E8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF16FF6EC5CAD51C4F5BC486 /* Pods_GateKeeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB3D6DFC5CB909DACCF2A2CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3EF541CB01210DD2ABFAC560 /* Pods-GateKeeper.debug.xcconfig */,
+				B16FE3D58661F1F52ACAA3BE /* Pods-GateKeeper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C14DE8CDC138A1526D687DD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5D60DD41D90A831003E8F4A = {
 			isa = PBXGroup;
 			children = (
 				F5D60DDF1D90A831003E8F4A /* GateKeeper */,
 				F5D60DDE1D90A831003E8F4A /* Products */,
+				AB3D6DFC5CB909DACCF2A2CB /* Pods */,
+				C14DE8CDC138A1526D687DD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D60DF21D90A831003E8F4A /* Build configuration list for PBXNativeTarget "GateKeeper" */;
 			buildPhases = (
+				82C3D923A872DF94EA0F07DA /* [CP] Check Pods Manifest.lock */,
 				F5D60DD91D90A831003E8F4A /* Sources */,
 				F5D60DDA1D90A831003E8F4A /* Frameworks */,
 				F5D60DDB1D90A831003E8F4A /* Resources */,
+				0151C819AA1FA715E55A86FB /* [CP] Embed Pods Frameworks */,
+				BF71C5D2619A236B1AD9E7B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0151C819AA1FA715E55A86FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82C3D923A872DF94EA0F07DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF71C5D2619A236B1AD9E7B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5D60DD91D90A831003E8F4A /* Sources */ = {
@@ -206,6 +281,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -247,12 +323,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		F5D60DF31D90A831003E8F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF541CB01210DD2ABFAC560 /* Pods-GateKeeper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GateKeeper/Info.plist;
@@ -260,12 +338,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GK.GateKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		F5D60DF41D90A831003E8F4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B16FE3D58661F1F52ACAA3BE /* Pods-GateKeeper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GateKeeper/Info.plist;
@@ -273,7 +352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GK.GateKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
