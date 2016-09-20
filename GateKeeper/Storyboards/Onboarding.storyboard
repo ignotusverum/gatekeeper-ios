@@ -18,17 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-Jv-blo"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-dO-hL5">
-                                <state key="normal" title="Button"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-Jv-blo">
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.92356770830000001" alpha="0.74561445552147243" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.92356770830000001" alpha="0.099717216257668717" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-dO-hL5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="DBD-3i-TPv"/>
+                                    <constraint firstAttribute="width" constant="96" id="fHk-vs-haT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RwE-dO-hL5" firstAttribute="top" secondItem="GRk-Lb-NQT" secondAttribute="bottom" constant="8" symbolic="YES" id="0hI-2o-eHm"/>
-                            <constraint firstItem="aRx-Jv-blo" firstAttribute="centerX" secondItem="nd2-ri-k95" secondAttribute="centerX" id="LbL-dl-JxR"/>
-                            <constraint firstItem="RwE-dO-hL5" firstAttribute="trailing" secondItem="nd2-ri-k95" secondAttribute="trailingMargin" id="iaU-wf-zdh"/>
-                            <constraint firstItem="aRx-Jv-blo" firstAttribute="bottom" secondItem="gQR-Wx-4P3" secondAttribute="top" id="yhq-1y-yef"/>
+                            <constraint firstItem="RwE-dO-hL5" firstAttribute="top" secondItem="GRk-Lb-NQT" secondAttribute="bottom" constant="8" symbolic="YES" id="F6Y-EC-BBn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RwE-dO-hL5" secondAttribute="trailing" constant="4" id="U9z-ru-PTo"/>
+                            <constraint firstItem="aRx-Jv-blo" firstAttribute="bottom" secondItem="gQR-Wx-4P3" secondAttribute="top" id="ZLm-8X-Dac"/>
+                            <constraint firstItem="aRx-Jv-blo" firstAttribute="centerX" secondItem="nd2-ri-k95" secondAttribute="centerX" id="sf1-at-KgL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -38,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eG-w1-JGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616" y="79"/>
+            <point key="canvasLocation" x="-616.79999999999995" y="78.710644677661179"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="WbX-wI-EFS">
