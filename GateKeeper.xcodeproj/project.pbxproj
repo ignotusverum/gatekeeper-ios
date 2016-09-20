@@ -11,6 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = F5D60E0F1D90B4AA003E8F4A /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
 			buildPhases = (
+				F5D60E101D90B4D4003E8F4A /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -30,6 +31,8 @@
 		F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DFD1D90B130003E8F4A /* ProximaNova-Reg.ttf */; };
 		F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DFE1D90B130003E8F4A /* ProximaNova-Sbold.ttf */; };
 		F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */; };
+		F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E111D90B501003E8F4A /* TMManagedObject.swift */; };
+		F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,8 @@
 		F5D60E051D90B183003E8F4A /* GMDCircleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDCircleLoader.h; sourceTree = "<group>"; };
 		F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDCircleLoader.m; sourceTree = "<group>"; };
 		F5D60E0B1D90B23B003E8F4A /* GateKeeper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GateKeeper-Bridging-Header.h"; sourceTree = "<group>"; };
+		F5D60E111D90B501003E8F4A /* TMManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMManagedObject.swift; sourceTree = "<group>"; };
+		F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKManagedObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,7 @@
 		F5D60DF61D90B05F003E8F4A /* Data Synchronization */ = {
 			isa = PBXGroup;
 			children = (
+				F5D60E111D90B501003E8F4A /* TMManagedObject.swift */,
 			);
 			path = "Data Synchronization";
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 		F5D60DF71D90B06F003E8F4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 					};
 					F5D60E0C1D90B4AA003E8F4A = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -308,6 +316,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F5D60E101D90B4D4003E8F4A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -316,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */,
+				F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */,
+				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,14 +495,23 @@
 		F5D60E0D1D90B4AA003E8F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GateKeeper/Models/Mogenerator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F5D60E0E1D90B4AA003E8F4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GateKeeper/Models/Mogenerator-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

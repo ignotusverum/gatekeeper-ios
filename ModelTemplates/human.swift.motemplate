@@ -1,0 +1,42 @@
+//
+//  <$managedObjectClassName$>.swift
+//  consumer
+//
+//  Created by Vladislav Zagorodnyuk on 2/3/16.
+//  Copyright © 2016 Human Ventures Co. All rights reserved.
+//
+
+import CoreData
+import SwiftyJSON
+
+@objc(<$managedObjectClassName$>)
+public class <$managedObjectClassName$>: _<$managedObjectClassName$> {
+
+	// MARK: - Fetching logic
+	
+	class func fetchObjectWithID(objectID: String, context: NSManagedObjectContext) throws -> <$managedObjectClassName$>? {
+                
+        return try <$managedObjectClassName$>.modelFetchWithID(objectID, context:context) as? <$managedObjectClassName$>
+    }
+
+    class func fetchOrInsertWithJSON(json: JSON, context: NSManagedObjectContext) throws -> <$managedObjectClassName$>? {
+                                
+        return try <$managedObjectClassName$>.modelFetchOrInsertWithJSON(json, context: context) as? <$managedObjectClassName$>
+    }
+    
+    override func setValueWithJSON(json: JSON, context: NSManagedObjectContext) {
+	
+		super.setValueWithJSON(json, context: context)
+        
+		if self.modelObjectID != nil {
+			
+		    <$foreach Attribute noninheritedAttributes do$>
+	
+			if let _<$Attribute.name$> = json["<$Attribute.name$>"].<$Attribute.objectAttributeType$> {
+				self.<$Attribute.name$> = _<$Attribute.name$>
+			}
+			
+			<$endforeach do$>	    
+		}
+	}
+}
