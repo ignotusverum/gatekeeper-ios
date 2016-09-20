@@ -114,6 +114,7 @@
 				F5D60DF81D90B07E003E8F4A /* Sections */,
 				F5D60DF51D90B022003E8F4A /* Storyboards */,
 				F5D60E031D90B16D003E8F4A /* UIComponents */,
+				F5D60E191D90B612003E8F4A /* Utilities */,
 				F5D60DF91D90B092003E8F4A /* Supporting Files */,
 			);
 			path = GateKeeper;
@@ -190,6 +191,13 @@
 				F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		F5D60E191D90B612003E8F4A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
