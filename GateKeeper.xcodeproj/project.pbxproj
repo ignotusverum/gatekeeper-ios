@@ -34,6 +34,7 @@
 		F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E111D90B501003E8F4A /* TMManagedObject.swift */; };
 		F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */; };
 		F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E161D90B5BF003E8F4A /* GKModel.xcdatamodeld */; };
+		F5D60E1B1D90B6BC003E8F4A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60E1A1D90B6BC003E8F4A /* Onboarding.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		F5D60E111D90B501003E8F4A /* TMManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMManagedObject.swift; sourceTree = "<group>"; };
 		F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKManagedObject.swift; sourceTree = "<group>"; };
 		F5D60E171D90B5BF003E8F4A /* GKModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKModel.xcdatamodel; sourceTree = "<group>"; };
+		F5D60E1A1D90B6BC003E8F4A /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D60DE41D90A831003E8F4A /* Main.storyboard */,
+				F5D60E1A1D90B6BC003E8F4A /* Onboarding.storyboard */,
 				F5D60DEC1D90A831003E8F4A /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -276,6 +279,7 @@
 				F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */,
 				F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */,
 				F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */,
+				F5D60E1B1D90B6BC003E8F4A /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
