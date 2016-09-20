@@ -6,6 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F5D60E0C1D90B4AA003E8F4A /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5D60E0F1D90B4AA003E8F4A /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		EF16FF6EC5CAD51C4F5BC486 /* Pods_GateKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */; };
 		F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */; };
@@ -207,6 +220,10 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
+					F5D60E0C1D90B4AA003E8F4A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = F5D60DD81D90A831003E8F4A /* Build configuration list for PBXProject "GateKeeper" */;
@@ -223,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				F5D60DDC1D90A831003E8F4A /* GateKeeper */,
+				F5D60E0C1D90B4AA003E8F4A /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -451,6 +469,20 @@
 			};
 			name = Release;
 		};
+		F5D60E0D1D90B4AA003E8F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5D60E0E1D90B4AA003E8F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,6 +503,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F5D60E0F1D90B4AA003E8F4A /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D60E0D1D90B4AA003E8F4A /* Debug */,
+				F5D60E0E1D90B4AA003E8F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
