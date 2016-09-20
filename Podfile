@@ -12,6 +12,8 @@ pod 'EZSwiftExtensions', :git => 'git@github.com:goktugyil/EZSwiftExtensions.git
 # Networking
 pod 'Alamofire', '~> 3.5'
 
+pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON.git', :branch => 'swift3'
+
 # Core Data
 pod 'MagicalRecord/Shorthand'
 

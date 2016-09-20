@@ -33,6 +33,7 @@
 		F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */; };
 		F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E111D90B501003E8F4A /* TMManagedObject.swift */; };
 		F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */; };
+		F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E161D90B5BF003E8F4A /* GKModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F5D60E0B1D90B23B003E8F4A /* GateKeeper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GateKeeper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F5D60E111D90B501003E8F4A /* TMManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMManagedObject.swift; sourceTree = "<group>"; };
 		F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKManagedObject.swift; sourceTree = "<group>"; };
+		F5D60E171D90B5BF003E8F4A /* GKModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */,
+				F5D60E161D90B5BF003E8F4A /* GKModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "mogenerator --template-var arc=true -m GateKeeper/Models/GKModel.xcdatamodeld / -M Model/ModelMachine -H Model/ModelHuman --base-class GKManagedObject --includem Model/ModelIncludes --swift --template-path ModelTemplates";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -340,6 +343,7 @@
 				F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */,
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
+				F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,8 +547,22 @@
 				F5D60E0E1D90B4AA003E8F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5D60E161D90B5BF003E8F4A /* GKModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5D60E171D90B5BF003E8F4A /* GKModel.xcdatamodel */,
+			);
+			currentVersion = F5D60E171D90B5BF003E8F4A /* GKModel.xcdatamodel */;
+			path = GKModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F5D60DD51D90A831003E8F4A /* Project object */;
 }
