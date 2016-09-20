@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wQ7-rh-4kc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Tutorial Container View Controller-->
+        <scene sceneID="oAe-LH-fwd">
+            <objects>
+                <viewController id="wQ7-rh-4kc" customClass="GKTutorialContainerViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GRk-Lb-NQT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQR-Wx-4P3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nd2-ri-k95">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-Jv-blo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-dO-hL5">
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RwE-dO-hL5" firstAttribute="top" secondItem="GRk-Lb-NQT" secondAttribute="bottom" constant="8" symbolic="YES" id="0hI-2o-eHm"/>
+                            <constraint firstItem="aRx-Jv-blo" firstAttribute="centerX" secondItem="nd2-ri-k95" secondAttribute="centerX" id="LbL-dl-JxR"/>
+                            <constraint firstItem="RwE-dO-hL5" firstAttribute="trailing" secondItem="nd2-ri-k95" secondAttribute="trailingMargin" id="iaU-wf-zdh"/>
+                            <constraint firstItem="aRx-Jv-blo" firstAttribute="bottom" secondItem="gQR-Wx-4P3" secondAttribute="top" id="yhq-1y-yef"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="aRx-Jv-blo" id="RAo-ZI-kyi"/>
+                        <outlet property="skipButton" destination="RwE-dO-hL5" id="pGH-Jo-hBT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eG-w1-JGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-616" y="79"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="WbX-wI-EFS">
+            <objects>
+                <viewController storyboardIdentifier="GKTutorialViewController" id="9lG-fQ-fze" customClass="GKTutorialViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RN9-pB-Ayj"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Sl-7A-O8c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FRX-qm-ReF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6A4-8o-jWJ"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6A4-8o-jWJ" firstAttribute="bottom" secondItem="5Sl-7A-O8c" secondAttribute="top" id="8cX-0e-YcU"/>
+                            <constraint firstAttribute="trailing" secondItem="6A4-8o-jWJ" secondAttribute="trailing" id="9Y3-Sf-oKx"/>
+                            <constraint firstItem="6A4-8o-jWJ" firstAttribute="top" secondItem="FRX-qm-ReF" secondAttribute="top" id="C9Z-k9-7zh"/>
+                            <constraint firstItem="6A4-8o-jWJ" firstAttribute="leading" secondItem="FRX-qm-ReF" secondAttribute="leading" id="ns6-Qu-aS8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6A4-8o-jWJ" id="H5h-CP-mml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2I-up-nqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-616.79999999999995" y="723.68815592203907"/>
+        </scene>
+    </scenes>
 </document>

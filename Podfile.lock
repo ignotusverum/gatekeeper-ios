@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.0.0)
+  - EZSwiftExtensions (1.5)
+  - EZSwipeController (0.5)
   - MagicalRecord/Shorthand (2.2)
   - PromiseKit (4.0.1):
     - PromiseKit/Foundation (= 4.0.1)
@@ -16,26 +18,42 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EZSwiftExtensions (from `git@github.com:ShiWeiCN/EZSwiftExtensions.git`, branch `jes-Swift3`)
+  - EZSwipeController (from `git@github.com:pattogato/EZSwipeController.git`, branch `bugfix/swift-3-fixes`)
   - MagicalRecord/Shorthand
   - PromiseKit
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
+  EZSwiftExtensions:
+    :branch: jes-Swift3
+    :git: git@github.com:ShiWeiCN/EZSwiftExtensions.git
+  EZSwipeController:
+    :branch: bugfix/swift-3-fixes
+    :git: git@github.com:pattogato/EZSwipeController.git
   SwiftyJSON:
     :branch: swift3
     :git: https://github.com/appsailor/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  EZSwiftExtensions:
+    :commit: b0f44b95cecfbe639ba3bda81dbddfe17dbcae3e
+    :git: git@github.com:ShiWeiCN/EZSwiftExtensions.git
+  EZSwipeController:
+    :commit: b1e5a9efea21857f78ecfc748ab7ebfed3553d02
+    :git: git@github.com:pattogato/EZSwipeController.git
   SwiftyJSON:
     :commit: de73429b38b8994f614fb27c5ec094bb8a4833f2
     :git: https://github.com/appsailor/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
+  EZSwipeController: 01cc43b319e133b6dbfb25bfdc78617a1560e952
   MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
   PromiseKit: ae9e7f97ee758e23f7b9c5e80380a2e78d6338c5
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 718d38e040528bbc2dbd1cb712a8bcf0aacd48ec
+PODFILE CHECKSUM: 7e1784f8813ae82739ccdbc595578659981442ce
 
 COCOAPODS: 1.0.1
