@@ -12,6 +12,9 @@ pod 'EZSwiftExtensions', :git => 'git@github.com:goktugyil/EZSwiftExtensions.git
 # Networking
 pod 'Alamofire', '~> 3.5'
 
+# Core Data
+pod 'MagicalRecord/Shorthand'
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |configuration|
