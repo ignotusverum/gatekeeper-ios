@@ -8,7 +8,7 @@
 
 import CoreData
 
-public class GKManagedObject: NSManagedObject {
+open class GKManagedObject: NSManagedObject {
 
     func propertyNames() -> [String] {
         return Mirror(reflecting: self).children.filter { $0.label != nil }.map { $0.label! }

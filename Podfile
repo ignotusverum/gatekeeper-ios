@@ -4,13 +4,13 @@ source 'https://github.com/twilio/cocoapod-specs'
 def pods
 
 # Utilities
-pod 'PromiseKit', '~> 3.5'
+pod 'PromiseKit'
 
 # Extensions
-pod 'EZSwiftExtensions', :git => 'git@github.com:goktugyil/EZSwiftExtensions.git', :branch => 'Swift2.3'
+#pod 'EZSwiftExtensions', :git => 'git@github.com:goktugyil/EZSwiftExtensions.git', :branch => 'Swift3'
 
 # Networking
-pod 'Alamofire', '~> 3.5'
+pod 'Alamofire'
 
 pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON.git', :branch => 'swift3'
 
@@ -20,7 +20,7 @@ pod 'MagicalRecord/Shorthand'
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |configuration|
-            configuration.build_settings['SWIFT_VERSION'] = "2.3"
+            configuration.build_settings['SWIFT_VERSION'] = "3.0"
         end
     end
 end
