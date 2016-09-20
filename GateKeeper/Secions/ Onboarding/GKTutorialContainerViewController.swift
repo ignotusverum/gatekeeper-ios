@@ -21,6 +21,13 @@ class GKTutorialContainerViewController: EZSwipeController {
     var tutorialControllers = [UIViewController]()
 
     // MARK: - Controller lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hiding navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,17 +74,21 @@ class GKTutorialContainerViewController: EZSwipeController {
     // MARK: - Actions
     @IBAction func skipButtonPressed() {
         
-        
+        // Skip segue
+        self.performSegue(withIdentifier: "termsSegue", sender: nil)
     }
 }
 
+// MARK: - EZSwipeControllerDataSource
 extension GKTutorialContainerViewController: EZSwipeControllerDataSource {
     
     func viewControllerData()-> [UIViewController] {
         
+        // Controllers for page controller
         return self.tutorialControllers
     }
     
+    // Changed page func
     func changedToPageIndex(_ index: Int) {
         
         self.pageControl.currentPage = index

@@ -39,6 +39,8 @@
 		F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E1F1D90E021003E8F4A /* GKTutorialContainerViewController.swift */; };
 		F5D60E221D90E13D003E8F4A /* GKTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E211D90E13D003E8F4A /* GKTutorialViewController.swift */; };
 		F5D60E291D90E869003E8F4A /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E281D90E869003E8F4A /* EZSwipeController.swift */; };
+		F5D60E2D1D91848A003E8F4A /* GKTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E2C1D91848A003E8F4A /* GKTermsViewController.swift */; };
+		F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E2F1D918527003E8F4A /* GKViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		F5D60E1F1D90E021003E8F4A /* GKTutorialContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKTutorialContainerViewController.swift; sourceTree = "<group>"; };
 		F5D60E211D90E13D003E8F4A /* GKTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKTutorialViewController.swift; sourceTree = "<group>"; };
 		F5D60E281D90E869003E8F4A /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
+		F5D60E2C1D91848A003E8F4A /* GKTermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKTermsViewController.swift; sourceTree = "<group>"; };
+		F5D60E2F1D918527003E8F4A /* GKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 		F5D60E191D90B612003E8F4A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F5D60E2E1D9184FD003E8F4A /* Extensions */,
 				F5D60E1C1D90DCE5003E8F4A /* GKNetworkingManager.swift */,
 			);
 			path = Utilities;
@@ -217,8 +222,8 @@
 		F5D60E1E1D90E008003E8F4A /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				F5D60E1F1D90E021003E8F4A /* GKTutorialContainerViewController.swift */,
-				F5D60E211D90E13D003E8F4A /* GKTutorialViewController.swift */,
+				F5D60E2A1D918479003E8F4A /* Tutorial */,
+				F5D60E2C1D91848A003E8F4A /* GKTermsViewController.swift */,
 			);
 			name = Onboarding;
 			path = " Onboarding";
@@ -230,6 +235,23 @@
 				F5D60E281D90E869003E8F4A /* EZSwipeController.swift */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		F5D60E2A1D918479003E8F4A /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				F5D60E1F1D90E021003E8F4A /* GKTutorialContainerViewController.swift */,
+				F5D60E211D90E13D003E8F4A /* GKTutorialViewController.swift */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		F5D60E2E1D9184FD003E8F4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5D60E2F1D918527003E8F4A /* GKViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,10 +403,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D60E2D1D91848A003E8F4A /* GKTermsViewController.swift in Sources */,
 				F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */,
 				F5D60E1D1D90DCE5003E8F4A /* GKNetworkingManager.swift in Sources */,
 				F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */,
 				F5D60E291D90E869003E8F4A /* EZSwipeController.swift in Sources */,
+				F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */,
 				F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */,
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,

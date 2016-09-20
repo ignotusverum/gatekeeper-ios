@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wQ7-rh-4kc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="okb-Ql-pPw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -31,6 +31,9 @@
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="skipButtonPressed" destination="wQ7-rh-4kc" eventType="touchUpInside" id="0Vd-TP-SbB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,14 +44,43 @@
                             <constraint firstItem="aRx-Jv-blo" firstAttribute="centerX" secondItem="nd2-ri-k95" secondAttribute="centerX" id="sf1-at-KgL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HRX-mb-uNF"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="pageControl" destination="aRx-Jv-blo" id="RAo-ZI-kyi"/>
                         <outlet property="skipButton" destination="RwE-dO-hL5" id="pGH-Jo-hBT"/>
+                        <segue destination="5XU-MH-38w" kind="show" identifier="termsSegue" id="0xl-rs-b0F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eG-w1-JGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616.79999999999995" y="78.710644677661179"/>
+            <point key="canvasLocation" x="322.39999999999998" y="78.710644677661179"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="wzG-7D-yQ9">
+            <objects>
+                <viewController id="5XU-MH-38w" customClass="GKTermsViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dpS-lf-fJZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="4pR-V5-Pdq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IcP-UF-t85">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ObC-lo-rwU">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="SSm-Q6-yzq">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="5XU-MH-38w" id="ANK-fS-Ihh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8s-Od-KfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="79"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="WbX-wI-EFS">
@@ -78,7 +110,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2I-up-nqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616.79999999999995" y="723.68815592203907"/>
+            <point key="canvasLocation" x="322.39999999999998" y="723.68815592203907"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JUx-Oj-fyG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="okb-Ql-pPw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="JGX-2T-rnh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wQ7-rh-4kc" kind="relationship" relationship="rootViewController" id="BzL-zw-XQh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mpq-Av-umY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="79"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backButton" width="24" height="15"/>
+    </resources>
 </document>
