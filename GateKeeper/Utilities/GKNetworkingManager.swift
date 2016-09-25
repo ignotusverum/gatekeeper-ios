@@ -70,7 +70,7 @@ class GKNetworkingManager: NSObject {
     
     func baseUrl() -> String {
         
-        return String(format: "https://%@", hostName)
+        return String(format: "http://%@", hostName)
     }
     
     func URLWithPath(path: String)-> URL {

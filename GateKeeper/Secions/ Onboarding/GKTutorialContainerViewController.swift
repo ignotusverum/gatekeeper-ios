@@ -12,6 +12,7 @@ import EZSwiftExtensions
 class GKTutorialContainerViewController: EZSwipeController {
 
     // Skip Tutorial
+    // Initially hidden in IB
     @IBOutlet weak var skipButton: UIButton!
     
     // Page indicator
@@ -92,5 +93,14 @@ extension GKTutorialContainerViewController: EZSwipeControllerDataSource {
     func changedToPageIndex(_ index: Int) {
         
         self.pageControl.currentPage = index
+        
+        if index == self.tutorialControllers.count - 1 {
+            
+            self.skipButton.isHidden = false
+        }
+        else {
+            
+            self.skipButton.isHidden = true
+        }
     }
 }
