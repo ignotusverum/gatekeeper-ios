@@ -5,6 +5,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Sbold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tutorial Container View Controller-->
         <scene sceneID="oAe-LH-fwd">
@@ -22,7 +27,7 @@
                                 <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.92356770830000001" alpha="0.74561445552147243" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.92356770830000001" alpha="0.099717216257668717" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-dO-hL5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-dO-hL5">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="DBD-3i-TPv"/>
                                     <constraint firstAttribute="width" constant="96" id="fHk-vs-haT"/>
@@ -35,12 +40,28 @@
                                     <action selector="skipButtonPressed" destination="wQ7-rh-4kc" eventType="touchUpInside" id="0Vd-TP-SbB"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4az-db-d0X">
+                                <color key="backgroundColor" red="0.0" green="0.37254901959999998" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7v8-28-XIt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                <state key="normal" title="Set me free!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonPressed" destination="wQ7-rh-4kc" eventType="touchUpInside" id="R6m-fJ-Gvf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RwE-dO-hL5" firstAttribute="top" secondItem="GRk-Lb-NQT" secondAttribute="bottom" constant="8" symbolic="YES" id="F6Y-EC-BBn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RwE-dO-hL5" secondAttribute="trailing" constant="4" id="U9z-ru-PTo"/>
                             <constraint firstItem="aRx-Jv-blo" firstAttribute="bottom" secondItem="gQR-Wx-4P3" secondAttribute="top" id="ZLm-8X-Dac"/>
+                            <constraint firstItem="4az-db-d0X" firstAttribute="leading" secondItem="nd2-ri-k95" secondAttribute="leading" id="bfD-Wt-0XL"/>
+                            <constraint firstItem="4az-db-d0X" firstAttribute="bottom" secondItem="gQR-Wx-4P3" secondAttribute="top" id="ftn-IE-Fim"/>
+                            <constraint firstItem="4az-db-d0X" firstAttribute="centerX" secondItem="aRx-Jv-blo" secondAttribute="centerX" id="oX8-Ih-KZ4"/>
                             <constraint firstItem="aRx-Jv-blo" firstAttribute="centerX" secondItem="nd2-ri-k95" secondAttribute="centerX" id="sf1-at-KgL"/>
                         </constraints>
                     </view>

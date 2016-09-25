@@ -12,11 +12,14 @@ import EZSwiftExtensions
 class GKTutorialContainerViewController: EZSwipeController {
 
     // Skip Tutorial
-    // Initially hidden in IB
     @IBOutlet weak var skipButton: UIButton!
     
     // Page indicator
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    // Next Button
+    // Hidden in IB
+    @IBOutlet weak var nextButton: UIButton!
     
     // Tutorial Controllers - datasource
     var tutorialControllers = [UIViewController]()
@@ -96,11 +99,13 @@ extension GKTutorialContainerViewController: EZSwipeControllerDataSource {
         
         if index == self.tutorialControllers.count - 1 {
             
-            self.skipButton.isHidden = false
+            self.skipButton.isHidden = true
+            self.nextButton.isHidden = false
         }
         else {
             
-            self.skipButton.isHidden = true
+            self.skipButton.isHidden = false
+            self.nextButton.isHidden = true
         }
     }
 }
