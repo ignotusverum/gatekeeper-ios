@@ -24,6 +24,8 @@
 		EF16FF6EC5CAD51C4F5BC486 /* Pods_GateKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F5A011231D985833000C5904 /* GKFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011221D985833000C5904 /* GKFont.swift */; };
 		F5A011251D98599F000C5904 /* TMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011241D98599F000C5904 /* TMString.swift */; };
+		F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */; };
+		F5A011291D986190000C5904 /* GKSynchronizerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011281D986190000C5904 /* GKSynchronizerAdapter.swift */; };
 		F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */; };
 		F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DE41D90A831003E8F4A /* Main.storyboard */; };
 		F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DEA1D90A831003E8F4A /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		B16FE3D58661F1F52ACAA3BE /* Pods-GateKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GateKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		F5A011221D985833000C5904 /* GKFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFont.swift; sourceTree = "<group>"; };
 		F5A011241D98599F000C5904 /* TMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMString.swift; sourceTree = "<group>"; };
+		F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerHandler.swift; sourceTree = "<group>"; };
+		F5A011281D986190000C5904 /* GKSynchronizerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerAdapter.swift; sourceTree = "<group>"; };
 		F5D60DDD1D90A831003E8F4A /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAppDelegate.swift; sourceTree = "<group>"; };
 		F5D60DE51D90A831003E8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +67,7 @@
 		F5D60E051D90B183003E8F4A /* GMDCircleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDCircleLoader.h; sourceTree = "<group>"; };
 		F5D60E061D90B183003E8F4A /* GMDCircleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDCircleLoader.m; sourceTree = "<group>"; };
 		F5D60E0B1D90B23B003E8F4A /* GateKeeper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GateKeeper-Bridging-Header.h"; sourceTree = "<group>"; };
-		F5D60E111D90B501003E8F4A /* TMManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMManagedObject.swift; sourceTree = "<group>"; };
+		F5D60E111D90B501003E8F4A /* TMManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMManagedObject.swift; path = "../Data Synchronization/TMManagedObject.swift"; sourceTree = "<group>"; };
 		F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKManagedObject.swift; sourceTree = "<group>"; };
 		F5D60E171D90B5BF003E8F4A /* GKModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GKModel.xcdatamodel; sourceTree = "<group>"; };
 		F5D60E1A1D90B6BC003E8F4A /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -149,7 +153,8 @@
 		F5D60DF61D90B05F003E8F4A /* Data Synchronization */ = {
 			isa = PBXGroup;
 			children = (
-				F5D60E111D90B501003E8F4A /* TMManagedObject.swift */,
+				F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */,
+				F5A011281D986190000C5904 /* GKSynchronizerAdapter.swift */,
 			);
 			path = "Data Synchronization";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */,
+				F5D60E111D90B501003E8F4A /* TMManagedObject.swift */,
 				F5D60E161D90B5BF003E8F4A /* GKModel.xcdatamodeld */,
 			);
 			path = Models;
@@ -403,11 +409,13 @@
 				F5D60E1D1D90DCE5003E8F4A /* GKNetworkingManager.swift in Sources */,
 				F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */,
 				F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */,
+				F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */,
 				F5A011251D98599F000C5904 /* TMString.swift in Sources */,
 				F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */,
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5A011231D985833000C5904 /* GKFont.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
+				F5A011291D986190000C5904 /* GKSynchronizerAdapter.swift in Sources */,
 				F5D60E221D90E13D003E8F4A /* GKTutorialViewController.swift in Sources */,
 				F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */,
 			);

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
     
+    // Title Setup
     func addTitleText(titleText: String, color: UIColor = UIColor.black) {
         
         let label = UILabel()
@@ -21,6 +22,18 @@ extension UIViewController {
         self.navigationItem.titleView = label
     }
     
+    // Alert
+    func showOneButtonAlertController(title: String, message: String, cancelButtonText: String) {
+        
+        let alertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: cancelButtonText, style: .cancel, handler:nil)
+        
+        alertController.addAction(alertAction)
+        
+        self.presentVC(alertController)
+    }
+    
+    // Action
     @IBAction func backButtonPressed(_ sender: AnyObject?) {
         
         self.view.endEditing(true)
