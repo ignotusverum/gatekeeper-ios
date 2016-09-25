@@ -9,17 +9,17 @@
 //MARK: - Font  Used By Application
 extension UIFont
 {
-    class func appBoldFontWithSize(_ fontsize:CGFloat) -> UIFont {
+    class func appBoldFont(size fontsize:CGFloat) -> UIFont {
         
         return UIFont(name: "ProximaNova-Bold", size: fontsize)!
     }
     
-    class func appRegularFontWithSize(_ fontsize:CGFloat) -> UIFont {
+    class func appRegularFont(size fontsize:CGFloat) -> UIFont {
         
         return UIFont(name: "ProximaNova-Regular", size: fontsize)!
     }
     
-    class func appSemiBoldFontWithSize(_ fontsize:CGFloat) -> UIFont {
+    class func appSemiBoldFont(size fontsize:CGFloat) -> UIFont {
         
         return UIFont(name: "ProximaNova-Semibold", size: fontsize)!
     }
