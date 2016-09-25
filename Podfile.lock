@@ -1,8 +1,7 @@
 PODS:
   - Alamofire (4.0.0)
-  - EZSwiftExtensions (1.5)
+  - EZSwiftExtensions (1.6)
   - EZSwipeController (0.5)
-  - MagicalRecord/Shorthand (2.2)
   - PromiseKit (4.0.1):
     - PromiseKit/Foundation (= 4.0.1)
     - PromiseKit/QuartzCore (= 4.0.1)
@@ -17,17 +16,16 @@ PODS:
   - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - EZSwiftExtensions (from `git@github.com:ShiWeiCN/EZSwiftExtensions.git`, branch `jes-Swift3`)
+  - Alamofire (= 4.0.0)
+  - EZSwiftExtensions (from `git@github.com:goktugyil/EZSwiftExtensions.git`, branch `Swift3`)
   - EZSwipeController (from `git@github.com:pattogato/EZSwipeController.git`, branch `bugfix/swift-3-fixes`)
-  - MagicalRecord/Shorthand
   - PromiseKit
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
   EZSwiftExtensions:
-    :branch: jes-Swift3
-    :git: git@github.com:ShiWeiCN/EZSwiftExtensions.git
+    :branch: Swift3
+    :git: git@github.com:goktugyil/EZSwiftExtensions.git
   EZSwipeController:
     :branch: bugfix/swift-3-fixes
     :git: git@github.com:pattogato/EZSwipeController.git
@@ -37,10 +35,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EZSwiftExtensions:
-    :commit: b0f44b95cecfbe639ba3bda81dbddfe17dbcae3e
-    :git: git@github.com:ShiWeiCN/EZSwiftExtensions.git
+    :commit: 8afb1aac46b1c977ccac69c0ee6e665099b1f65b
+    :git: git@github.com:goktugyil/EZSwiftExtensions.git
   EZSwipeController:
-    :commit: b1e5a9efea21857f78ecfc748ab7ebfed3553d02
+    :commit: a040876ed3e5873abdf2534f52ea04e99eb6e5bf
     :git: git@github.com:pattogato/EZSwipeController.git
   SwiftyJSON:
     :commit: de73429b38b8994f614fb27c5ec094bb8a4833f2
@@ -48,12 +46,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
-  EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
+  EZSwiftExtensions: 6c5e29ae473b3d2edbf5472eab0a3d7bdb20215c
   EZSwipeController: 01cc43b319e133b6dbfb25bfdc78617a1560e952
-  MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
   PromiseKit: ae9e7f97ee758e23f7b9c5e80380a2e78d6338c5
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 7e1784f8813ae82739ccdbc595578659981442ce
+PODFILE CHECKSUM: ee89d787bb3d6c86cdcf4b886d2c72df2eeaa5b2
 
 COCOAPODS: 1.0.1

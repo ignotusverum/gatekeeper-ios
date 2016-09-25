@@ -7,17 +7,14 @@ def pods
 pod 'PromiseKit'
 
 # Extensions
-pod 'EZSwiftExtensions', :git => 'git@github.com:ShiWeiCN/EZSwiftExtensions.git', :branch => 'jes-Swift3'
+pod 'EZSwiftExtensions', :git => 'git@github.com:goktugyil/EZSwiftExtensions.git', :branch => 'Swift3'
 
 # Networking
-pod 'Alamofire'
+pod 'Alamofire', '4.0.0'
 
-#pod 'EZSwipeController', :git => 'git@github.com:pattogato/EZSwipeController.git', :branch => 'bugfix/swift-3-fixes'
+pod 'EZSwipeController', :git => 'git@github.com:pattogato/EZSwipeController.git', :branch => 'bugfix/swift-3-fixes'
 
 pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON.git', :branch => 'swift3'
-
-# Core Data
-pod 'MagicalRecord/Shorthand'
 
 # swift integration
 use_frameworks!
