@@ -40,8 +40,9 @@ class GKTutorialContainerViewController: EZSwipeController {
         // Setting number of pages
         self.pageControl.numberOfPages = self.tutorialControllers.count + 1
 
-        // Bringing skip button to front
+        // Bringing buttons button to front
         self.view.bringSubview(toFront: self.skipButton)
+        self.view.bringSubview(toFront: self.nextButton)
     }
     
     // Initializing datasource

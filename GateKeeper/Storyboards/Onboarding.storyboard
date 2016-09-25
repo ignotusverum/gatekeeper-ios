@@ -68,6 +68,7 @@
                     <navigationItem key="navigationItem" id="HRX-mb-uNF"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="nextButton" destination="4az-db-d0X" id="QpE-ms-2Dn"/>
                         <outlet property="pageControl" destination="aRx-Jv-blo" id="RAo-ZI-kyi"/>
                         <outlet property="skipButton" destination="RwE-dO-hL5" id="pGH-Jo-hBT"/>
                         <segue destination="5XU-MH-38w" kind="show" identifier="termsSegue" id="0xl-rs-b0F"/>
