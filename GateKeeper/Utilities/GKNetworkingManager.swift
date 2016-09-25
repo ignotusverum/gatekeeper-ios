@@ -21,6 +21,11 @@ public let GKNetworkingManagerLoginSuccessfulNotificationKey = "GKNetworkingMana
 public let GKNetworkingManagerLogoutSuccessfulNotificationKey = "GKNetworkingManagerLogoutSuccessfulNotificationKey"
 public let GKNetworkingManagerRequestUnauthorizedNotificationKey = "GKNetworkingManagerRequestUnauthorizedNotificationKey"
 
+public var _hostName = ""
+
+let hostName = "admin.gatekeeperdirectory.com/GateKeeper/"
+let hostVersion = "1"
+
 class GKNetworkingManager: NSObject {
 
     
