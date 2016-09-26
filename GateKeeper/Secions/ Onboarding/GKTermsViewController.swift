@@ -38,6 +38,14 @@ class GKTermsViewController: UIViewController {
     }
     
     // MARK: - UI Setup
+    
+    // Scroll to bottom of textView
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.termsTextView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
     func customSetup() {
         
         let config = GKCongif.shared
