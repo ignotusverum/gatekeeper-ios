@@ -31,6 +31,8 @@ class GKTermsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.customSetup()
+        
         // Setting title for navBar
         self.addTitleText(titleText: "Terms & Conditions")
     }
@@ -40,6 +42,7 @@ class GKTermsViewController: UIViewController {
         
         let config = GKCongif.shared
         
+        // Show Terms if it's stored
         if let termsString = config.termsString {
             
             self.termsTextView.text = termsString
