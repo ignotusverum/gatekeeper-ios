@@ -15,13 +15,15 @@ class GKCopy: NSObject {
     // Phone Input Attirbuted Copy
     var phoneInput: NSAttributedString? {
         
+        // A Confirmation Code will be generated & sent through SMS to the entered mobile number
+        
         let ccString = NSMutableAttributedString(string: "Confirmation Code").bold()
         let smsString = NSMutableAttributedString(string: "SMS").bold()
         let mobileString = NSMutableAttributedString(string: "mobile").bold()
 
         let resultString = NSMutableAttributedString(string: "A ")
         resultString.append(ccString)
-        resultString.append(NSAttributedString(string: " will be generated & sent through\n"))
+        resultString.append(NSAttributedString(string: " will be generated & sent through "))
         resultString.append(smsString)
         resultString.append(NSAttributedString(string: " to the entered "))
         resultString.append(mobileString)

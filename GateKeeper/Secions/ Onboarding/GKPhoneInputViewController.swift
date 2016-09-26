@@ -38,4 +38,10 @@ class GKPhoneInputViewController: UIViewController {
         
         self.descriptionLabel.attributedText = copy.phoneInput
     }
+    
+    // MARK: - Actions
+    @IBAction func generateCodeButtonPressed(_ sender: UIButton) {
+     
+        print("generate code button pressed")
+    }
 }

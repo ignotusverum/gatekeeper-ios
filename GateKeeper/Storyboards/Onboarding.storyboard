@@ -288,7 +288,7 @@
                             <constraint firstItem="53G-Zr-ha8" firstAttribute="width" secondItem="rlc-9Y-1wV" secondAttribute="width" id="O5z-dv-c4A"/>
                             <constraint firstItem="HqX-Df-E7a" firstAttribute="height" secondItem="rlc-9Y-1wV" secondAttribute="height" id="WRx-Qr-jnb"/>
                             <constraint firstItem="u6U-R2-HuV" firstAttribute="top" secondItem="HqX-Df-E7a" secondAttribute="bottom" constant="10" id="XqA-Rc-BQZ"/>
-                            <constraint firstItem="HqX-Df-E7a" firstAttribute="top" secondItem="rlc-9Y-1wV" secondAttribute="bottom" constant="30" id="cfu-tA-M16"/>
+                            <constraint firstItem="HqX-Df-E7a" firstAttribute="top" secondItem="rlc-9Y-1wV" secondAttribute="bottom" constant="16" id="cfu-tA-M16"/>
                             <constraint firstItem="53G-Zr-ha8" firstAttribute="leading" secondItem="lhP-AP-TgL" secondAttribute="leadingMargin" constant="3" id="hOc-GD-nb0"/>
                             <constraint firstItem="53G-Zr-ha8" firstAttribute="leading" secondItem="rlc-9Y-1wV" secondAttribute="leading" id="o1q-Sh-VSZ"/>
                             <constraint firstItem="53G-Zr-ha8" firstAttribute="centerX" secondItem="lhP-AP-TgL" secondAttribute="centerX" id="pQB-wk-lOO"/>
@@ -296,7 +296,7 @@
                             <constraint firstItem="HqX-Df-E7a" firstAttribute="leading" secondItem="u6U-R2-HuV" secondAttribute="leading" id="qjI-ca-rmY"/>
                             <constraint firstItem="HqX-Df-E7a" firstAttribute="width" secondItem="rlc-9Y-1wV" secondAttribute="width" id="sm3-xo-DBP"/>
                             <constraint firstItem="u6U-R2-HuV" firstAttribute="width" secondItem="53G-Zr-ha8" secondAttribute="width" id="vyg-GJ-634"/>
-                            <constraint firstItem="rlc-9Y-1wV" firstAttribute="top" secondItem="53G-Zr-ha8" secondAttribute="bottom" constant="-10" id="y8y-er-vR5"/>
+                            <constraint firstItem="rlc-9Y-1wV" firstAttribute="top" secondItem="53G-Zr-ha8" secondAttribute="bottom" constant="4" id="y8y-er-vR5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IvV-tG-RMD">
@@ -307,6 +307,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="countryCodeTextField" destination="z2r-XU-7bW" id="VPx-rC-P5g"/>
+                        <outlet property="descriptionLabel" destination="53G-Zr-ha8" id="PeV-r6-JBc"/>
+                        <outlet property="phoneNubmerTextField" destination="5sJ-Yi-BL9" id="0mU-vn-kU4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6o-zo-bHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
