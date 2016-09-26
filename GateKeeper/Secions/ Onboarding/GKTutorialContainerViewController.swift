@@ -17,6 +17,10 @@ class GKTutorialContainerViewController: EZSwipeController {
     // Page indicator
     @IBOutlet weak var pageControl: UIPageControl!
     
+    // Next Button
+    // Hidden in IB
+    @IBOutlet weak var nextButton: UIButton!
+    
     // Tutorial Controllers - datasource
     var tutorialControllers = [UIViewController]()
 
@@ -36,8 +40,9 @@ class GKTutorialContainerViewController: EZSwipeController {
         // Setting number of pages
         self.pageControl.numberOfPages = self.tutorialControllers.count + 1
 
-        // Bringing skip button to front
+        // Bringing buttons button to front
         self.view.bringSubview(toFront: self.skipButton)
+        self.view.bringSubview(toFront: self.nextButton)
     }
     
     // Initializing datasource
@@ -92,5 +97,16 @@ extension GKTutorialContainerViewController: EZSwipeControllerDataSource {
     func changedToPageIndex(_ index: Int) {
         
         self.pageControl.currentPage = index
+        
+        if index == self.tutorialControllers.count - 1 {
+            
+            self.skipButton.isHidden = true
+            self.nextButton.isHidden = false
+        }
+        else {
+            
+            self.skipButton.isHidden = false
+            self.nextButton.isHidden = true
+        }
     }
 }
