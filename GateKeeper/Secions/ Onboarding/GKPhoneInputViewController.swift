@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PhoneNumberKit
 
 class GKPhoneInputViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class GKPhoneInputViewController: UIViewController {
     @IBOutlet weak var countryCodeTextField: UITextField!
     
     // Phone input
-    @IBOutlet weak var phoneNubmerTextField: UITextField!
+    @IBOutlet weak var phoneNubmerTextField: PhoneNumberTextField!
 
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -29,14 +30,29 @@ class GKPhoneInputViewController: UIViewController {
         
         // Custom UI setup
         self.customSetup()
+        
+        print(Locale.current.regionCode)
     }
     
     // MARK: - Custom Setup
     func customSetup() {
         
+        // Copy Setup
         let copy = GKCopy.shared
-        
         self.descriptionLabel.attributedText = copy.phoneInput
+        
+        // Current reion setup
+        let phoneNumberKit = PhoneNumberKit()
+        
+        if let currentRegion = Locale.current.regionCode {
+         
+            let countryCode = phoneNumberKit.codeForCountry(currentRegion)
+            
+            if let countryCode = countryCode {
+                
+                self.countryCodeTextField.text = "+" + String(countryCode)
+            }
+        }
     }
     
     // MARK: - Actions
