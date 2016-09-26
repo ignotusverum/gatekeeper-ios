@@ -15,6 +15,9 @@ import SwiftyJSON
 // Asynch
 import PromiseKit
 
+// Extensions
+import EZSwiftExtensions
+
 public let GKNetworkingManagerAccessTokenKey = "GKNetworkingManagerAccessTokenKey"
 public let GKNetworkingManagerLoginFailureNotificationKey = "GKNetworkingManagerLoginFailureNotificationKey"
 public let GKNetworkingManagerLoginSuccessfulNotificationKey = "GKNetworkingManagerLoginSuccessfulNotificationKey"
@@ -60,6 +63,8 @@ class GKNetworkingManager: NSObject {
     func configureHTTPHeader() {
         
         // Custom header configuration
+        self.headers["accessToken"] = "0"
+        self.headers["deviceId"] = UIDevice.idForVendor()
     }
     
     // MARK: - Path building

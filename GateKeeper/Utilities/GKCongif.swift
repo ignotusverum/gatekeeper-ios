@@ -8,6 +8,7 @@
 
 import UIKit
 import PromiseKit
+import SwiftyJSON
 
 class GKCongif: NSObject {
     
@@ -20,9 +21,14 @@ class GKCongif: NSObject {
         return Promise { fulfill, reject in
          
             let netman = GKNetworkingManager.sharedManager
-            netman.request(.post, path: "getTermAndCondtion").then { result in
+            netman.request(.post, path: "getTermAndCondtion").then { result-> Void in
                 
-                fulfill(nil)
+                if let termsString = result["data"].string {
+                    fulfill(termsString)
+                }
+                else {
+                    fulfill(nil)
+                }
                 
                 }.catch { error in
                     reject(error)

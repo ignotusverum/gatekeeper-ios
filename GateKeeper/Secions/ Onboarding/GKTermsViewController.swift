@@ -41,7 +41,14 @@ class GKTermsViewController: UIViewController {
     // MARK: - UI Setup
     func customSetup() {
         
-        GKCongif.fetchTerms()
+        GKCongif.fetchTerms().then { resultString-> Void in
+            
+            self.termsTextView.text = resultString
+            
+            }.catch { error in
+                
+                self.termsTextView.text = ""
+        }
     }
     
     // MARK: - Actions
