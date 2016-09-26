@@ -33,21 +33,27 @@ class GKTermsViewController: UIViewController {
         
         // Setting title for navBar
         self.addTitleText(titleText: "Terms & Conditions")
-        
-        // UI Setup
-        self.customSetup()
     }
     
     // MARK: - UI Setup
     func customSetup() {
         
-        GKCongif.fetchTerms().then { resultString-> Void in
+        let config = GKCongif.shared
+        
+        if let termsString = config.termsString {
             
-            self.termsTextView.text = resultString
-            
-            }.catch { error in
+            self.termsTextView.text = termsString
+        }
+        else {
+         
+            GKCongif.fetchTerms().then { resultString-> Void in
                 
-                self.termsTextView.text = ""
+                self.termsTextView.text = resultString
+                
+                }.catch { error in
+                    
+                    self.termsTextView.text = ""
+            }
         }
     }
     

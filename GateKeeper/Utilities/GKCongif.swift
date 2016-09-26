@@ -15,6 +15,8 @@ class GKCongif: NSObject {
     // Shared Manager
     static let shared = GKCongif()
 
+    var termsString: String?
+    
     // Terms request
     class func fetchTerms()-> Promise<String?> {
         

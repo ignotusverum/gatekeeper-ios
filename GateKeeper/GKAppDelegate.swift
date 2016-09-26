@@ -17,4 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
         return true
     }
+    
+    // MARK: - Fetching logic
+    func fetchTerms() {
+        
+        let config = GKCongif.shared
+        
+        GKCongif.fetchTerms().then { result in
+            
+            config.termsString = result
+            }.catch { error in
+                print(error)
+        }
+    }
 }
