@@ -71,7 +71,8 @@ class GKTermsViewController: UIViewController {
     // MARK: - Actions
     @IBAction func acceptButtonPressed(_ sender: UIButton) {
         
-        // Perform segue to code generation
+        // Phone input segue
+        self.performSegue(withIdentifier: "phoneInputSegue", sender: nil)
     }
     
     @IBAction func rejectButtonPressed(_ sender: UIButton) {

@@ -27,6 +27,9 @@
 		F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */; };
 		F5A011291D986190000C5904 /* GKSynchronizerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011281D986190000C5904 /* GKSynchronizerAdapter.swift */; };
 		F5A0112B1D996D35000C5904 /* GKCongif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0112A1D996D35000C5904 /* GKCongif.swift */; };
+		F5A0112D1D99AFE3000C5904 /* GKPhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0112C1D99AFE3000C5904 /* GKPhoneInputViewController.swift */; };
+		F5A011301D99B2FD000C5904 /* GKNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0112F1D99B2FD000C5904 /* GKNavigationBar.swift */; };
+		F5A011331D99B381000C5904 /* GKNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011321D99B381000C5904 /* GKNavigationViewController.swift */; };
 		F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */; };
 		F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DE41D90A831003E8F4A /* Main.storyboard */; };
 		F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DEA1D90A831003E8F4A /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerHandler.swift; sourceTree = "<group>"; };
 		F5A011281D986190000C5904 /* GKSynchronizerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerAdapter.swift; sourceTree = "<group>"; };
 		F5A0112A1D996D35000C5904 /* GKCongif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKCongif.swift; sourceTree = "<group>"; };
+		F5A0112C1D99AFE3000C5904 /* GKPhoneInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPhoneInputViewController.swift; sourceTree = "<group>"; };
+		F5A0112F1D99B2FD000C5904 /* GKNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKNavigationBar.swift; sourceTree = "<group>"; };
+		F5A011321D99B381000C5904 /* GKNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKNavigationViewController.swift; sourceTree = "<group>"; };
 		F5D60DDD1D90A831003E8F4A /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAppDelegate.swift; sourceTree = "<group>"; };
 		F5D60DE51D90A831003E8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +113,14 @@
 				15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5A011311D99B365000C5904 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5A011321D99B381000C5904 /* GKNavigationViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F5D60DD41D90A831003E8F4A = {
@@ -222,6 +236,7 @@
 		F5D60E191D90B612003E8F4A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F5A011311D99B365000C5904 /* Controllers */,
 				F5D60E2E1D9184FD003E8F4A /* Extensions */,
 				F5D60E1C1D90DCE5003E8F4A /* GKNetworkingManager.swift */,
 				F5A0112A1D996D35000C5904 /* GKCongif.swift */,
@@ -234,6 +249,7 @@
 			children = (
 				F5D60E2A1D918479003E8F4A /* Tutorial */,
 				F5D60E2C1D91848A003E8F4A /* GKTermsViewController.swift */,
+				F5A0112C1D99AFE3000C5904 /* GKPhoneInputViewController.swift */,
 			);
 			name = Onboarding;
 			path = " Onboarding";
@@ -254,6 +270,7 @@
 				F5D60E2F1D918527003E8F4A /* GKViewController.swift */,
 				F5A011221D985833000C5904 /* GKFont.swift */,
 				F5A011241D98599F000C5904 /* TMString.swift */,
+				F5A0112F1D99B2FD000C5904 /* GKNavigationBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,16 +426,19 @@
 			files = (
 				F5D60E2D1D91848A003E8F4A /* GKTermsViewController.swift in Sources */,
 				F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */,
+				F5A011331D99B381000C5904 /* GKNavigationViewController.swift in Sources */,
 				F5D60E1D1D90DCE5003E8F4A /* GKNetworkingManager.swift in Sources */,
 				F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */,
 				F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */,
 				F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */,
 				F5A011251D98599F000C5904 /* TMString.swift in Sources */,
+				F5A011301D99B2FD000C5904 /* GKNavigationBar.swift in Sources */,
 				F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */,
 				F5A0112B1D996D35000C5904 /* GKCongif.swift in Sources */,
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5A011231D985833000C5904 /* GKFont.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
+				F5A0112D1D99AFE3000C5904 /* GKPhoneInputViewController.swift in Sources */,
 				F5A011291D986190000C5904 /* GKSynchronizerAdapter.swift in Sources */,
 				F5D60E221D90E13D003E8F4A /* GKTutorialViewController.swift in Sources */,
 				F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */,

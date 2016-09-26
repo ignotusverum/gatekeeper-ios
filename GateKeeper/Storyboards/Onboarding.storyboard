@@ -3,9 +3,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ProximaNova-Reg.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
         <array key="ProximaNova-Sbold.ttf">
             <string>ProximaNova-Semibold</string>
         </array>
@@ -54,7 +58,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RwE-dO-hL5" firstAttribute="top" secondItem="GRk-Lb-NQT" secondAttribute="bottom" constant="8" symbolic="YES" id="F6Y-EC-BBn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RwE-dO-hL5" secondAttribute="trailing" constant="4" id="U9z-ru-PTo"/>
@@ -136,7 +140,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VcM-Xu-bP2" firstAttribute="leading" secondItem="IcP-UF-t85" secondAttribute="leading" id="2UT-zJ-pS7"/>
                             <constraint firstAttribute="trailing" secondItem="4Lh-JY-1NO" secondAttribute="trailing" id="57M-ug-aRU"/>
@@ -159,11 +163,154 @@
                         <outlet property="acceptButton" destination="bGJ-bS-noc" id="SLZ-ue-Ax4"/>
                         <outlet property="rejectButton" destination="e7D-js-bL4" id="ZEJ-eT-gYK"/>
                         <outlet property="termsTextView" destination="VcM-Xu-bP2" id="TQJ-hf-vIu"/>
+                        <segue destination="mZI-45-nFY" kind="show" identifier="phoneInputSegue" id="vEU-b7-gYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8s-Od-KfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="78.710644677661179"/>
+        </scene>
+        <!--Phone Input View Controller-->
+        <scene sceneID="b58-JL-QQZ">
+            <objects>
+                <viewController id="mZI-45-nFY" customClass="GKPhoneInputViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TdW-0U-Uc9"/>
+                        <viewControllerLayoutGuide type="bottom" id="dxg-D7-dqu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lhP-AP-TgL">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Confirmation Code will be generated &amp; sent through SMS to the entered mobile number" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53G-Zr-ha8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Lse-17-CzI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lse-17-CzI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Lse-17-CzI"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlc-9Y-1wV">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Insert your Phone number" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sJ-Yi-BL9">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KfN-xv-JPf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KfN-xv-JPf"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="KfN-xv-JPf"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Code" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-XU-7bW">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5sJ-Yi-BL9" firstAttribute="centerY" secondItem="rlc-9Y-1wV" secondAttribute="centerY" id="1bG-2j-N0K"/>
+                                    <constraint firstAttribute="height" constant="55" id="2s8-ld-gsx"/>
+                                    <constraint firstItem="z2r-XU-7bW" firstAttribute="height" secondItem="5sJ-Yi-BL9" secondAttribute="height" id="4xy-5P-jhC"/>
+                                    <constraint firstAttribute="trailing" secondItem="5sJ-Yi-BL9" secondAttribute="trailing" id="FDm-gs-he6"/>
+                                    <constraint firstItem="z2r-XU-7bW" firstAttribute="centerY" secondItem="rlc-9Y-1wV" secondAttribute="centerY" id="Lfu-O0-xzb"/>
+                                    <constraint firstItem="5sJ-Yi-BL9" firstAttribute="width" secondItem="rlc-9Y-1wV" secondAttribute="width" multiplier="0.6" id="gn2-f4-4dQ"/>
+                                    <constraint firstItem="z2r-XU-7bW" firstAttribute="width" secondItem="rlc-9Y-1wV" secondAttribute="width" multiplier="0.4" id="q8v-SD-6iM"/>
+                                    <constraint firstItem="z2r-XU-7bW" firstAttribute="leading" secondItem="rlc-9Y-1wV" secondAttribute="leading" id="vXR-wt-Gcp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="z2r-XU-7bW"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="2s8-ld-gsx"/>
+                                        <exclude reference="4xy-5P-jhC"/>
+                                        <exclude reference="vXR-wt-Gcp"/>
+                                        <exclude reference="Lfu-O0-xzb"/>
+                                        <exclude reference="q8v-SD-6iM"/>
+                                        <exclude reference="gn2-f4-4dQ"/>
+                                        <exclude reference="FDm-gs-he6"/>
+                                        <exclude reference="1bG-2j-N0K"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="z2r-XU-7bW"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="2s8-ld-gsx"/>
+                                        <include reference="4xy-5P-jhC"/>
+                                        <include reference="vXR-wt-Gcp"/>
+                                        <include reference="Lfu-O0-xzb"/>
+                                        <include reference="q8v-SD-6iM"/>
+                                        <include reference="gn2-f4-4dQ"/>
+                                        <include reference="FDm-gs-he6"/>
+                                        <include reference="1bG-2j-N0K"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-Df-E7a">
+                                <color key="backgroundColor" red="0.0" green="0.37254901959999998" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                <state key="normal" title="Generate a Confirmation Code">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order for the code to be generated please enter your country code without a + sign or any zeros in front of it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6U-R2-HuV">
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="53G-Zr-ha8" firstAttribute="top" secondItem="TdW-0U-Uc9" secondAttribute="bottom" constant="30" id="5cc-Oa-hW8"/>
+                            <constraint firstItem="rlc-9Y-1wV" firstAttribute="leading" secondItem="HqX-Df-E7a" secondAttribute="leading" id="KMn-5c-FSs"/>
+                            <constraint firstItem="53G-Zr-ha8" firstAttribute="width" secondItem="rlc-9Y-1wV" secondAttribute="width" id="O5z-dv-c4A"/>
+                            <constraint firstItem="HqX-Df-E7a" firstAttribute="height" secondItem="rlc-9Y-1wV" secondAttribute="height" id="WRx-Qr-jnb"/>
+                            <constraint firstItem="u6U-R2-HuV" firstAttribute="top" secondItem="HqX-Df-E7a" secondAttribute="bottom" constant="10" id="XqA-Rc-BQZ"/>
+                            <constraint firstItem="HqX-Df-E7a" firstAttribute="top" secondItem="rlc-9Y-1wV" secondAttribute="bottom" constant="30" id="cfu-tA-M16"/>
+                            <constraint firstItem="53G-Zr-ha8" firstAttribute="leading" secondItem="lhP-AP-TgL" secondAttribute="leadingMargin" constant="3" id="hOc-GD-nb0"/>
+                            <constraint firstItem="53G-Zr-ha8" firstAttribute="leading" secondItem="rlc-9Y-1wV" secondAttribute="leading" id="o1q-Sh-VSZ"/>
+                            <constraint firstItem="53G-Zr-ha8" firstAttribute="centerX" secondItem="lhP-AP-TgL" secondAttribute="centerX" id="pQB-wk-lOO"/>
+                            <constraint firstItem="u6U-R2-HuV" firstAttribute="height" secondItem="53G-Zr-ha8" secondAttribute="height" id="pT3-P5-9kS"/>
+                            <constraint firstItem="HqX-Df-E7a" firstAttribute="leading" secondItem="u6U-R2-HuV" secondAttribute="leading" id="qjI-ca-rmY"/>
+                            <constraint firstItem="HqX-Df-E7a" firstAttribute="width" secondItem="rlc-9Y-1wV" secondAttribute="width" id="sm3-xo-DBP"/>
+                            <constraint firstItem="u6U-R2-HuV" firstAttribute="width" secondItem="53G-Zr-ha8" secondAttribute="width" id="vyg-GJ-634"/>
+                            <constraint firstItem="rlc-9Y-1wV" firstAttribute="top" secondItem="53G-Zr-ha8" secondAttribute="bottom" constant="-10" id="y8y-er-vR5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IvV-tG-RMD">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="QGr-Zr-EJX">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="mZI-45-nFY" id="H5o-mj-L8E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6o-zo-bHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="79"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="WbX-wI-EFS">
@@ -195,10 +342,10 @@
             </objects>
             <point key="canvasLocation" x="322.39999999999998" y="723.68815592203907"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="JUx-Oj-fyG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="okb-Ql-pPw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="okb-Ql-pPw" customClass="GKNavigationViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="JGX-2T-rnh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -211,7 +358,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpq-Av-umY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330" y="79"/>
+            <point key="canvasLocation" x="-324" y="79"/>
         </scene>
     </scenes>
     <resources>
