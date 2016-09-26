@@ -86,7 +86,7 @@ class GKNetworkingManager: NSObject {
     
     func URLString(path: String)-> String {
         
-        return String(format: "%@/%@", self.baseUrl(), path)
+        return String(format: "%@%@", self.baseUrl(), path)
     }
     
     // MARK: - HTTP Requests

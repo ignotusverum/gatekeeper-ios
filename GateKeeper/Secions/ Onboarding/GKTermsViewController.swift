@@ -33,10 +33,18 @@ class GKTermsViewController: UIViewController {
         
         // Setting title for navBar
         self.addTitleText(titleText: "Terms & Conditions")
+        
+        // UI Setup
+        self.customSetup()
+    }
+    
+    // MARK: - UI Setup
+    func customSetup() {
+        
+        GKCongif.fetchTerms()
     }
     
     // MARK: - Actions
-    
     @IBAction func acceptButtonPressed(_ sender: UIButton) {
         
         // Perform segue to code generation
