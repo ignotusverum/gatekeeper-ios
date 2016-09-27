@@ -83,13 +83,13 @@ class GKPhoneInputViewController: UIViewController {
         }
         
         // Buiding params - different phone format
-        let phoneParams: [String: Any] = ["keyData": "mobileNo", "valueData": self.phoneNumber!]
-        let phoneRequest: [String: Any] = ["phones": phoneParams]
+        let phoneParams = ["keyData": "mobileNo", "valueData": self.phoneNumber!]
+        let phoneRequest = ["phones": phoneParams]
         
         let deviceToken = GKPushHandler.shared.deviceID
         
         // Current device params
-        let deviceParams: [String: Any] = ["deviceId": UIDevice.idForVendor()!, "deviceType": "2", "deviceToken": deviceToken]
+        let deviceParams = ["deviceId": UIDevice.idForVendor()!, "deviceType": "2", "deviceToken": deviceToken]
         
         // Current user params
         let userContact: [String: Any] = ["userContact": phoneRequest, "userDevice": deviceParams, "countryCode": countryCode]
