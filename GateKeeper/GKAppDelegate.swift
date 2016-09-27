@@ -49,4 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ToastManager.shared.style = style
     }
+    
+    // MARK: - Notifications
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        
+    }
 }

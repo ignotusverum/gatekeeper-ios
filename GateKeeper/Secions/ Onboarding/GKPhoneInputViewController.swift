@@ -1,4 +1,4 @@
-//
+
 //  GKPhoneInputViewController.swift
 //  GateKeeper
 //
@@ -76,6 +76,11 @@ class GKPhoneInputViewController: UIViewController {
         if phoneNubmerTextField.isValidNumber {
          
             let phoneParams = ["keyData": "mobileNo", "valueData": ""]
+            let phoneRequest = ["phones": phoneParams]
+            
+            let deviceParams = ["deviceId": UIDevice.idForVendor(), "deviceType": "2", ]
+            
+//            let userContact = ["userContact": phoneRequest, "userDevice": ""]
             
         }
         else {

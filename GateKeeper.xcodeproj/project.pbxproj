@@ -33,6 +33,7 @@
 		F5A011351D99B4D4000C5904 /* GKCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011341D99B4D4000C5904 /* GKCopy.swift */; };
 		F5A011391D99F7B6000C5904 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011381D99F7B6000C5904 /* Toast.swift */; };
 		F5A0113B1D99F8EE000C5904 /* GKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0113A1D99F8EE000C5904 /* GKColor.swift */; };
+		F5A0113E1D99FC05000C5904 /* GKPushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0113D1D99FC05000C5904 /* GKPushHandler.swift */; };
 		F5D60DE11D90A831003E8F4A /* GKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */; };
 		F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DE41D90A831003E8F4A /* Main.storyboard */; };
 		F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D60DEA1D90A831003E8F4A /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		F5A011341D99B4D4000C5904 /* GKCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKCopy.swift; sourceTree = "<group>"; };
 		F5A011381D99F7B6000C5904 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F5A0113A1D99F8EE000C5904 /* GKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKColor.swift; sourceTree = "<group>"; };
+		F5A0113D1D99FC05000C5904 /* GKPushHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPushHandler.swift; sourceTree = "<group>"; };
 		F5D60DDD1D90A831003E8F4A /* GateKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D60DE01D90A831003E8F4A /* GKAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKAppDelegate.swift; sourceTree = "<group>"; };
 		F5D60DE51D90A831003E8F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,15 @@
 				F5A011381D99F7B6000C5904 /* Toast.swift */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		F5A0113C1D99FBEE000C5904 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F5A0113D1D99FC05000C5904 /* GKPushHandler.swift */,
+			);
+			name = "New Group";
+			path = "Push Notifications";
 			sourceTree = "<group>";
 		};
 		F5D60DD41D90A831003E8F4A = {
@@ -259,6 +270,7 @@
 		F5D60E191D90B612003E8F4A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F5A0113C1D99FBEE000C5904 /* New Group */,
 				F5A011311D99B365000C5904 /* Controllers */,
 				F5D60E2E1D9184FD003E8F4A /* Extensions */,
 				F5D60E1C1D90DCE5003E8F4A /* GKNetworkingManager.swift */,
@@ -469,6 +481,7 @@
 				F5A011391D99F7B6000C5904 /* Toast.swift in Sources */,
 				F5A0113B1D99F8EE000C5904 /* GKColor.swift in Sources */,
 				F5D60E221D90E13D003E8F4A /* GKTutorialViewController.swift in Sources */,
+				F5A0113E1D99FC05000C5904 /* GKPushHandler.swift in Sources */,
 				F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
