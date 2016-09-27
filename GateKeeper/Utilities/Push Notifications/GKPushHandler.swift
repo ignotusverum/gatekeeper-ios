@@ -18,12 +18,14 @@ class GKPushHandler: NSObject {
     
     // Shared Manager
     
-    class func deviceTokenString(deviceToken: NSData)-> String {
+    class func deviceTokenString(deviceToken: Data)-> String {
         
         let characterSet :CharacterSet = CharacterSet(charactersIn: "<>")
         let deviceTokenString: String = (deviceToken.description)
             .trimmingCharacters(in: characterSet)
             .replacingOccurrences(of: " ", with: "")
+        
+        self.shared.deviceID = deviceTokenString
         
         return deviceTokenString
     }
@@ -57,7 +59,7 @@ class GKPushHandler: NSObject {
         }
     }
     
-    class func sendPushToken(pushToken: NSData, success: ()-> Void, failure: ()-> Void) {
+    class func sendPushToken(pushToken: Data, success: ()-> Void, failure: ()-> Void) {
         
         let pushTokenString = self.deviceTokenString(deviceToken: pushToken)
         
