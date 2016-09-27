@@ -68,7 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        GKPushHandler.registerForPushNotifications(UIApplication.sharedApplication())
     }
     
-    
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
         if notificationSettings.types != .none {
             application.registerForRemoteNotifications()

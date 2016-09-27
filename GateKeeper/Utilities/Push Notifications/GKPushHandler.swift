@@ -14,7 +14,7 @@ class GKPushHandler: NSObject {
     static let shared = GKPushHandler()
     
     // Device ID
-    var deviceID: String?
+    var deviceID = "1234567890"
     
     // Shared Manager
     

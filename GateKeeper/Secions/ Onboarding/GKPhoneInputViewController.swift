@@ -72,20 +72,35 @@ class GKPhoneInputViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func generateCodeButtonPressed(_ sender: UIButton) {
-     
-        if phoneNubmerTextField.isValidNumber {
-         
-            let phoneParams = ["keyData": "mobileNo", "valueData": ""]
-            let phoneRequest = ["phones": phoneParams]
+        
+        // Validation check + Country code check
+        guard let countryCode = self.countryCodeTextField.text, countryCodeTextField.text!.length > 0, phoneNubmerTextField.isValidNumber else {
             
-            let deviceParams = ["deviceId": UIDevice.idForVendor(), "deviceType": "2", ]
-            
-//            let userContact = ["userContact": phoneRequest, "userDevice": ""]
-            
-        }
-        else {
-            
+            // Show alert
             self.view.makeToast("Please enter country code")
+            
+            return
+        }
+        
+        // Buiding params
+        let phoneParams = ["keyData": "mobileNo", "valueData": ""]
+        let phoneRequest = ["phones": phoneParams]
+        
+        let deviceToken = GKPushHandler.shared.deviceID
+        
+        // Current device params
+        let deviceParams = ["deviceId": UIDevice.idForVendor(), "deviceType": "2", "deviceToken": deviceToken]
+        
+        // Current user params
+        let userContact: [String: Any] = ["userContact": phoneRequest, "userDevice": deviceParams, "countryCode": countryCode]
+        
+        // Post request with params
+        let netman = GKNetworkingManager.sharedManager
+        netman.request(.post, path: "getOtp", parameters: userContact).then { result-> Void in
+            print(result)
+            
+            }.catch { error in
+                print(error)
         }
     }
 }
