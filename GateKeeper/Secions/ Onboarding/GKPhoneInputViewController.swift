@@ -19,7 +19,20 @@ class GKPhoneInputViewController: UIViewController {
     @IBOutlet weak var countryCodeTextField: UITextField!
     
     // Phone input
+    // Automatically formats with local region
     @IBOutlet weak var phoneNubmerTextField: PhoneNumberTextField!
+    
+    // Formatted phone number
+    var phoneNumber: String? {
+        
+        do {
+            let phoneNumber = try PhoneNumber(rawNumber: self.phoneNubmerTextField.text!)
+            
+            return phoneNumber.toE164()
+        } catch { }
+        
+        return nil
+    }
 
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -30,8 +43,6 @@ class GKPhoneInputViewController: UIViewController {
         
         // Custom UI setup
         self.customSetup()
-        
-        print(Locale.current.regionCode)
     }
     
     // MARK: - Custom Setup
@@ -49,8 +60,12 @@ class GKPhoneInputViewController: UIViewController {
             let countryCode = phoneNumberKit.codeForCountry(currentRegion)
             
             if let countryCode = countryCode {
+            
+                // Int to string
+                let countryCodeString = String(countryCode)
                 
-                self.countryCodeTextField.text = "+" + String(countryCode)
+                // Setting country code for region
+                self.countryCodeTextField.text = "+" + countryCodeString
             }
         }
     }
@@ -58,6 +73,14 @@ class GKPhoneInputViewController: UIViewController {
     // MARK: - Actions
     @IBAction func generateCodeButtonPressed(_ sender: UIButton) {
      
-        print("generate code button pressed")
+        if phoneNubmerTextField.isValidNumber {
+         
+            let phoneParams = ["keyData": "mobileNo", "valueData": ""]
+            
+        }
+        else {
+            
+            self.view.makeToast("Please enter country code")
+        }
     }
 }

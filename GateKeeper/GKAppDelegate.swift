@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Fetching shared data
         self.fetchTerms()
         
+        // Alert setup
+        self.modalAlertSetup()
+        
         return true
     }
     
@@ -32,5 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }.catch { error in
                 print(error)
         }
+    }
+    
+    // MARK: - UI Setup
+    func modalAlertSetup() {
+        
+        // create a new style
+        var style = ToastStyle()
+        
+        // this is just one of many style options
+        style.backgroundColor = UIColor.GKBlueColor()
+        style.messageFont = UIFont.appBoldFont(size: 15.0)
+        
+        ToastManager.shared.style = style
     }
 }
