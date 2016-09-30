@@ -23,12 +23,12 @@ class GKPhoneInputViewController: UIViewController {
     @IBOutlet weak var phoneNubmerTextField: PhoneNumberTextField!
     
     // Formatted phone number
-    var phoneNumber: String? {
+    var phoneNumber: PhoneNumber? {
         
         do {
             let phoneNumber = try PhoneNumber(rawNumber: self.phoneNubmerTextField.text!)
             
-            return phoneNumber.toE164()
+            return phoneNumber
         } catch { }
         
         return nil
@@ -74,7 +74,7 @@ class GKPhoneInputViewController: UIViewController {
     @IBAction func generateCodeButtonPressed(_ sender: UIButton) {
         
         // Validation check + Country code check
-        guard let countryCode = self.countryCodeTextField.text, countryCodeTextField.text!.length > 0, phoneNubmerTextField.isValidNumber else {
+        guard let countryCode = self.phoneNumber?.countryCode, countryCodeTextField.text!.length > 0, phoneNubmerTextField.isValidNumber else {
             
             // Show alert
             self.view.makeToast("Please enter country code")
@@ -83,7 +83,10 @@ class GKPhoneInputViewController: UIViewController {
         }
         
         // Buiding params - different phone format
-        let phoneParams = ["keyData": "mobileNo", "valueData": self.phoneNumber!]
+        
+        let phoneString = "\(self.phoneNumber!.countryCode)\(self.phoneNumber!.nationalNumber)"
+        
+        let phoneParams = ["keyData": "mobileNo", "valueData": phoneString]
         let phoneRequest = ["phones": phoneParams]
         
         let deviceToken = GKPushHandler.shared.deviceID
