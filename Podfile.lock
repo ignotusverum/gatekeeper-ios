@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.0.0)
-  - EZSwiftExtensions (1.6)
+  - EZSwiftExtensions (1.7)
   - EZSwipeController (0.5)
   - PhoneNumberKit (0.8.5):
     - PhoneNumberKit/PhoneNumberKitCore (= 0.8.5)
@@ -8,16 +8,16 @@ PODS:
   - PhoneNumberKit/PhoneNumberKitCore (0.8.5)
   - PhoneNumberKit/UIKit (0.8.5):
     - PhoneNumberKit/PhoneNumberKitCore
-  - PromiseKit (4.0.1):
-    - PromiseKit/Foundation (= 4.0.1)
-    - PromiseKit/QuartzCore (= 4.0.1)
-    - PromiseKit/UIKit (= 4.0.1)
-  - PromiseKit/CorePromise (4.0.1)
-  - PromiseKit/Foundation (4.0.1):
+  - PromiseKit (4.0.3):
+    - PromiseKit/Foundation (= 4.0.3)
+    - PromiseKit/QuartzCore (= 4.0.3)
+    - PromiseKit/UIKit (= 4.0.3)
+  - PromiseKit/CorePromise (4.0.3)
+  - PromiseKit/Foundation (4.0.3):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.0.1):
+  - PromiseKit/QuartzCore (4.0.3):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.0.1):
+  - PromiseKit/UIKit (4.0.3):
     - PromiseKit/CorePromise
   - SwiftyJSON (3.0.0)
 
@@ -42,7 +42,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EZSwipeController:
-    :commit: a040876ed3e5873abdf2534f52ea04e99eb6e5bf
+    :commit: 1184e8d5d1ee851f3a8b0e0fc305ae32729d71cb
     :git: git@github.com:pattogato/EZSwipeController.git
   PhoneNumberKit:
     :commit: 46a6414d84b92ec2dfc6121c379d222ae3ffa4a4
@@ -53,10 +53,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
-  EZSwiftExtensions: 6c5e29ae473b3d2edbf5472eab0a3d7bdb20215c
+  EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   EZSwipeController: 01cc43b319e133b6dbfb25bfdc78617a1560e952
   PhoneNumberKit: 5668a7af19d2e566d92831a632ee80f5047eff75
-  PromiseKit: ae9e7f97ee758e23f7b9c5e80380a2e78d6338c5
+  PromiseKit: dfe8fcc6445674fb23378d89990838c1cbdbf05a
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
 PODFILE CHECKSUM: df55f1ca4d7bef1641c6e791a678ad067b570192
