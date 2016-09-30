@@ -87,7 +87,7 @@ class GKPhoneInputViewController: UIViewController {
         let phoneString = "\(self.phoneNumber!.countryCode)\(self.phoneNumber!.nationalNumber)"
         
         let phoneParams = ["keyData": "mobileNo", "valueData": phoneString]
-        let phoneRequest = ["phones": phoneParams]
+        let phoneRequest = ["phones": [phoneParams]]
         
         let deviceToken = GKPushHandler.shared.deviceID
         
