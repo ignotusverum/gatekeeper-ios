@@ -54,6 +54,8 @@
 		F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E2F1D918527003E8F4A /* GKViewController.swift */; };
 		F5DC7F221DA003F800CB048E /* GKPhoneValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F211DA003F800CB048E /* GKPhoneValidationViewController.swift */; };
 		F5DC7F251DA0382700CB048E /* GKUserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F241DA0382700CB048E /* GKUserAdapter.swift */; };
+		F5DC7F271DA0620400CB048E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DC7F261DA0620400CB048E /* Account.storyboard */; };
+		F5DC7F2A1DA0624200CB048E /* GKAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F291DA0624200CB048E /* GKAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		F5D60E2F1D918527003E8F4A /* GKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKViewController.swift; sourceTree = "<group>"; };
 		F5DC7F211DA003F800CB048E /* GKPhoneValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPhoneValidationViewController.swift; sourceTree = "<group>"; };
 		F5DC7F241DA0382700CB048E /* GKUserAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKUserAdapter.swift; sourceTree = "<group>"; };
+		F5DC7F261DA0620400CB048E /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		F5DC7F291DA0624200CB048E /* GKAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 				F5D60DE41D90A831003E8F4A /* Main.storyboard */,
 				F5D60E1A1D90B6BC003E8F4A /* Onboarding.storyboard */,
 				F5D60DEC1D90A831003E8F4A /* LaunchScreen.storyboard */,
+				F5DC7F261DA0620400CB048E /* Account.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 		F5D60DF81D90B07E003E8F4A /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F5DC7F281DA0622A00CB048E /* Account */,
 				F5D60E1E1D90E008003E8F4A /* Onboarding */,
 			);
 			name = Sections;
@@ -326,6 +332,14 @@
 			path = Adapters;
 			sourceTree = "<group>";
 		};
+		F5DC7F281DA0622A00CB048E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				F5DC7F291DA0624200CB048E /* GKAccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +417,7 @@
 				F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */,
 				F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */,
 				F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */,
+				F5DC7F271DA0620400CB048E /* Account.storyboard in Resources */,
 				F5D60E1B1D90B6BC003E8F4A /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +495,7 @@
 				F5A011331D99B381000C5904 /* GKNavigationViewController.swift in Sources */,
 				F5D60E1D1D90DCE5003E8F4A /* GKNetworkingManager.swift in Sources */,
 				F5D60E151D90B50D003E8F4A /* GKManagedObject.swift in Sources */,
+				F5DC7F2A1DA0624200CB048E /* GKAccountViewController.swift in Sources */,
 				F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */,
 				F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */,
 				F5A011251D98599F000C5904 /* TMString.swift in Sources */,
