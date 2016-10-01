@@ -95,7 +95,7 @@ class GKPhoneInputViewController: UIViewController {
         }
         
         // Phone Number Validation
-        guard let phoneNumber = self.phoneNumber?.toNational(), phoneNubmerTextField.isValidNumber else {
+        guard let phoneNumber = self.phoneNumber?.nationalNumber, phoneNubmerTextField.isValidNumber else {
             
             // Show alert
             self.view.makeToast("Please enter valid phone number.")
@@ -103,16 +103,21 @@ class GKPhoneInputViewController: UIViewController {
             return
         }
         
+        GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
+        
         // Generate code number
-        GKUserAdapter.generateValidation(forPhone: phoneNumber, countryCode: String(countryCode)).then { result in
+        GKUserAdapter.generateValidation(forPhone: String(phoneNumber), countryCode: String(countryCode)).then { result in
             
             // Success - go to code validation
             self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
+            
+            GMDCircleLoader.hide(from: self.view, animated: true)
             
             }.catch { error in
                 
                 // Show alert
                 self.view.makeToast("Something went wrong, please try again.")
+                GMDCircleLoader.hide(from: self.view, animated: true)
         }
     }
 }

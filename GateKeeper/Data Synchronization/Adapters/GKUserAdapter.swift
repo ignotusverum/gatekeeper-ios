@@ -28,7 +28,7 @@ class GKUserAdapter: GKSynchronizerAdapter {
             let deviceParams = ["deviceId": UIDevice.idForVendor()!, "deviceType": "2", "deviceToken": deviceToken]
             
             // Current user params
-            let userContact: [String: Any] = ["userContact": phoneRequest, "userDevice": deviceParams, "countryCode": String(countryCode)]
+            let userContact: [String: Any] = ["userContact": phoneRequest, "userDevice": deviceParams, "countryCode": countryCode]
             
             // Post request with params
             let netman = GKNetworkingManager.sharedManager
