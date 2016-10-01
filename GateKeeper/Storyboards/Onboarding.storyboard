@@ -334,10 +334,11 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert your code" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-2K-n59">
-                                <frame key="frameInset" minX="56" minY="108" width="261" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert your code" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-2K-n59">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hzp-sL-u3J"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                 <connections>
@@ -345,28 +346,15 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code has been sent to you via message. It will expire after 30 minutes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-QE-wMf">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="M0z-Uu-eab"/>
-                                    <constraint firstAttribute="width" constant="290" id="O6p-ex-EuN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="M0z-Uu-eab"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="M0z-Uu-eab"/>
-                                    </mask>
-                                </variation>
                             </label>
-                            <button opaque="NO" tag="301" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-sT-H4d">
-                                <frame key="frameInset" minX="42" minY="205" width="290" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-sT-H4d">
                                 <color key="backgroundColor" red="0.0" green="0.37254901959999998" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="LH0-fa-8Mq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                 <state key="normal" title="Validate">
                                     <color key="titleColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -378,8 +366,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5nG-QE-wMf" firstAttribute="top" secondItem="dp9-gj-zDQ" secondAttribute="bottom" constant="30" id="M82-9h-kEt"/>
-                            <constraint firstItem="5nG-QE-wMf" firstAttribute="centerX" secondItem="9pw-wx-ipJ" secondAttribute="centerX" id="Rs6-Dc-TWp"/>
+                            <constraint firstItem="XPp-2K-n59" firstAttribute="top" secondItem="5nG-QE-wMf" secondAttribute="bottom" constant="18" id="3AO-Es-CUP"/>
+                            <constraint firstItem="5nG-QE-wMf" firstAttribute="leading" secondItem="9pw-wx-ipJ" secondAttribute="leadingMargin" constant="26" id="BXi-wQ-sML"/>
+                            <constraint firstItem="exj-fF-1c2" firstAttribute="top" secondItem="VYm-sT-H4d" secondAttribute="bottom" constant="343" id="QLt-dK-mnr"/>
+                            <constraint firstItem="5nG-QE-wMf" firstAttribute="top" secondItem="dp9-gj-zDQ" secondAttribute="bottom" constant="30" id="RDA-AV-wlT"/>
+                            <constraint firstItem="5nG-QE-wMf" firstAttribute="leading" secondItem="VYm-sT-H4d" secondAttribute="leading" id="UxB-Ec-3KV"/>
+                            <constraint firstItem="XPp-2K-n59" firstAttribute="leading" secondItem="9pw-wx-ipJ" secondAttribute="leadingMargin" constant="40" id="UzO-wB-zt1"/>
+                            <constraint firstItem="VYm-sT-H4d" firstAttribute="top" secondItem="XPp-2K-n59" secondAttribute="bottom" constant="57" id="VOh-iB-rCa"/>
+                            <constraint firstItem="5nG-QE-wMf" firstAttribute="centerX" secondItem="XPp-2K-n59" secondAttribute="centerX" id="WZa-Tl-Kpr"/>
+                            <constraint firstItem="5nG-QE-wMf" firstAttribute="centerX" secondItem="9pw-wx-ipJ" secondAttribute="centerX" id="Wos-Pf-kkL"/>
+                            <constraint firstItem="5nG-QE-wMf" firstAttribute="trailing" secondItem="VYm-sT-H4d" secondAttribute="trailing" id="u39-yC-Z6y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UVx-Zc-TO5">

@@ -75,6 +75,12 @@ class GKPhoneValidationViewController: UIViewController {
                     return
                 }
                 
+                if let success = result?["success"].bool {
+                    if success == true {
+                        // Perform account segue
+                    }
+                }
+                
                 }.catch { error in
              
                     self.showError()
