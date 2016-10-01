@@ -40,5 +40,17 @@ class GKPhoneValidationViewController: UIViewController {
         let sharedCopy = GKCopy.shared
         
         self.titleLabel.attributedText = sharedCopy.phoneValidation
+        
+        // Become first responder
+        self.phoneValidationField.becomeFirstResponder()
+    }
+}
+
+extension GKPhoneValidationViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // lenght should be < 8
+        return textField.text!.length < 8
     }
 }
