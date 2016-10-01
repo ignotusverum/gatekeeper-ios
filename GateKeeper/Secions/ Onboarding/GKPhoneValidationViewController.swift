@@ -69,7 +69,11 @@ class GKPhoneValidationViewController: UIViewController {
             // Validation request
             GKUserAdapter.validate(validationCode, tempUserID: self.tempUserID).then { result-> Void in
                 
-                
+                if let message = result?["message"].string {
+                    
+                    self.view.makeToast(message)
+                    return
+                }
                 
                 }.catch { error in
              
