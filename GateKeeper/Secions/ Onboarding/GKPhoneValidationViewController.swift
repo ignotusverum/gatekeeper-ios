@@ -44,13 +44,18 @@ class GKPhoneValidationViewController: UIViewController {
         // Become first responder
         self.phoneValidationField.becomeFirstResponder()
     }
+    
+    // MARK: - Actions
+    @IBAction func validatePhoneButtonTapped(_ sender: UIButton) {
+        
+    }
 }
 
 extension GKPhoneValidationViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        // lenght should be < 8
-        return textField.text!.length < 8
+        // lenght should be < 8 and can delete
+        return textField.text!.length < 8 || string == ""
     }
 }

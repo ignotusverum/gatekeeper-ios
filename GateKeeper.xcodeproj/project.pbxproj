@@ -53,6 +53,7 @@
 		F5D60E2D1D91848A003E8F4A /* GKTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E2C1D91848A003E8F4A /* GKTermsViewController.swift */; };
 		F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D60E2F1D918527003E8F4A /* GKViewController.swift */; };
 		F5DC7F221DA003F800CB048E /* GKPhoneValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F211DA003F800CB048E /* GKPhoneValidationViewController.swift */; };
+		F5DC7F251DA0382700CB048E /* GKUserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F241DA0382700CB048E /* GKUserAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		F5D60E2C1D91848A003E8F4A /* GKTermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKTermsViewController.swift; sourceTree = "<group>"; };
 		F5D60E2F1D918527003E8F4A /* GKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKViewController.swift; sourceTree = "<group>"; };
 		F5DC7F211DA003F800CB048E /* GKPhoneValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPhoneValidationViewController.swift; sourceTree = "<group>"; };
+		F5DC7F241DA0382700CB048E /* GKUserAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKUserAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		F5D60DF61D90B05F003E8F4A /* Data Synchronization */ = {
 			isa = PBXGroup;
 			children = (
+				F5DC7F231DA0380800CB048E /* Adapters */,
 				F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */,
 				F5A011281D986190000C5904 /* GKSynchronizerAdapter.swift */,
 			);
@@ -313,6 +316,14 @@
 				F5A0112F1D99B2FD000C5904 /* GKNavigationBar.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5DC7F231DA0380800CB048E /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				F5DC7F241DA0382700CB048E /* GKUserAdapter.swift */,
+			);
+			path = Adapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,6 +491,7 @@
 				F5DC7F221DA003F800CB048E /* GKPhoneValidationViewController.swift in Sources */,
 				F5A011351D99B4D4000C5904 /* GKCopy.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
+				F5DC7F251DA0382700CB048E /* GKUserAdapter.swift in Sources */,
 				F5A0112D1D99AFE3000C5904 /* GKPhoneInputViewController.swift in Sources */,
 				F5A011291D986190000C5904 /* GKSynchronizerAdapter.swift in Sources */,
 				F5A011391D99F7B6000C5904 /* Toast.swift in Sources */,

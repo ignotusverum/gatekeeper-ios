@@ -86,45 +86,33 @@ class GKPhoneInputViewController: UIViewController {
     @IBAction func generateCodeButtonPressed(_ sender: UIButton) {
         
         // Validation check + Country code check
-        guard let countryCode = self.phoneNumber?.countryCode, countryCodeTextField.text!.length > 0, phoneNubmerTextField.isValidNumber else {
+        guard let countryCode = self.phoneNumber?.countryCode, countryCodeTextField.text!.length > 0 else {
             
             // Show alert
-            self.view.makeToast("Please enter country code")
+            self.view.makeToast("Please enter country code.")
             
             return
         }
         
-        // Buiding params - different phone format
-        let phoneString = "\(self.phoneNumber!.countryCode)\(self.phoneNumber!.nationalNumber)"
-        
-        let phoneParams = ["keyData": "mobileNo", "valueData": phoneString]
-        let phoneRequest = ["phones": [phoneParams]]
-        
-        let deviceToken = GKPushHandler.shared.deviceID
-        
-        // Current device params
-        let deviceParams = ["deviceId": UIDevice.idForVendor()!, "deviceType": "2", "deviceToken": deviceToken]
-        
-        // Current user params
-        let userContact: [String: Any] = ["userContact": phoneRequest, "userDevice": deviceParams, "countryCode": String(countryCode)]
-        
-        GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
-        
-        // Post request with params
-        let netman = GKNetworkingManager.sharedManager
-        netman.request(.post, path: "getOtp", parameters: userContact).then { result-> Void in
+        // Phone Number Validation
+        guard let phoneNumber = self.phoneNumber?.toNational(), phoneNubmerTextField.isValidNumber else {
             
-            // Success - segue to validation
+            // Show alert
+            self.view.makeToast("Please enter valid phone number.")
+            
+            return
+        }
+        
+        // Generate code number
+        GKUserAdapter.generateValidation(forPhone: phoneNumber, countryCode: String(countryCode)).then { result in
+            
+            // Success - go to code validation
             self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
-            
-            GMDCircleLoader.hide(from: self.view, animated: true)
             
             }.catch { error in
                 
                 // Show alert
-                self.view.makeToast(error.localizedDescription)
-                
-                GMDCircleLoader.hide(from: self.view, animated: true)
+                self.view.makeToast("Something went wrong, please try again.")
         }
     }
 }
