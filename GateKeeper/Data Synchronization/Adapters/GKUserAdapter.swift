@@ -49,7 +49,7 @@ class GKUserAdapter: GKSynchronizerAdapter {
     }
     
     // Validate generated code
-    class func validate(_ code: String)-> Promise<JSON?> {
+    class func validate(_ code: String, tempUserID: String)-> Promise<JSON?> {
         
         return Promise { fulfill, reject in
             
@@ -58,9 +58,16 @@ class GKUserAdapter: GKSynchronizerAdapter {
             // Current device params
             let deviceParams = ["deviceId": UIDevice.idForVendor()!, "deviceType": "2", "deviceToken": deviceToken]
             
+            let requestParams: [String: Any] = ["id": tempUserID, "password": code, "userDevice": deviceParams]
             
-            
-//            let parameters = [id: DEFAULTS.value(forKey: dUser_ID) as! String,"password":self.phoneTextField.text!,userDevice:userDeviceDict] as [String : Any]
+            let netman = GKNetworkingManager.sharedManager
+            netman.request(.post, path: "otpVerification", parameters: requestParams).then { result-> Void in
+             
+                fulfill(result)
+                }.catch { error in
+                    
+                    reject(error)
+            }
         }
     }
 }

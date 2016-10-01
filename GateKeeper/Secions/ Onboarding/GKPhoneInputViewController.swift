@@ -120,9 +120,11 @@ class GKPhoneInputViewController: UIViewController {
             }
             else {
             
+                // Show alert
                 self.view.makeToast("Something went wrong, please try again.")
                 GMDCircleLoader.hide(from: self.view, animated: true)
             }
+            
             }.catch { error in
                 
                 // Show alert
