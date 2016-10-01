@@ -10,6 +10,16 @@ import UIKit
 
 class GKAccountViewController: UIViewController {
 
+    // User image
+    @IBOutlet weak var profileImageView: UIImageView!
     
-
+    // User tableview data
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Controller lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
 }
