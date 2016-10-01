@@ -61,7 +61,7 @@ class GKPushHandler: NSObject {
     
     class func sendPushToken(pushToken: Data, success: ()-> Void, failure: ()-> Void) {
         
-        let pushTokenString = self.deviceTokenString(deviceToken: pushToken)
+//        let pushTokenString = self.deviceTokenString(deviceToken: pushToken)
         
         // Register call
     }
