@@ -106,7 +106,7 @@ class GKPhoneInputViewController: UIViewController {
         GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
         
         // Generate code number
-        GKUserAdapter.generateValidation(forPhone: String(phoneNumber), countryCode: String(countryCode)).then { result in
+        GKUserAdapter.generateValidation(forPhone: String(phoneNumber), countryCode: String(countryCode)).then { result-> Void in
             
             // Success - go to code validation
             self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
