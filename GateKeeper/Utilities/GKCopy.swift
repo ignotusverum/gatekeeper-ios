@@ -13,7 +13,7 @@ class GKCopy: NSObject {
     static let shared = GKCopy()
     
     // Phone Input Attirbuted Copy
-    var phoneInput: NSAttributedString? {
+    var phoneInput: NSAttributedString {
         
         // A Confirmation Code will be generated & sent through SMS to the entered mobile number
         
@@ -32,4 +32,18 @@ class GKCopy: NSObject {
         return resultString
     }
     
+    var phoneValidation: NSAttributedString? {
+       
+        // *Code* has been sent to you via *message*. It will expire after 30 minutes.
+        
+        let code = NSMutableAttributedString(string: "Code").bold()
+        let message = NSMutableAttributedString(string: "message").bold()
+        
+        let resultString = NSMutableAttributedString(attributedString: code)
+        resultString.append(NSAttributedString(string: " has been sent to you via "))
+        resultString.append(message)
+        resultString.append(NSAttributedString(string: ". It will expire after 30 minutes."))
+        
+        return resultString
+    }
 }

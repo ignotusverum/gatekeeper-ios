@@ -14,7 +14,12 @@ extension UIColor {
         return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
     }
     
-    class func GKBlueColor()-> UIColor {
-        return ColorWith(red: 0.0, green: 95.0, blue: 159.0, alpha: 1.0)
+    // MARK: - Application colors
+    open class var GKBlueColor: UIColor {
+        return UIColor.ColorWith(red: 0.0, green: 95.0, blue: 159.0, alpha: 1.0)
+    }
+    
+    open class var GKBorderColor: UIColor {
+       return UIColor.ColorWith(red: 219.0, green: 220.0, blue: 221.0, alpha: 1.0)
     }
 }

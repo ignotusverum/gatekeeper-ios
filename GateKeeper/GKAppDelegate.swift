@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         var style = ToastStyle()
         
         // this is just one of many style options
-        style.backgroundColor = UIColor.GKBlueColor()
+        style.backgroundColor = UIColor.GKBlueColor
         style.messageFont = UIFont.appBoldFont(size: 15.0)
         
         ToastManager.shared.style = style

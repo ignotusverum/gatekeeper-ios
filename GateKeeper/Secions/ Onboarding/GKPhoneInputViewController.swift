@@ -16,11 +16,23 @@ class GKPhoneInputViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     // Country input
-    @IBOutlet weak var countryCodeTextField: UITextField!
+    @IBOutlet weak var countryCodeTextField: UITextField! {
+        didSet {
+            
+            countryCodeTextField.layer.borderWidth = 1.0
+            countryCodeTextField.layer.borderColor = UIColor.GKBorderColor.cgColor
+        }
+    }
     
     // Phone input
     // Automatically formats with local region
-    @IBOutlet weak var phoneNubmerTextField: PhoneNumberTextField!
+    @IBOutlet weak var phoneNubmerTextField: PhoneNumberTextField! {
+        didSet {
+            
+            phoneNubmerTextField.layer.borderWidth = 1.0
+            phoneNubmerTextField.layer.borderColor = UIColor.GKBorderColor.cgColor
+        }
+    }
     
     // Formatted phone number
     var phoneNumber: PhoneNumber? {
@@ -83,7 +95,6 @@ class GKPhoneInputViewController: UIViewController {
         }
         
         // Buiding params - different phone format
-        
         let phoneString = "\(self.phoneNumber!.countryCode)\(self.phoneNumber!.nationalNumber)"
         
         let phoneParams = ["keyData": "mobileNo", "valueData": phoneString]
@@ -97,6 +108,8 @@ class GKPhoneInputViewController: UIViewController {
         // Current user params
         let userContact: [String: Any] = ["userContact": phoneRequest, "userDevice": deviceParams, "countryCode": String(countryCode)]
         
+        GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
+        
         // Post request with params
         let netman = GKNetworkingManager.sharedManager
         netman.request(.post, path: "getOtp", parameters: userContact).then { result-> Void in
@@ -104,10 +117,14 @@ class GKPhoneInputViewController: UIViewController {
             // Success - segue to validation
             self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
             
+            GMDCircleLoader.hide(from: self.view, animated: true)
+            
             }.catch { error in
                 
                 // Show alert
                 self.view.makeToast(error.localizedDescription)
+                
+                GMDCircleLoader.hide(from: self.view, animated: true)
         }
     }
 }
