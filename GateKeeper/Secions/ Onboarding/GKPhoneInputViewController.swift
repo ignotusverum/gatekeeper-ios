@@ -101,11 +101,13 @@ class GKPhoneInputViewController: UIViewController {
         let netman = GKNetworkingManager.sharedManager
         netman.request(.post, path: "getOtp", parameters: userContact).then { result-> Void in
             
-            print(result)
+            // Success - segue to validation
+            self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
             
             }.catch { error in
                 
-                print(error)
+                // Show alert
+                self.view.makeToast(error.localizedDescription)
         }
     }
 }

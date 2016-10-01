@@ -314,7 +314,7 @@
                         <outlet property="countryCodeTextField" destination="z2r-XU-7bW" id="VPx-rC-P5g"/>
                         <outlet property="descriptionLabel" destination="53G-Zr-ha8" id="PeV-r6-JBc"/>
                         <outlet property="phoneNubmerTextField" destination="5sJ-Yi-BL9" id="0mU-vn-kU4"/>
-                        <segue destination="TR8-uW-rrg" kind="show" id="6oc-iz-hUx"/>
+                        <segue destination="TR8-uW-rrg" kind="show" identifier="phoneValidationSegue" id="6oc-iz-hUx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6o-zo-bHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -359,7 +359,7 @@
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code has been sent to you via message. It will expire after 30 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-QE-wMf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code has been sent to you via message. It will expire after 30 minutes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-QE-wMf">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="M0z-Uu-eab"/>
                                 </constraints>
