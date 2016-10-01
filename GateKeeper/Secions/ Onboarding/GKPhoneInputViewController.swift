@@ -100,9 +100,11 @@ class GKPhoneInputViewController: UIViewController {
         // Post request with params
         let netman = GKNetworkingManager.sharedManager
         netman.request(.post, path: "getOtp", parameters: userContact).then { result-> Void in
+            
             print(result)
             
             }.catch { error in
+                
                 print(error)
         }
     }
