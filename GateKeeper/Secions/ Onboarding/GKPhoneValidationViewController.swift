@@ -63,6 +63,29 @@ class GKPhoneValidationViewController: UIViewController {
     // MARK: - Utilities
     func validatePhoneNumber() {
         
+        // Text check
+        if let validationCode = self.phoneValidationField.text {
+            
+            // Validation request
+            GKUserAdapter.validate(validationCode, tempUserID: self.tempUserID).then { result-> Void in
+                
+                
+                
+                }.catch { error in
+             
+                    self.showError()
+            }
+        }
+        else {
+            
+            self.showError()
+        }
+    }
+    
+    // MARK: - Utilities
+    func showError() {
+        
+        self.view.makeToast("Something went wrong, please try again.")
     }
 }
 

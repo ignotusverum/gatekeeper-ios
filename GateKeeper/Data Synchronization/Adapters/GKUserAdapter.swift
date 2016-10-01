@@ -38,6 +38,11 @@ class GKUserAdapter: GKSynchronizerAdapter {
                     
                     fulfill(userID)
                 }
+                    // If it's already mapped - int
+                else if let userID = result["data"].int {
+                    
+                    fulfill(String(userID))
+                }
                 
                 fulfill(nil)
                 
