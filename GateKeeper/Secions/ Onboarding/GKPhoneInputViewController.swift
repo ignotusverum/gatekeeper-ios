@@ -45,6 +45,9 @@ class GKPhoneInputViewController: UIViewController {
         
         return nil
     }
+    
+    // Response result - temporary user id
+    private var tempUserID: String?
 
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -108,16 +111,33 @@ class GKPhoneInputViewController: UIViewController {
         // Generate code number
         GKUserAdapter.generateValidation(forPhone: String(phoneNumber), countryCode: String(countryCode)).then { result-> Void in
             
-            // Success - go to code validation
-            self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
+            if let userID = result {
+                
+                self.tempUserID = userID
+                
+                // Success - go to code validation
+                self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
+            }
+            else {
             
-            GMDCircleLoader.hide(from: self.view, animated: true)
-            
+                self.view.makeToast("Something went wrong, please try again.")
+                GMDCircleLoader.hide(from: self.view, animated: true)
+            }
             }.catch { error in
                 
                 // Show alert
                 self.view.makeToast("Something went wrong, please try again.")
                 GMDCircleLoader.hide(from: self.view, animated: true)
+        }
+    }
+    
+    // MARK: - Segue handling
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "phoneValidationSegue", let tempUserID = self.tempUserID {
+            
+            // Passing user id
+            let controller = segue.destination as? GKPhoneValidationViewController
+            controller?.tempUserID = tempUserID
         }
     }
 }

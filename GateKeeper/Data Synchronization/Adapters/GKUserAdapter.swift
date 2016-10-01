@@ -12,7 +12,7 @@ import SwiftyJSON
 class GKUserAdapter: GKSynchronizerAdapter {
 
     // Generate Phone Code Validation Promise
-    class func generateValidation(forPhone phone: String, countryCode: String)-> Promise<JSON?> {
+    class func generateValidation(forPhone phone: String, countryCode: String)-> Promise<String?> {
         
         return Promise { fulfill, reject in
             
@@ -34,12 +34,33 @@ class GKUserAdapter: GKSynchronizerAdapter {
             let netman = GKNetworkingManager.sharedManager
             netman.request(.post, path: "getOtp", parameters: userContact).then { result-> Void in
                 
-                fulfill(result)
+                if let userID = result["data"].string {
+                    
+                    fulfill(userID)
+                }
+                
+                fulfill(nil)
                 
                 }.catch { error in
                     
                     reject(error)
             }
+        }
+    }
+    
+    // Validate generated code
+    class func validate(_ code: String)-> Promise<JSON?> {
+        
+        return Promise { fulfill, reject in
+            
+            let deviceToken = GKPushHandler.shared.deviceID
+            
+            // Current device params
+            let deviceParams = ["deviceId": UIDevice.idForVendor()!, "deviceType": "2", "deviceToken": deviceToken]
+            
+            
+            
+//            let parameters = [id: DEFAULTS.value(forKey: dUser_ID) as! String,"password":self.phoneTextField.text!,userDevice:userDeviceDict] as [String : Any]
         }
     }
 }

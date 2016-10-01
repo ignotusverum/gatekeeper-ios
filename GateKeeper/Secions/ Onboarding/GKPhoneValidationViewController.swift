@@ -10,6 +10,9 @@ import UIKit
 
 class GKPhoneValidationViewController: UIViewController {
 
+    // Temp user id
+    var tempUserID = ""
+    
     // Phone Validation Field
     @IBOutlet weak var phoneValidationField: UITextField! {
         didSet {
@@ -47,6 +50,18 @@ class GKPhoneValidationViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func validatePhoneButtonTapped(_ sender: UIButton) {
+        
+        if self.phoneValidationField.text!.length > 2 {
+        
+            self.validatePhoneNumber()
+            return
+        }
+        
+        self.view.makeToast("Please enter valid code.")
+    }
+    
+    // MARK: - Utilities
+    func validatePhoneNumber() {
         
     }
 }
