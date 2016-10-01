@@ -12,7 +12,7 @@ extension String {
         
         let attributedString = NSMutableAttributedString(string: self)
         
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(size: 15.0), range: NSRange(location: 0, length: self.length))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont.appBoldFont(size: 17.0), range: NSRange(location: 0, length: self.length))
         attributedString.addAttribute(NSForegroundColorAttributeName, value: color, range: NSRange(location: 0, length: self.length))
         
         return attributedString

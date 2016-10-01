@@ -8,21 +8,29 @@
 
 import UIKit
 import PromiseKit
+import SwiftyJSON
 
 class GKCongif: NSObject {
     
     // Shared Manager
     static let shared = GKCongif()
 
+    var termsString: String?
+    
     // Terms request
     class func fetchTerms()-> Promise<String?> {
         
         return Promise { fulfill, reject in
          
             let netman = GKNetworkingManager.sharedManager
-            netman.request(.post, path: "getTermAndCondtion").then { result in
+            netman.request(.post, path: "getTermAndCondtion").then { result-> Void in
                 
-                fulfill(nil)
+                if let termsString = result["data"].string {
+                    fulfill(termsString)
+                }
+                else {
+                    fulfill(nil)
+                }
                 
                 }.catch { error in
                     reject(error)

@@ -31,23 +31,48 @@ class GKTermsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.customSetup()
+        
         // Setting title for navBar
         self.addTitleText(titleText: "Terms & Conditions")
-        
-        // UI Setup
-        self.customSetup()
     }
     
     // MARK: - UI Setup
+    
+    // Scroll to bottom of textView
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.termsTextView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
     func customSetup() {
         
-        GKCongif.fetchTerms()
+        let config = GKCongif.shared
+        
+        // Show Terms if it's stored
+        if let termsString = config.termsString {
+            
+            self.termsTextView.text = termsString
+        }
+        else {
+         
+            GKCongif.fetchTerms().then { resultString-> Void in
+                
+                self.termsTextView.text = resultString
+                
+                }.catch { error in
+                    
+                    self.termsTextView.text = ""
+            }
+        }
     }
     
     // MARK: - Actions
     @IBAction func acceptButtonPressed(_ sender: UIButton) {
         
-        // Perform segue to code generation
+        // Phone input segue
+        self.performSegue(withIdentifier: "phoneInputSegue", sender: nil)
     }
     
     @IBAction func rejectButtonPressed(_ sender: UIButton) {

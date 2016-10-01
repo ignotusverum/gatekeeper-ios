@@ -1,56 +1,64 @@
 PODS:
   - Alamofire (4.0.0)
-  - EZSwiftExtensions (1.6)
+  - EZSwiftExtensions (1.7)
   - EZSwipeController (0.5)
-  - PromiseKit (4.0.1):
-    - PromiseKit/Foundation (= 4.0.1)
-    - PromiseKit/QuartzCore (= 4.0.1)
-    - PromiseKit/UIKit (= 4.0.1)
-  - PromiseKit/CorePromise (4.0.1)
-  - PromiseKit/Foundation (4.0.1):
+  - PhoneNumberKit (0.8.5):
+    - PhoneNumberKit/PhoneNumberKitCore (= 0.8.5)
+    - PhoneNumberKit/UIKit (= 0.8.5)
+  - PhoneNumberKit/PhoneNumberKitCore (0.8.5)
+  - PhoneNumberKit/UIKit (0.8.5):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - PromiseKit (4.0.3):
+    - PromiseKit/Foundation (= 4.0.3)
+    - PromiseKit/QuartzCore (= 4.0.3)
+    - PromiseKit/UIKit (= 4.0.3)
+  - PromiseKit/CorePromise (4.0.3)
+  - PromiseKit/Foundation (4.0.3):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.0.1):
+  - PromiseKit/QuartzCore (4.0.3):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.0.1):
+  - PromiseKit/UIKit (4.0.3):
     - PromiseKit/CorePromise
   - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.0.0)
-  - EZSwiftExtensions (from `git@github.com:goktugyil/EZSwiftExtensions.git`, branch `Swift3`)
+  - EZSwiftExtensions
   - EZSwipeController (from `git@github.com:pattogato/EZSwipeController.git`, branch `bugfix/swift-3-fixes`)
+  - PhoneNumberKit (from `git@github.com:marmelroy/PhoneNumberKit.git`, branch `swift3.0`)
   - PromiseKit
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
-  EZSwiftExtensions:
-    :branch: Swift3
-    :git: git@github.com:goktugyil/EZSwiftExtensions.git
   EZSwipeController:
     :branch: bugfix/swift-3-fixes
     :git: git@github.com:pattogato/EZSwipeController.git
+  PhoneNumberKit:
+    :branch: swift3.0
+    :git: git@github.com:marmelroy/PhoneNumberKit.git
   SwiftyJSON:
     :branch: swift3
     :git: https://github.com/appsailor/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
-  EZSwiftExtensions:
-    :commit: 8afb1aac46b1c977ccac69c0ee6e665099b1f65b
-    :git: git@github.com:goktugyil/EZSwiftExtensions.git
   EZSwipeController:
-    :commit: a040876ed3e5873abdf2534f52ea04e99eb6e5bf
+    :commit: 1184e8d5d1ee851f3a8b0e0fc305ae32729d71cb
     :git: git@github.com:pattogato/EZSwipeController.git
+  PhoneNumberKit:
+    :commit: 46a6414d84b92ec2dfc6121c379d222ae3ffa4a4
+    :git: git@github.com:marmelroy/PhoneNumberKit.git
   SwiftyJSON:
     :commit: de73429b38b8994f614fb27c5ec094bb8a4833f2
     :git: https://github.com/appsailor/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
-  EZSwiftExtensions: 6c5e29ae473b3d2edbf5472eab0a3d7bdb20215c
+  EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   EZSwipeController: 01cc43b319e133b6dbfb25bfdc78617a1560e952
-  PromiseKit: ae9e7f97ee758e23f7b9c5e80380a2e78d6338c5
+  PhoneNumberKit: 5668a7af19d2e566d92831a632ee80f5047eff75
+  PromiseKit: dfe8fcc6445674fb23378d89990838c1cbdbf05a
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: ee89d787bb3d6c86cdcf4b886d2c72df2eeaa5b2
+PODFILE CHECKSUM: df55f1ca4d7bef1641c6e791a678ad067b570192
 
 COCOAPODS: 1.0.1
