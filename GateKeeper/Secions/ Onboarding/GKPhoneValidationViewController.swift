@@ -11,7 +11,7 @@ import UIKit
 class GKPhoneValidationViewController: UIViewController {
 
     // Temp user id
-    var tempUserID = ""
+    var tempUser: TempUser?
     
     // Phone Validation Field
     @IBOutlet weak var phoneValidationField: UITextField! {
@@ -67,7 +67,7 @@ class GKPhoneValidationViewController: UIViewController {
         if let validationCode = self.phoneValidationField.text {
             
             // Validation request
-            GKUserAdapter.validate(validationCode, tempUserID: self.tempUserID).then { result-> Void in
+            GKUserAdapter.validate(validationCode, tempUserID: self.tempUser!.modelID).then { result-> Void in
                 
                 if let message = result?["message"].string {
                     

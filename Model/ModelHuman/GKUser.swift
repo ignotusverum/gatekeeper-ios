@@ -10,15 +10,18 @@ import Sync
 import CoreData
 
 import PromiseKit
+import PhoneNumberKit
 
-struct tempUser {
+struct TempUser {
+    
+    var modelID: String
     
     var firstName: String?
     var lastName: String?
     
     var prefix: String?
     
-    var phoneNumber: String?
+    var phoneNumber: PhoneNumber
     
     var emails: [String]?
     
@@ -30,8 +33,9 @@ struct tempUser {
     
     var birthday: Date?
     
-    init(phoneNumber: String?) {
+    init(modelID: String, phoneNumber: PhoneNumber) {
         
+        self.modelID = modelID
         self.phoneNumber = phoneNumber
     }
 }
