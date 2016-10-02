@@ -11,7 +11,7 @@ import UIKit
 class GKAccountViewController: UIViewController {
 
     // User image
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileImageButton: UIButton!
     
     // User tableview data
     @IBOutlet weak var tableView: UITableView!
@@ -37,6 +37,12 @@ class GKAccountViewController: UIViewController {
         // Register custom cells
         self.tableView.register(accountCellNib, forCellReuseIdentifier: "GKAccountTableViewCell")
         self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "accountActionCellNib")
+    }
+    
+    // MARK: - Actions
+    @IBAction func profileButtonPressed(_ sender: UIButton) {
+        
+        // show image picker
     }
 }
 
