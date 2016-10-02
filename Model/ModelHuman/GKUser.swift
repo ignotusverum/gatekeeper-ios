@@ -30,6 +30,10 @@ struct tempUser {
     
     var birthday: Date?
     
+    init(phoneNumber: String?) {
+        
+        self.phoneNumber = phoneNumber
+    }
 }
 
 struct Work {
