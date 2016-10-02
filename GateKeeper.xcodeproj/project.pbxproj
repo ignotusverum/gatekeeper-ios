@@ -31,7 +31,9 @@
 		F525545E1DA18EA60089299F /* GKFirstNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525545D1DA18EA60089299F /* GKFirstNameCell.swift */; };
 		F52554601DA18F250089299F /* GKLastNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525545F1DA18F250089299F /* GKLastNameCell.swift */; };
 		F52554621DA18F470089299F /* GKPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554611DA18F470089299F /* GKPlaceholder.swift */; };
-		F52554651DA18F910089299F /* GKPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554641DA18F910089299F /* GKPhoneCell.swift */; };
+		F52554691DA192C00089299F /* GKStreet1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554681DA192C00089299F /* GKStreet1Cell.swift */; };
+		F525546B1DA192DC0089299F /* GKPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525546A1DA192DC0089299F /* GKPhoneCell.swift */; };
+		F525546D1DA192E80089299F /* GKEmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525546C1DA192E80089299F /* GKEmailCell.swift */; };
 		F5A011231D985833000C5904 /* GKFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011221D985833000C5904 /* GKFont.swift */; };
 		F5A011251D98599F000C5904 /* TMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011241D98599F000C5904 /* TMString.swift */; };
 		F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */; };
@@ -84,7 +86,9 @@
 		F525545D1DA18EA60089299F /* GKFirstNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFirstNameCell.swift; sourceTree = "<group>"; };
 		F525545F1DA18F250089299F /* GKLastNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKLastNameCell.swift; sourceTree = "<group>"; };
 		F52554611DA18F470089299F /* GKPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPlaceholder.swift; sourceTree = "<group>"; };
-		F52554641DA18F910089299F /* GKPhoneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPhoneCell.swift; sourceTree = "<group>"; };
+		F52554681DA192C00089299F /* GKStreet1Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKStreet1Cell.swift; sourceTree = "<group>"; };
+		F525546A1DA192DC0089299F /* GKPhoneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPhoneCell.swift; sourceTree = "<group>"; };
+		F525546C1DA192E80089299F /* GKEmailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKEmailCell.swift; sourceTree = "<group>"; };
 		F5A011221D985833000C5904 /* GKFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFont.swift; sourceTree = "<group>"; };
 		F5A011241D98599F000C5904 /* TMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMString.swift; sourceTree = "<group>"; };
 		F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerHandler.swift; sourceTree = "<group>"; };
@@ -440,7 +444,9 @@
 				F5DC7F301DA0662800CB048E /* GKActionAccountTableViewCell.swift */,
 				F5DC7F341DA0692D00CB048E /* GKActionAccountTableViewCell.xib */,
 				F52554631DA18F620089299F /* Profile */,
-				F52554641DA18F910089299F /* GKPhoneCell.swift */,
+				F525546A1DA192DC0089299F /* GKPhoneCell.swift */,
+				F525546C1DA192E80089299F /* GKEmailCell.swift */,
+				F52554681DA192C00089299F /* GKStreet1Cell.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -610,14 +616,15 @@
 				F5A011251D98599F000C5904 /* TMString.swift in Sources */,
 				F52554571DA189B00089299F /* GKModalView.swift in Sources */,
 				F525545E1DA18EA60089299F /* GKFirstNameCell.swift in Sources */,
+				F52554691DA192C00089299F /* GKStreet1Cell.swift in Sources */,
 				F5A011301D99B2FD000C5904 /* GKNavigationBar.swift in Sources */,
 				F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */,
-				F52554651DA18F910089299F /* GKPhoneCell.swift in Sources */,
 				F5A0112B1D996D35000C5904 /* GKCongif.swift in Sources */,
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5A011231D985833000C5904 /* GKFont.swift in Sources */,
 				F5DC7F221DA003F800CB048E /* GKPhoneValidationViewController.swift in Sources */,
 				F5DC7F311DA0662800CB048E /* GKActionAccountTableViewCell.swift in Sources */,
+				F525546B1DA192DC0089299F /* GKPhoneCell.swift in Sources */,
 				F52554511DA0DCF10089299F /* GKUser.swift in Sources */,
 				F5A011351D99B4D4000C5904 /* GKCopy.swift in Sources */,
 				F5D60E071D90B183003E8F4A /* GMDCircleLoader.m in Sources */,
@@ -632,6 +639,7 @@
 				F5A0113B1D99F8EE000C5904 /* GKColor.swift in Sources */,
 				F5D60E221D90E13D003E8F4A /* GKTutorialViewController.swift in Sources */,
 				F5A0113E1D99FC05000C5904 /* GKPushHandler.swift in Sources */,
+				F525546D1DA192E80089299F /* GKEmailCell.swift in Sources */,
 				F5D60E181D90B5BF003E8F4A /* GKModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

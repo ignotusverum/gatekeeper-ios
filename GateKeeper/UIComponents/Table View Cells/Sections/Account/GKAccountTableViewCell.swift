@@ -15,4 +15,16 @@ class GKAccountTableViewCell: UITableViewCell {
     
     // Icon Image
     @IBOutlet weak var iconImageView: UIImageView!
+    
+    // Icon image name
+    public var iconImageName: String {
+        return ""
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Set icon image view
+        self.iconImageView.image = UIImage(named: iconImageName)
+    }
 }

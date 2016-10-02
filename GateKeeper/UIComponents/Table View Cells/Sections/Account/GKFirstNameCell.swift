@@ -13,7 +13,6 @@ class GKFirstNameCell: GKAccountTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Custom setup
         self.customSetup()
     }
     
