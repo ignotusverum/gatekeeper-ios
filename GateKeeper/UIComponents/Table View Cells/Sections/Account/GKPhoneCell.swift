@@ -14,6 +14,7 @@ class GKPhoneCell: GKActionAccountTableViewCell {
     var indexPath: IndexPath? {
         didSet {
             
+            // If first row - update button icons
             if indexPath?.row == 0 {
                 
                 self.actionButton.setImage(UIImage(named: "Add"), for: .normal)
@@ -27,6 +28,7 @@ class GKPhoneCell: GKActionAccountTableViewCell {
     
     override func actionButtonPressed(_ sender: UIButton) {
      
+        // First row = add
         if self.indexPath?.row == 0 {
             
             self.delegate?.addActionButtonPressed(self)
@@ -34,6 +36,7 @@ class GKPhoneCell: GKActionAccountTableViewCell {
             return
         }
         
+        // Remove 
         self.delegate?.closeActionButtonPressed(self)
     }
 }
