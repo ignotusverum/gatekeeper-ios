@@ -25,11 +25,6 @@ class GKPhoneCell: GKActionAccountTableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     override func actionButtonPressed(_ sender: UIButton) {
      
         if self.indexPath?.row == 0 {
