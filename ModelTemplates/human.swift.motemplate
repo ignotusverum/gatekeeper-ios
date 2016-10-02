@@ -6,7 +6,7 @@
 //  Copyright © 2016 Vladislav Zagorodnyuk Co. All rights reserved.
 //
 
-import Synch
+import Sync
 import CoreData
 
 import PromiseKit
@@ -19,10 +19,14 @@ public class <$managedObjectClassName$>: _<$managedObjectClassName$> {
 		
 		return Promise { fulfill, reject in
 			
-			Synch.changes(
+			let appDelegate = GKAppDelegate.shared
+			let stack = appDelegate.dataStack
+			
+			Sync.changes(
 				changes: JSON,
 				inEntityNamed: <$managedObjectClassName$>.entityName(),
-				dataStack: dataStack) { error in
+				dataStack: stack,
+				completion: { error in
 					
 					if let error = error {
 						reject(error)
@@ -30,8 +34,7 @@ public class <$managedObjectClassName$>: _<$managedObjectClassName$> {
 					else {
 						fulfill(nil)
 					}
-				}
-			)
-		}
+				})
+			}
 	}
 }

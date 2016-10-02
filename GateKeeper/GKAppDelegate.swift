@@ -12,7 +12,7 @@ import UserNotifications
 import DATAStack
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class GKAppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     // Shared delegate
     static let shared = UIApplication.shared.delegate as? AppDelegate
