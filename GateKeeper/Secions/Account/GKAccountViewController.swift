@@ -31,11 +31,9 @@ class GKAccountViewController: UIViewController {
     func tableViewInit() {
      
         // Account cells
-        let accountCellNib = UINib(nibName: "GKAccountTableViewCell", bundle: nil)
         let accountActionCellNib = UINib(nibName: "GKActionAccountTableViewCell", bundle: nil)
         
         // Register custom cells
-        self.tableView.register(accountCellNib, forCellReuseIdentifier: "GKAccountTableViewCell")
         self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "GKActionAccountTableViewCell")
     }
     
