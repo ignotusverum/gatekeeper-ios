@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Lsr-hX-Uq2" customClass="GKModalView" customModule="GateKeeper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-UB-Aqw">
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <visualEffectView hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR4-YP-7ea">
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wCA-Yr-dwB">
+                        <frame key="frameInset"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-ga-w2G">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Select Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFH-uZ-rfR">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fRt-UE-VQK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UB7-gk-fBa">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="Lsr-hX-Uq2" id="eu8-5w-QkN"/>
+                                <outlet property="delegate" destination="Lsr-hX-Uq2" id="EFJ-S8-5Is"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="UB7-gk-fBa" firstAttribute="width" secondItem="SaG-ga-w2G" secondAttribute="width" id="AWG-qn-GFx"/>
+                        <constraint firstAttribute="bottom" secondItem="UB7-gk-fBa" secondAttribute="bottom" id="IO8-p8-9ee"/>
+                        <constraint firstItem="UB7-gk-fBa" firstAttribute="top" secondItem="aFH-uZ-rfR" secondAttribute="bottom" id="VW1-LO-cYl"/>
+                        <constraint firstItem="aFH-uZ-rfR" firstAttribute="top" secondItem="SaG-ga-w2G" secondAttribute="top" id="YTK-fn-r8C"/>
+                        <constraint firstItem="UB7-gk-fBa" firstAttribute="width" secondItem="SaG-ga-w2G" secondAttribute="width" id="ab3-0a-1Hn"/>
+                        <constraint firstItem="UB7-gk-fBa" firstAttribute="centerX" secondItem="SaG-ga-w2G" secondAttribute="centerX" id="d3J-HU-cWi"/>
+                        <constraint firstItem="aFH-uZ-rfR" firstAttribute="width" secondItem="SaG-ga-w2G" secondAttribute="width" id="n4v-4b-5QI"/>
+                        <constraint firstItem="aFH-uZ-rfR" firstAttribute="centerX" secondItem="SaG-ga-w2G" secondAttribute="centerX" id="tb0-bN-9TZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gR4-YP-7ea" secondAttribute="trailing" id="2Vl-Ia-yAT"/>
+                <constraint firstItem="SaG-ga-w2G" firstAttribute="centerY" secondItem="Lsr-hX-Uq2" secondAttribute="centerY" id="CMM-Dl-kLo"/>
+                <constraint firstItem="gR4-YP-7ea" firstAttribute="top" secondItem="Lsr-hX-Uq2" secondAttribute="top" id="DPD-UJ-SZd"/>
+                <constraint firstItem="SaG-ga-w2G" firstAttribute="centerX" secondItem="Lsr-hX-Uq2" secondAttribute="centerX" id="JaB-Og-axy"/>
+                <constraint firstItem="SaG-ga-w2G" firstAttribute="width" secondItem="Lsr-hX-Uq2" secondAttribute="width" multiplier="0.7" id="YRO-2J-HAG"/>
+                <constraint firstItem="gR4-YP-7ea" firstAttribute="leading" secondItem="Lsr-hX-Uq2" secondAttribute="leading" id="fx5-Yx-Fej"/>
+                <constraint firstItem="Y4o-UB-Aqw" firstAttribute="centerX" secondItem="Lsr-hX-Uq2" secondAttribute="centerX" id="hzO-4F-bwV"/>
+                <constraint firstAttribute="bottom" secondItem="gR4-YP-7ea" secondAttribute="bottom" id="nHx-pA-Eem"/>
+                <constraint firstItem="Y4o-UB-Aqw" firstAttribute="height" secondItem="Lsr-hX-Uq2" secondAttribute="height" id="rQ2-5q-J3T"/>
+                <constraint firstItem="SaG-ga-w2G" firstAttribute="height" secondItem="Lsr-hX-Uq2" secondAttribute="height" multiplier="0.3" id="s6t-cI-rOX"/>
+                <constraint firstItem="Y4o-UB-Aqw" firstAttribute="width" secondItem="Lsr-hX-Uq2" secondAttribute="width" id="xZM-Vq-ypo"/>
+                <constraint firstItem="Y4o-UB-Aqw" firstAttribute="centerY" secondItem="Lsr-hX-Uq2" secondAttribute="centerY" id="yLQ-YP-P9g"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImageView" destination="Y4o-UB-Aqw" id="NkI-fn-r2d"/>
+                <outlet property="backgroundView" destination="SaG-ga-w2G" id="ojy-i1-O76"/>
+                <outlet property="tableView" destination="UB7-gk-fBa" id="6h5-1g-NfU"/>
+            </connections>
+        </view>
+    </objects>
+</document>

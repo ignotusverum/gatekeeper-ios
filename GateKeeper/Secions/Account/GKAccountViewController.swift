@@ -16,6 +16,13 @@ class GKAccountViewController: UIViewController {
     // User tableview data
     @IBOutlet weak var tableView: UITableView!
     
+    // Static datasouce
+    let nameSectionDatasource = ["First name", "Last name", "Prefix"]
+    
+    let phoneNumberDatasource = ["Home"]
+    
+    let emailDatasource = ["Home"]
+    
     // User datasource
     var tempUser: TempUser?
     

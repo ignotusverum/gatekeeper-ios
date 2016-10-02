@@ -24,6 +24,10 @@
 		EF16FF6EC5CAD51C4F5BC486 /* Pods_GateKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D89D0F928A407C8311FCBB /* Pods_GateKeeper.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F52554511DA0DCF10089299F /* GKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525544E1DA0DCF10089299F /* GKUser.swift */; };
 		F52554521DA0DCF10089299F /* _GKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554501DA0DCF10089299F /* _GKUser.swift */; };
+		F52554551DA1897F0089299F /* GKModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52554541DA1897F0089299F /* GKModalView.xib */; };
+		F52554571DA189B00089299F /* GKModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554561DA189B00089299F /* GKModalView.swift */; };
+		F525545B1DA18C310089299F /* GKModalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554591DA18C310089299F /* GKModalTableViewCell.swift */; };
+		F525545C1DA18C310089299F /* GKModalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F525545A1DA18C310089299F /* GKModalTableViewCell.xib */; };
 		F5A011231D985833000C5904 /* GKFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011221D985833000C5904 /* GKFont.swift */; };
 		F5A011251D98599F000C5904 /* TMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011241D98599F000C5904 /* TMString.swift */; };
 		F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */; };
@@ -69,6 +73,10 @@
 		B16FE3D58661F1F52ACAA3BE /* Pods-GateKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GateKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-GateKeeper/Pods-GateKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		F525544E1DA0DCF10089299F /* GKUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKUser.swift; sourceTree = "<group>"; };
 		F52554501DA0DCF10089299F /* _GKUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _GKUser.swift; sourceTree = "<group>"; };
+		F52554541DA1897F0089299F /* GKModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKModalView.xib; sourceTree = "<group>"; };
+		F52554561DA189B00089299F /* GKModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKModalView.swift; sourceTree = "<group>"; };
+		F52554591DA18C310089299F /* GKModalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKModalTableViewCell.swift; sourceTree = "<group>"; };
+		F525545A1DA18C310089299F /* GKModalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKModalTableViewCell.xib; sourceTree = "<group>"; };
 		F5A011221D985833000C5904 /* GKFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFont.swift; sourceTree = "<group>"; };
 		F5A011241D98599F000C5904 /* TMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMString.swift; sourceTree = "<group>"; };
 		F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerHandler.swift; sourceTree = "<group>"; };
@@ -158,6 +166,24 @@
 			name = ModelMachine;
 			path = Model/ModelMachine;
 			sourceTree = SOURCE_ROOT;
+		};
+		F52554531DA189530089299F /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				F52554561DA189B00089299F /* GKModalView.swift */,
+				F52554541DA1897F0089299F /* GKModalView.xib */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		F52554581DA18C180089299F /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				F52554591DA18C310089299F /* GKModalTableViewCell.swift */,
+				F525545A1DA18C310089299F /* GKModalTableViewCell.xib */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
 		};
 		F5A011311D99B365000C5904 /* Controllers */ = {
 			isa = PBXGroup;
@@ -294,6 +320,7 @@
 		F5D60E031D90B16D003E8F4A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F52554531DA189530089299F /* Modals */,
 				F5DC7F2B1DA064D800CB048E /* Table View Cells */,
 				F5D60E041D90B183003E8F4A /* Loader */,
 			);
@@ -382,6 +409,7 @@
 		F5DC7F2C1DA064ED00CB048E /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F52554581DA18C180089299F /* Modals */,
 				F5DC7F2D1DA064FC00CB048E /* Account */,
 			);
 			path = Sections;
@@ -470,12 +498,14 @@
 				F5D60E001D90B130003E8F4A /* ProximaNova-Light.ttf in Resources */,
 				F5D60DEE1D90A831003E8F4A /* LaunchScreen.storyboard in Resources */,
 				F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */,
+				F525545C1DA18C310089299F /* GKModalTableViewCell.xib in Resources */,
 				F5D60DFF1D90B130003E8F4A /* ProximaNova-Bold.ttf in Resources */,
 				F5DC7F351DA0692D00CB048E /* GKActionAccountTableViewCell.xib in Resources */,
 				F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */,
 				F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */,
 				F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */,
 				F5DC7F271DA0620400CB048E /* Account.storyboard in Resources */,
+				F52554551DA1897F0089299F /* GKModalView.xib in Resources */,
 				F5D60E1B1D90B6BC003E8F4A /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +588,7 @@
 				F5D60E301D918527003E8F4A /* GKViewController.swift in Sources */,
 				F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */,
 				F5A011251D98599F000C5904 /* TMString.swift in Sources */,
+				F52554571DA189B00089299F /* GKModalView.swift in Sources */,
 				F5A011301D99B2FD000C5904 /* GKNavigationBar.swift in Sources */,
 				F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */,
 				F5A0112B1D996D35000C5904 /* GKCongif.swift in Sources */,
@@ -572,6 +603,7 @@
 				F5A0112D1D99AFE3000C5904 /* GKPhoneInputViewController.swift in Sources */,
 				F5DC7F2F1DA0651300CB048E /* GKAccountTableViewCell.swift in Sources */,
 				F5A011291D986190000C5904 /* GKSynchronizerAdapter.swift in Sources */,
+				F525545B1DA18C310089299F /* GKModalTableViewCell.swift in Sources */,
 				F5A011391D99F7B6000C5904 /* Toast.swift in Sources */,
 				F5A0113B1D99F8EE000C5904 /* GKColor.swift in Sources */,
 				F5D60E221D90E13D003E8F4A /* GKTutorialViewController.swift in Sources */,
