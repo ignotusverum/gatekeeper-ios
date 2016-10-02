@@ -10,7 +10,8 @@ import UIKit
 
 protocol GKActionAccountTableViewCellDelegate {
     
-    func actionButtonPressed(_ cell: GKActionAccountTableViewCell)
+    func addActionButtonPressed(_ cell: GKActionAccountTableViewCell)
+    func closeActionButtonPressed(_ cell: GKActionAccountTableViewCell)
 }
 
 class GKActionAccountTableViewCell: GKAccountTableViewCell {
@@ -19,7 +20,8 @@ class GKActionAccountTableViewCell: GKAccountTableViewCell {
     @IBOutlet weak var actionButton: UIButton!
 
     // Delegate
-    @IBAction func actionButtonPressed(_ sender: UIButton) {
-        
-    }
+    var delegate: GKActionAccountTableViewCellDelegate?
+    
+    // Action
+    @IBAction func actionButtonPressed(_ sender: UIButton) { }
 }

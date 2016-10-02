@@ -17,11 +17,21 @@ class GKAccountViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // Static datasouce
-    let nameSectionDatasource = ["First name", "Last name", "Prefix"]
+    let nameSectionPlaceholoders = ["First name", "Last name", "Prefix"]
     
-    let phoneNumberDatasource = ["Home"]
+    let phoneNumberPlaceholoders = ["Home"]
     
-    let emailDatasource = ["Home"]
+    let emailPlaceholoders = ["Home"]
+    
+    let addressPlaceholoders = ["Street 1", "Street 2", "City", "State", "Country", "Zip"]
+    
+    let companyPlaceholoders = ["Company", "Title"]
+    
+    let socialPlaceholoders = ["Website"]
+    
+    let birthdayPlaceholoders = ["Birthday"]
+    
+    var cellPlaceholders = [[String]]()
     
     // User datasource
     var tempUser: TempUser?
@@ -37,6 +47,9 @@ class GKAccountViewController: UIViewController {
     // Table view init
     func tableViewInit() {
      
+        // Init cell placeholders
+        self.cellPlaceholders = [nameSectionPlaceholoders, phoneNumberPlaceholoders, emailPlaceholoders, addressPlaceholoders, companyPlaceholoders, socialPlaceholoders, birthdayPlaceholoders]
+        
         // Account cells
         let accountActionCellNib = UINib(nibName: "GKActionAccountTableViewCell", bundle: nil)
         
@@ -63,12 +76,12 @@ extension GKAccountViewController: UITableViewDataSource {
         // First, last name, prefix
         if section == 0 {
             
-            return 3
+            return nameSectionPlaceholoders.count
         }
         // Phone number
         else if section == 1 {
             
-            return 1
+            return phoneNumberPlaceholoders.count
         }
             // Number of addresses
         else if section == 2, let addresses = self.tempUser?.addresses {
@@ -78,7 +91,7 @@ extension GKAccountViewController: UITableViewDataSource {
             // Company - Company name / Title
         else if section == 3 {
             
-            return 2
+            return companyPlaceholoders.count
         }
             // Social
         else if section == 4, let social = self.tempUser?.socials {
@@ -93,6 +106,8 @@ extension GKAccountViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GKAccountActionTableViewCell", for: indexPath) as! GKActionAccountTableViewCell
+        
+        
         
         return cell
     }
