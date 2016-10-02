@@ -1,11 +1,12 @@
 //
 //  <$managedObjectClassName$>.swift
-//  consumer
+//  GateKeeper
 //
-//  Created by Vladislav Zagorodnyuk on 2/3/16.
-//  Copyright © 2016 Human Ventures Co. All rights reserved.
+//  Created by Vladislav Zagorodnyuk on 10/02/16.
+//  Copyright © 2016 Vladsialv Zagorodnyuk Co. All rights reserved.
 //
 
+import Synch
 import CoreData
 import SwiftyJSON
 

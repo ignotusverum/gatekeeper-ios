@@ -9,9 +9,15 @@
 import UIKit
 import UserNotifications
 
+import DATAStack
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
+    // Shared delegate
+    static let shared = UIApplication.shared.delegate as? AppDelegate
+    
+    // Window
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -36,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }.catch { error in
                 print(error)
         }
+    }
+    
+    // MARK: - Core data
+    func setupCoreData() {
+        
+        let _ = DATAStack(modelName:"GKModel")
     }
     
     // MARK: - UI Setup
