@@ -11,6 +11,45 @@ import CoreData
 
 import PromiseKit
 
+struct tempUser {
+    
+    var firstName: String?
+    var lastName: String?
+    
+    var prefix: String?
+    
+    var phoneNumber: String?
+    
+    var emails: [String]?
+    
+    var addresses: [Address]?
+    
+    var works: [Work]?
+    
+    var socials: [String]?
+    
+    var birthday: Date?
+    
+}
+
+struct Work {
+    
+    var company: String?
+    var Title: String?
+}
+
+struct Address {
+    
+    var street1: String?
+    var street2: String?
+    
+    var city: String?
+    var state: String?
+    
+    var country: String?
+    var zip: String?
+}
+
 @objc(GKUser)
 open class GKUser: _GKUser {
 
