@@ -41,6 +41,23 @@ class GKAccountViewController: UIViewController {
 extension GKAccountViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
+//        profileArr.add(firstName!)
+//        profileArr.add(lastName!)
+//        profileArr.add(prefixName!)
+        
+//        profileArr.add(phone)
+        
+//        profileArr.add(email)
+        
+//        profileArr.add(address)
+        
+//        profileArr.add(company)
+        
+//        profileArr.add(website!)
+        
+//        profileArr.add(birthday!)
+        
         return 0
     }
     
