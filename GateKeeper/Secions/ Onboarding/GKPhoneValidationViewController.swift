@@ -69,15 +69,21 @@ class GKPhoneValidationViewController: UIViewController {
             // Validation request
             GKUserAdapter.validate(validationCode, tempUserID: self.tempUser!.modelID).then { result-> Void in
                 
-                if let message = result?["message"].string {
-                    
-                    self.view.makeToast(message)
-                    return
-                }
-                
+                // Success check
                 if let success = result?["success"].bool {
                     if success == true {
-                        // Perform account segue
+                        
+                        // Perform segue
+                        self.pushAccount()
+                    }
+                }
+                else {
+                    
+                    // If message = error
+                    if let message = result?["message"].string {
+                        
+                        self.view.makeToast(message)
+                        return
                     }
                 }
                 
@@ -96,6 +102,21 @@ class GKPhoneValidationViewController: UIViewController {
     func showError() {
         
         self.view.makeToast("Something went wrong, please try again.")
+    }
+    
+    func pushAccount() {
+        
+        // Get account storybard
+        let sb = UIStoryboard.init(name: "Account", bundle: nil)
+        
+        // init controller
+        let accountVC = sb.instantiateViewController(withIdentifier: "GKAccountViewController") as! GKAccountViewController
+        
+        // pass datasource
+        accountVC.tempUser = self.tempUser
+        
+        // Push controller
+        self.navigationController?.pushViewController(accountVC, animated: true)
     }
 }
 

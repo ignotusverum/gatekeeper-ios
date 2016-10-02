@@ -16,6 +16,9 @@ class GKAccountViewController: UIViewController {
     // User tableview data
     @IBOutlet weak var tableView: UITableView!
     
+    // User datasource
+    var tempUser: TempUser?
+    
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
