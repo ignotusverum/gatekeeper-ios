@@ -1,39 +1,39 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to <$sanitizedManagedObjectClassName$>.swift instead.
+// Make changes to <$managedObjectClassName$>.swift instead.
 
 import Foundation
 import CoreData
 <$if hasCustomBaseCaseImport$>import <$baseClassImport$><$endif$>
 
 <$if noninheritedAttributes.@count > 0$>
-public enum <$sanitizedManagedObjectClassName$>Attributes: String {<$foreach Attribute noninheritedAttributes do$>
+public enum <$managedObjectClassName$>Attributes: String {<$foreach Attribute noninheritedAttributes do$>
     case <$Attribute.name$> = "<$Attribute.name$>"<$endforeach do$>
 }
 <$endif$>
 
 <$if noninheritedRelationships.@count > 0$>
-public enum <$sanitizedManagedObjectClassName$>Relationships: String {<$foreach Relationship noninheritedRelationships do$>
+public enum <$managedObjectClassName$>Relationships: String {<$foreach Relationship noninheritedRelationships do$>
     case <$Relationship.name$> = "<$Relationship.name$>"<$endforeach do$>
 }
 <$endif$>
 
 <$if noninheritedFetchedProperties.@count > 0$>
-public enum <$sanitizedManagedObjectClassName$>FetchedProperties: String {<$foreach FetchedProperty noninheritedFetchedProperties do$>
+public enum <$managedObjectClassName$>FetchedProperties: String {<$foreach FetchedProperty noninheritedFetchedProperties do$>
     case <$FetchedProperty.name$> = "<$FetchedProperty.name$>"<$endforeach do$>
 }
 <$endif$>
 
 <$if hasUserInfoKeys && userInfoKeyValues.@count > 0$>		
-public enum <$sanitizedManagedObjectClassName$>UserInfo: String {<$foreach UserInfo userInfoKeyValues do$>		
+public enum <$managedObjectClassName$>UserInfo: String {<$foreach UserInfo userInfoKeyValues do$>		
     case <$UserInfo.key$> = "<$UserInfo.key$>"<$endforeach do$>		
 }		
 <$endif$>
 
 
 <$if hasCustomSuperentity $>
-open class _<$sanitizedManagedObjectClassName$>: <$customSuperentity$> {
+open class _<$managedObjectClassName$>: <$customSuperentity$> {
 <$else$>
-open class _<$sanitizedManagedObjectClassName$>: NSManagedObject {
+open class _<$managedObjectClassName$>: NSManagedObject {
 <$endif$>
     // MARK: - Class methods
 
@@ -52,7 +52,7 @@ open class _<$sanitizedManagedObjectClassName$>: NSManagedObject {
     }
 
     public convenience init?(managedObjectContext: NSManagedObjectContext) {
-        guard let entity = _<$sanitizedManagedObjectClassName$>.entity(managedObjectContext: managedObjectContext) else { return nil }
+        guard let entity = _<$managedObjectClassName$>.entity(managedObjectContext: managedObjectContext) else { return nil }
         self.init(entity: entity, insertInto: managedObjectContext)
     }
 
@@ -63,9 +63,9 @@ open class _<$sanitizedManagedObjectClassName$>: NSManagedObject {
 <$if Attribute.isReadonly$>
     open var <$Attribute.name$>: NSNumber?
     {
-        self.willAccessValueForKey(<$sanitizedManagedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
-        let <$Attribute.name$> = self.primitiveValueForKey(<$sanitizedManagedObjectClassName$>Attributes.<$Attribute.name$>.rawValue) as? NSNumber
-        self.didAccessValueForKey(<$sanitizedManagedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
+        self.willAccessValueForKey(<$managedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
+        let <$Attribute.name$> = self.primitiveValueForKey(<$managedObjectClassName$>Attributes.<$Attribute.name$>.rawValue) as? NSNumber
+        self.didAccessValueForKey(<$managedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
         return <$Attribute.name$>
     }
 <$else$>
@@ -76,9 +76,9 @@ open class _<$sanitizedManagedObjectClassName$>: NSManagedObject {
 <$if Attribute.isReadonly$>
     open var <$Attribute.name$>: <$Attribute.objectAttributeType$><$if Attribute.isOptional$>?<$endif$>
     {
-        self.willAccessValueForKey(<$sanitizedManagedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
-        let <$Attribute.name$> = self.primitiveValueForKey(<$sanitizedManagedObjectClassName$>Attributes.<$Attribute.name$>.rawValue) as? <$Attribute.objectAttributeType$>
-        self.didAccessValueForKey(<$sanitizedManagedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
+        self.willAccessValueForKey(<$managedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
+        let <$Attribute.name$> = self.primitiveValueForKey(<$managedObjectClassName$>Attributes.<$Attribute.name$>.rawValue) as? <$Attribute.objectAttributeType$>
+        self.didAccessValueForKey(<$managedObjectClassName$>Attributes.<$Attribute.name$>.rawValue)
         return <$Attribute.name$>
     }
 <$else$>
@@ -101,7 +101,7 @@ open class _<$sanitizedManagedObjectClassName$>: NSManagedObject {
 
 <$else$>
     @NSManaged open
-    var <$Relationship.name$>: <$Relationship.destinationEntity.sanitizedManagedObjectClassName$><$if Relationship.isOptional$>?<$endif$>
+    var <$Relationship.name$>: <$Relationship.destinationEntity.managedObjectClassName$><$if Relationship.isOptional$>?<$endif$>
 <$endif$>
 <$endforeach do$>
 
@@ -171,12 +171,12 @@ open class _<$sanitizedManagedObjectClassName$>: NSManagedObject {
 
 <$foreach FetchedProperty noninheritedFetchedProperties do$>
     @NSManaged open
-    let <$FetchedProperty.name$>: [<$FetchedProperty.entity.sanitizedManagedObjectClassName$>]
+    let <$FetchedProperty.name$>: [<$FetchedProperty.entity.managedObjectClassName$>]
 <$endforeach do$>
 }
 
 <$foreach Relationship noninheritedRelationships do$><$if Relationship.isToMany$>
-extension _<$sanitizedManagedObjectClassName$> {
+extension _<$managedObjectClassName$> {
 
     open func add<$Relationship.name.initialCapitalString$>(_ objects: <$Relationship.immutableCollectionClassName$>) {
         let mutable = self.<$Relationship.name$>.mutableCopy() as! NSMutable<$if Relationship.jr_isOrdered$>Ordered<$endif$>Set
@@ -190,13 +190,13 @@ extension _<$sanitizedManagedObjectClassName$> {
         self.<$Relationship.name$> = mutable.copy() as! NS<$if Relationship.jr_isOrdered$>Ordered<$endif$>Set
     }
 
-    open func add<$Relationship.name.initialCapitalString$>Object(_ value: <$Relationship.destinationEntity.sanitizedManagedObjectClassName$>) {
+    open func add<$Relationship.name.initialCapitalString$>Object(_ value: <$Relationship.destinationEntity.managedObjectClassName$>) {
         let mutable = self.<$Relationship.name$>.mutableCopy() as! NSMutable<$if Relationship.jr_isOrdered$>Ordered<$endif$>Set
         mutable.add(value)
         self.<$Relationship.name$> = mutable.copy() as! NS<$if Relationship.jr_isOrdered$>Ordered<$endif$>Set
     }
 
-    open func remove<$Relationship.name.initialCapitalString$>Object(_ value: <$Relationship.destinationEntity.sanitizedManagedObjectClassName$>) {
+    open func remove<$Relationship.name.initialCapitalString$>Object(_ value: <$Relationship.destinationEntity.managedObjectClassName$>) {
         let mutable = self.<$Relationship.name$>.mutableCopy() as! NSMutable<$if Relationship.jr_isOrdered$>Ordered<$endif$>Set
         mutable.remove(value)
         self.<$Relationship.name$> = mutable.copy() as! NS<$if Relationship.jr_isOrdered$>Ordered<$endif$>Set

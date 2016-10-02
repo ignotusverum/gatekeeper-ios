@@ -12,10 +12,10 @@ import CoreData
 import PromiseKit
 
 @objc(<$managedObjectClassName$>)
-public class <$managedObjectClassName$>: _<$managedObjectClassName$> {
+open class <$managedObjectClassName$>: _<$managedObjectClassName$> {
 
 	// MARK: - Synchronization logic
-	class func synchronize(withJSON JSON: [String : Any])-> Promise<<$managedObjectClassName$>?> {
+	class func synchronize(withJSON JSON: [[String : Any]])-> Promise<<$managedObjectClassName$>?> {
 		
 		return Promise { fulfill, reject in
 			

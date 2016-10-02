@@ -1,6 +1,7 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to GKUser.swift instead.
 
+import Foundation
 import CoreData
 
 public enum GKUserAttributes: String {
@@ -16,81 +17,60 @@ public enum GKUserAttributes: String {
     case websites = "websites"
 }
 
-@objc public
-class _GKUser: GKManagedObject {
+open class _GKUser: GKManagedObject {
 
     // MARK: - Class methods
 
-    public class func entityName () -> String {
+    open class func entityName () -> String {
         return "GKUser"
     }
 
-    public class func entity(managedObjectContext: NSManagedObjectContext!) -> NSEntityDescription! {
-        return NSEntityDescription.entityForName(self.entityName(), inManagedObjectContext: managedObjectContext);
+    open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
+        return NSEntityDescription.entity(forEntityName: self.entityName(), in: managedObjectContext)
     }
 
     // MARK: - Life cycle methods
 
-    public override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
-        super.init(entity: entity, insertIntoManagedObjectContext: context)
+    public override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
     }
 
-    public convenience init(managedObjectContext: NSManagedObjectContext!) {
-        let entity = _GKUser.entity(managedObjectContext)
-        self.init(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
+    public convenience init?(managedObjectContext: NSManagedObjectContext) {
+        guard let entity = _GKUser.entity(managedObjectContext: managedObjectContext) else { return nil }
+        self.init(entity: entity, insertInto: managedObjectContext)
     }
 
     // MARK: - Properties
 
-    @NSManaged public
+    @NSManaged open
     var addresses: NSData?
 
-    // func validateAddresses(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var birthday: NSDate?
 
-    // func validateBirthday(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var emailAddresses: NSData?
 
-    // func validateEmailAddresses(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var firstName: String?
 
-    // func validateFirstName(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var lastName: String?
 
-    // func validateLastName(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var modelID: String?
 
-    // func validateModelID(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var phoneNumberString: String?
 
-    // func validatePhoneNumberString(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var phoneNumbers: NSData?
 
-    // func validatePhoneNumbers(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var prefix: String?
 
-    // func validatePrefix(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
-
-    @NSManaged public
+    @NSManaged open
     var websites: NSData?
-
-    // func validateWebsites(value: AutoreleasingUnsafeMutablePointer<AnyObject>, error: NSErrorPointer) -> Bool {}
 
     // MARK: - Relationships
 

@@ -15,7 +15,7 @@ import DATAStack
 class GKAppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     // Shared delegate
-    static let shared = UIApplication.shared.delegate as? AppDelegate
+    static let shared = UIApplication.shared.delegate as? GKAppDelegate
     
     // Window
     var window: UIWindow?

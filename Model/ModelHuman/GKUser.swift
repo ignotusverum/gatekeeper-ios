@@ -12,18 +12,17 @@ import CoreData
 import PromiseKit
 
 @objc(GKUser)
-public class GKUser: _GKUser {
+open class GKUser: _GKUser {
 
 	// MARK: - Synchronization logic
-	class func synchronize(withJSON JSON: [String : Any])-> Promise<GKUser?> {
+	class func synchronize(withJSON JSON: [[String : Any]])-> Promise<GKUser?> {
 
 		return Promise { fulfill, reject in
 
 			let appDelegate = GKAppDelegate.shared
-			let stack = appDelegate.dataStack
+			let stack = appDelegate!.dataStack
 
-			Sync.changes(
-				changes: JSON,
+			Sync.changes(JSON,
 				inEntityNamed: GKUser.entityName(),
 				dataStack: stack,
 				completion: { error in
