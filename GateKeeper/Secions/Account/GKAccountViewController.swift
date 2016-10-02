@@ -36,7 +36,7 @@ class GKAccountViewController: UIViewController {
         
         // Register custom cells
         self.tableView.register(accountCellNib, forCellReuseIdentifier: "GKAccountTableViewCell")
-        self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "GKAccountActionTableViewCell")
+        self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "GKActionAccountTableViewCell")
     }
     
     // MARK: - Actions
@@ -50,7 +50,6 @@ class GKAccountViewController: UIViewController {
 extension GKAccountViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 7
     }
     
@@ -88,7 +87,8 @@ extension GKAccountViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GKAccountActionTableViewCell", for: indexPath) as! GKActionAccountTableViewCell
+        
         return cell
     }
 }

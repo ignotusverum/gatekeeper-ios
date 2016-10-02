@@ -19,8 +19,6 @@ class GKActionAccountTableViewCell: GKAccountTableViewCell {
     @IBOutlet weak var actionButton: UIButton!
 
     // Delegate
-    
-    
     @IBAction func actionButtonPressed(_ sender: UIButton) {
         
     }
