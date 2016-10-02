@@ -19,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     // Window
     var window: UIWindow?
+    
+    // Data stack
+    lazy var dataStack: DATAStack = {
+        let dataStack = DATAStack(modelName: "GKModel")
+        
+        return dataStack
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
      
@@ -42,12 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }.catch { error in
                 print(error)
         }
-    }
-    
-    // MARK: - Core data
-    func setupCoreData() {
-        
-        let _ = DATAStack(modelName:"GKModel")
     }
     
     // MARK: - UI Setup
