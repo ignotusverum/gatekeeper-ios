@@ -18,18 +18,17 @@ struct TempUser {
     
     var firstName: String?
     var lastName: String?
-    
     var prefix: String?
     
     var phoneNumber: PhoneNumber
     
-    var emails: [String]?
+    var emails = [String]()
     
-    var addresses: [Address]?
+    var addresses = [Address]()
     
-    var works: [Work]?
+    var works = [Work]()
     
-    var socials: [String]?
+    var socials = [String]()
     
     var birthday: Date?
     

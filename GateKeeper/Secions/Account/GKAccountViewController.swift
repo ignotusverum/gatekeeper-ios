@@ -36,7 +36,7 @@ class GKAccountViewController: UIViewController {
         
         // Register custom cells
         self.tableView.register(accountCellNib, forCellReuseIdentifier: "GKAccountTableViewCell")
-        self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "accountActionCellNib")
+        self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "GKAccountActionTableViewCell")
     }
     
     // MARK: - Actions
@@ -51,27 +51,39 @@ extension GKAccountViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-//        profileArr.add(firstName!)
-//        profileArr.add(lastName!)
-//        profileArr.add(prefixName!)
-        
-//        profileArr.add(phone)
-        
-//        profileArr.add(email)
-        
-//        profileArr.add(address)
-        
-//        profileArr.add(company)
-        
-//        profileArr.add(website!)
-        
-//        profileArr.add(birthday!)
-        
-        return 0
+        return 7
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        
+        // First, last name, prefix
+        if section == 0 {
+            
+            return 3
+        }
+        // Phone number
+        else if section == 1 {
+            
+            return 1
+        }
+            // Number of addresses
+        else if section == 2, let addresses = self.tempUser?.addresses {
+            
+            return addresses.count + 1
+        }
+            // Company - Company name / Title
+        else if section == 3 {
+            
+            return 2
+        }
+            // Social
+        else if section == 4, let social = self.tempUser?.socials {
+            
+            return social.count + 1
+        }
+        
+        // Birthday
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

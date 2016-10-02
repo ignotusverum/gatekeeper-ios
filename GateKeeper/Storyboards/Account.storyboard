@@ -96,6 +96,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="profileImageButton" destination="vKS-vH-u7n" id="ElI-r6-bIb"/>
                         <outlet property="tableView" destination="agw-sX-jSR" id="VM8-CJ-A7s"/>
                     </connections>
                 </viewController>
@@ -109,7 +110,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GrZ-pl-gXu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dtV-a7-hHH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dtV-a7-hHH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
