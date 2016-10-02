@@ -139,6 +139,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F52554431DA0D93F0089299F /* ModelHuman */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelHuman;
+			sourceTree = "<group>";
+		};
+		F52554441DA0D93F0089299F /* ModelMachine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelMachine;
+			sourceTree = "<group>";
+		};
 		F5A011311D99B365000C5904 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +244,8 @@
 		F5D60DF71D90B06F003E8F4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F52554431DA0D93F0089299F /* ModelHuman */,
+				F52554441DA0D93F0089299F /* ModelMachine */,
 				F5D60E141D90B50D003E8F4A /* GKManagedObject.swift */,
 				F5D60E111D90B501003E8F4A /* TMManagedObject.swift */,
 				F5D60E161D90B5BF003E8F4A /* GKModel.xcdatamodeld */,
