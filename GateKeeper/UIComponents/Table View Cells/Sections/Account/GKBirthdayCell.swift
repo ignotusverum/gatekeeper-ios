@@ -10,6 +10,13 @@ import UIKit
 
 class GKBirthdayCell: GKAccountTableViewCell {
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Disable input
+        self.textField.isUserInteractionEnabled = false
+    }
+    
     // Override Placeholder
     override public var placeholderString: String {
         return "Birthday"

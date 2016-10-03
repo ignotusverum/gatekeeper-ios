@@ -16,23 +16,6 @@ class GKAccountViewController: UIViewController {
     // User tableview data
     @IBOutlet weak var tableView: UITableView!
     
-    // Static datasouce
-    let nameSectionPlaceholoders = ["First name", "Last name", "Prefix"]
-    
-    let phoneNumberPlaceholoders = ["Home"]
-    
-    let emailPlaceholoders = ["Home"]
-    
-    let addressPlaceholoders = ["Street 1", "Street 2", "City", "State", "Country", "Zip"]
-    
-    let companyPlaceholoders = ["Company", "Title"]
-    
-    let socialPlaceholoders = ["Website"]
-    
-    let birthdayPlaceholoders = ["Birthday"]
-    
-    var cellPlaceholders = [[String]]()
-    
     // User datasource
     var tempUser: TempUser?
     
@@ -46,9 +29,6 @@ class GKAccountViewController: UIViewController {
     
     // Table view init
     func tableViewInit() {
-     
-        // Init cell placeholders
-        self.cellPlaceholders = [nameSectionPlaceholoders, phoneNumberPlaceholoders, emailPlaceholoders, addressPlaceholoders, companyPlaceholoders, socialPlaceholoders, birthdayPlaceholoders]
         
         // Account cells
         let accountActionCellNib = UINib(nibName: "GKActionAccountTableViewCell", bundle: nil)
@@ -76,22 +56,22 @@ extension GKAccountViewController: UITableViewDataSource {
         // First, last name, prefix
         if section == 0 {
             
-            return nameSectionPlaceholoders.count
+            return 3
         }
         // Phone number
         else if section == 1 {
             
-            return phoneNumberPlaceholoders.count
+            return 1
         }
             // Number of addresses
         else if section == 2, let addresses = self.tempUser?.addresses {
             
-            return addresses.count + 1
+            return addresses.count * 6
         }
             // Company - Company name / Title
         else if section == 3 {
             
-            return companyPlaceholoders.count
+            return 2
         }
             // Social
         else if section == 4, let social = self.tempUser?.socials {

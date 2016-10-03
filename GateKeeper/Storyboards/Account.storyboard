@@ -10,10 +10,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Account View Controller-->
+        <!--Aaccount View Controller-->
         <scene sceneID="Z5O-cY-Mjm">
             <objects>
-                <viewController storyboardIdentifier="GKAccountViewController" id="new-ED-sGU" customClass="GKAccountViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GKAccountViewController" id="new-ED-sGU" customClass="GKAaccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QTz-5I-O5A"/>
                         <viewControllerLayoutGuide type="bottom" id="f0c-Ku-Hnt"/>
@@ -110,7 +110,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GrZ-pl-gXu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dtV-a7-hHH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dtV-a7-hHH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
