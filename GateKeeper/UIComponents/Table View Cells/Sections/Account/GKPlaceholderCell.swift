@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GKPlaceholder: GKAccountTableViewCell {
+class GKPlaceholderCell: GKAccountTableViewCell {
 
     // Override Placeholder
     override public var placeholderString: String {

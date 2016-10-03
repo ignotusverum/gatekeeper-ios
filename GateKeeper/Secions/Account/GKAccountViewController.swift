@@ -16,6 +16,23 @@ class GKAccountViewController: UIViewController {
     // User tableview data
     @IBOutlet weak var tableView: UITableView!
     
+    // Cell Identifiers
+    let profileSectionCells = ["GKFirstNameCell", "GKLastNameCell", "GKPlaceholderCell"]
+    
+    let phoneCells = ["GKPhoneCell"]
+    
+    let emailCells = ["GKEmailCell"]
+    
+    let socialCells = ["GKSocialCell"]
+    
+    let birthdayCells = ["GKBirthdayCell"]
+    
+    let workSectionCells = ["GKCompanyCell", "GKTitleCell"]
+    
+    let addressCells = ["GKStreet1Cell", "GKStreet2Cell", "GKCityCell", "GKStateCell", "GKCountryCell", "GKZipCell"]
+    
+    var datasourceCells = [[String]]()
+    
     // User datasource
     var tempUser: TempUser?
     
@@ -34,10 +51,38 @@ class GKAccountViewController: UIViewController {
     func tableViewInit() {
         
         // Account cells
-        let accountActionCellNib = UINib(nibName: "GKActionAccountTableViewCell", bundle: nil)
+        // Profile cells
+        self.tableView.register(GKFirstNameCell.self, forCellReuseIdentifier: "GKFirstNameCell")
+        self.tableView.register(GKLastNameCell.self, forCellReuseIdentifier: "GKLastNameCell")
+        self.tableView.register(GKPlaceholderCell.self, forCellReuseIdentifier: "GKPlaceholderCell")
         
-        // Register custom cells
-        self.tableView.register(accountActionCellNib, forCellReuseIdentifier: "GKActionAccountTableViewCell")
+        // Phone cells
+        self.tableView.register(GKPhoneCell.self, forCellReuseIdentifier: "GKPhoneCell")
+        
+        // Email cells
+        self.tableView.register(GKEmailCell.self, forCellReuseIdentifier: "GKEmailCell")
+        
+        // Address Cells
+        self.tableView.register(GKStreet1Cell.self, forCellReuseIdentifier: "GKStreet1Cell")
+        self.tableView.register(GKStreet2Cell.self, forCellReuseIdentifier: "GKStreet2Cell")
+        self.tableView.register(GKCityCell.self, forCellReuseIdentifier: "GKCityCell")
+        self.tableView.register(GKStateCell.self, forCellReuseIdentifier: "GKStateCell")
+        self.tableView.register(GKCountryCell.self, forCellReuseIdentifier: "GKCountryCell")
+        self.tableView.register(GKZipCell.self, forCellReuseIdentifier: "GKZipCell")
+        
+        // Work
+        self.tableView.register(GKCompanyCell.self, forCellReuseIdentifier: "GKCompanyCell")
+        self.tableView.register(GKTitleCell.self, forCellReuseIdentifier: "GKTitleCell")
+        
+        // Social
+        self.tableView.register(GKSocialCell.self, forCellReuseIdentifier: "GKSocialCell")
+        self.tableView.register(GKTitleCell.self, forCellReuseIdentifier: "GKTitleCell")
+        
+        // Birthday
+        self.tableView.register(GKBirthdayCell.self, forCellReuseIdentifier: "GKBirthdayCell")
+        
+        // Init cell identifiers array
+        self.datasourceCells = [profileSectionCells, phoneCells, emailCells, addressCells, workSectionCells, socialCells, birthdayCells]
     }
     
     // MARK: - Actions
@@ -88,9 +133,7 @@ extension GKAccountViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GKAccountActionTableViewCell", for: indexPath) as! GKActionAccountTableViewCell
-        
-        
+        var cell = tableView.dequeueReusableCell(withIdentifier: self.datasourceCells[indexPath.section][indexPath.row], for: indexPath)
         
         return cell
     }

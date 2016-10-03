@@ -9,7 +9,7 @@
 import UIKit
 
 class GKFirstNameCell: GKAccountTableViewCell {
-
+    
     // Overriding icon name
     override public var iconImageName: String {
         return "ico_user"
