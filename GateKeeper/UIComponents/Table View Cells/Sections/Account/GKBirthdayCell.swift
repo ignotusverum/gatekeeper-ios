@@ -1,5 +1,5 @@
 //
-//  GKEmailCell.swift
+//  GKBirthdayCell.swift
 //  GateKeeper
 //
 //  Created by Vladislav Zagorodnyuk on 10/2/16.
@@ -8,10 +8,15 @@
 
 import UIKit
 
-class GKEmailCell: GKActionAccountTableViewCell {
+class GKBirthdayCell: GKAccountTableViewCell {
+
+    // Override Placeholder
+    override public var placeholderString: String {
+        return "Birthday"
+    }
 
     // Overriding icon name
     override public var iconImageName: String {
-        return "ico_email"
+        return "ico_date"
     }
 }

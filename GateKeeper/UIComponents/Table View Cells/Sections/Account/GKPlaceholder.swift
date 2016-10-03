@@ -10,9 +10,8 @@ import UIKit
 
 class GKPlaceholder: GKAccountTableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.textField.placeholder = "Placeholder"
+    // Override Placeholder
+    override public var placeholderString: String {
+        return "Placeholder"
     }
 }

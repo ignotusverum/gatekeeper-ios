@@ -10,7 +10,8 @@ import UIKit
 
 class GKPhoneCell: GKActionAccountTableViewCell {
 
+    // Overriding icon name
     override public var iconImageName: String {
-        return "123"
+        return "ico_phone"
     }
 }

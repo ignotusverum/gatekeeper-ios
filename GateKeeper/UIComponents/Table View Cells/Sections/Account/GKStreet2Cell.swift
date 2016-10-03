@@ -1,5 +1,5 @@
 //
-//  GKLastNameCell.swift
+//  GKStreet2Cell.swift
 //  GateKeeper
 //
 //  Created by Vladislav Zagorodnyuk on 10/2/16.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class GKLastNameCell: GKAccountTableViewCell {
+class GKStreet2Cell: GKAccountTableViewCell {
 
     // Override Placeholder
     override public var placeholderString: String {
-        return "Last name"
+        return "Street 2"
     }
 }

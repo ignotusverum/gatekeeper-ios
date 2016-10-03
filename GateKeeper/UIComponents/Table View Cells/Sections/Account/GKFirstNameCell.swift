@@ -10,15 +10,13 @@ import UIKit
 
 class GKFirstNameCell: GKAccountTableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.customSetup()
+    // Overriding icon name
+    override public var iconImageName: String {
+        return "ico_user"
     }
     
-    func customSetup() {
-        
-        self.textField.placeholder = "First name"
-        self.iconImageView.image = UIImage(named: "ico_user")
+    // Override Placeholder
+    override public var placeholderString: String {
+        return "First name"
     }
 }

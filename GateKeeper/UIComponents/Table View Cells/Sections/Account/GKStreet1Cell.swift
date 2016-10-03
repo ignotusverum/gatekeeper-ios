@@ -10,6 +10,13 @@ import UIKit
 
 class GKStreet1Cell: GKActionAccountTableViewCell {
 
+    // Overriding icon name
+    override public var iconImageName: String {
+        return "ico_loc"
+    }
     
-
+    // Override Placeholder
+    override public var placeholderString: String {
+        return "Street 1"
+    }
 }
