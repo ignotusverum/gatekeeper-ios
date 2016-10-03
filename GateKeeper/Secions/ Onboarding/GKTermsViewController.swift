@@ -11,7 +11,6 @@ import UIKit
 class GKTermsViewController: UIViewController {
 
     // MARK: - Outlets
-    
     // Control Buttons
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var rejectButton: UIButton!

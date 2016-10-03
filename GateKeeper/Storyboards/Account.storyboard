@@ -10,10 +10,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Aaccount View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="Z5O-cY-Mjm">
             <objects>
-                <viewController storyboardIdentifier="GKAccountViewController" id="new-ED-sGU" customClass="GKAaccountViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GKAccountViewController" id="new-ED-sGU" customClass="GKAccountViewController" customModule="GateKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QTz-5I-O5A"/>
                         <viewControllerLayoutGuide type="bottom" id="f0c-Ku-Hnt"/>
@@ -74,7 +74,11 @@
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agw-sX-jSR">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="new-ED-sGU" id="ymU-4C-mJA"/>
+                                    <outlet property="delegate" destination="new-ED-sGU" id="pRs-xT-PJZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
