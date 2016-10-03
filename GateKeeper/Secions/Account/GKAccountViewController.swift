@@ -25,6 +25,9 @@ class GKAccountViewController: UIViewController {
         
         // Init custom cells
         self.tableViewInit()
+        
+        // Title
+        self.addTitleText(titleText: "Your Information")
     }
     
     // Table view init
