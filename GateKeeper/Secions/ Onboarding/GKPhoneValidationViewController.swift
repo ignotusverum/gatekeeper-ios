@@ -64,42 +64,42 @@ class GKPhoneValidationViewController: UIViewController {
     func validatePhoneNumber() {
         
         // Text check
-        if let validationCode = self.phoneValidationField.text {
+//        if let validationCode = self.phoneValidationField.text {
             
-            GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
-            
-            // Validation request
-            GKUserAdapter.validate(validationCode, tempUserID: self.tempUser!.modelID).then { result-> Void in
-                
-                GMDCircleLoader.hide(from: self.view, animated: true)
-                
-                // Success check
-                if let success = result?["success"].bool {
-                    if success == true {
-                        
-                        // Perform segue
+//            GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
+//            
+//            // Validation request
+//            GKUserAdapter.validate(validationCode, tempUserID: self.tempUser!.modelID).then { result-> Void in
+//                
+//                GMDCircleLoader.hide(from: self.view, animated: true)
+//                
+//                // Success check
+//                if let success = result?["success"].bool {
+//                    if success == true {
+//                        
+//                        // Perform segue
                         self.pushAccount()
-                    }
-                }
-                else {
-                    
-                    // If message = error
-                    if let message = result?["message"].string {
-                        
-                        self.view.makeToast(message)
-                        return
-                    }
-                }
-                
-                }.catch { error in
-             
-                    self.showError()
-            }
-        }
-        else {
-            
-            self.showError()
-        }
+//                    }
+//                }
+//                else {
+//                    
+//                    // If message = error
+//                    if let message = result?["message"].string {
+//                        
+//                        self.view.makeToast(message)
+//                        return
+//                    }
+//                }
+//                
+//                }.catch { error in
+//             
+//                    self.showError()
+//            }
+//        }
+//        else {
+//            
+//            self.showError()
+//        }
     }
     
     // MARK: - Utilities

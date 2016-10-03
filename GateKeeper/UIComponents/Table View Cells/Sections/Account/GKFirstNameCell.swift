@@ -12,11 +12,18 @@ class GKFirstNameCell: GKAccountTableViewCell {
     
     // Overriding icon name
     override public var iconImageName: String {
+        
         return "ico_user"
     }
     
     // Override Placeholder
     override public var placeholderString: String {
+        
         return "First name"
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
 }

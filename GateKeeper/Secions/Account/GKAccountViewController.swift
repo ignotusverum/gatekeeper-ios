@@ -17,21 +17,21 @@ class GKAccountViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // Cell Identifiers
-    let profileSectionCells = ["GKFirstNameCell", "GKLastNameCell", "GKPlaceholderCell"]
+    let profileSectionCells: [Reusable.Type] = [GKFirstNameCell.self, GKLastNameCell.self, GKPlaceholderCell.self]
     
-    let phoneCells = ["GKPhoneCell"]
+    let phoneCells = [GKPhoneCell.self]
     
-    let emailCells = ["GKEmailCell"]
+    let emailCells = [GKEmailCell.self]
     
-    let socialCells = ["GKSocialCell"]
+    let socialCells = [GKSocialCell.self]
     
-    let birthdayCells = ["GKBirthdayCell"]
+    let birthdayCells = [GKBirthdayCell.self]
     
-    let workSectionCells = ["GKCompanyCell", "GKTitleCell"]
+    let workSectionCells: [Reusable.Type] = [GKCompanyCell.self, GKTitleCell.self]
     
-    let addressCells = ["GKStreet1Cell", "GKStreet2Cell", "GKCityCell", "GKStateCell", "GKCountryCell", "GKZipCell"]
+    let addressCells: [Reusable.Type] = [GKStreet1Cell.self, GKStreet2Cell.self, GKCityCell.self, GKStateCell.self, GKCountryCell.self, GKZipCell.self]
     
-    var datasourceCells = [[String]]()
+    var datasourceCells = [[Reusable.Type]]()
     
     // User datasource
     var tempUser: TempUser?
@@ -50,39 +50,15 @@ class GKAccountViewController: UIViewController {
     // Table view init
     func tableViewInit() {
         
-        // Account cells
-        // Profile cells
-        self.tableView.register(GKFirstNameCell.self, forCellReuseIdentifier: "GKFirstNameCell")
-        self.tableView.register(GKLastNameCell.self, forCellReuseIdentifier: "GKLastNameCell")
-        self.tableView.register(GKPlaceholderCell.self, forCellReuseIdentifier: "GKPlaceholderCell")
-        
-        // Phone cells
-        self.tableView.register(GKPhoneCell.self, forCellReuseIdentifier: "GKPhoneCell")
-        
-        // Email cells
-        self.tableView.register(GKEmailCell.self, forCellReuseIdentifier: "GKEmailCell")
-        
-        // Address Cells
-        self.tableView.register(GKStreet1Cell.self, forCellReuseIdentifier: "GKStreet1Cell")
-        self.tableView.register(GKStreet2Cell.self, forCellReuseIdentifier: "GKStreet2Cell")
-        self.tableView.register(GKCityCell.self, forCellReuseIdentifier: "GKCityCell")
-        self.tableView.register(GKStateCell.self, forCellReuseIdentifier: "GKStateCell")
-        self.tableView.register(GKCountryCell.self, forCellReuseIdentifier: "GKCountryCell")
-        self.tableView.register(GKZipCell.self, forCellReuseIdentifier: "GKZipCell")
-        
-        // Work
-        self.tableView.register(GKCompanyCell.self, forCellReuseIdentifier: "GKCompanyCell")
-        self.tableView.register(GKTitleCell.self, forCellReuseIdentifier: "GKTitleCell")
-        
-        // Social
-        self.tableView.register(GKSocialCell.self, forCellReuseIdentifier: "GKSocialCell")
-        self.tableView.register(GKTitleCell.self, forCellReuseIdentifier: "GKTitleCell")
-        
-        // Birthday
-        self.tableView.register(GKBirthdayCell.self, forCellReuseIdentifier: "GKBirthdayCell")
-        
         // Init cell identifiers array
         self.datasourceCells = [profileSectionCells, phoneCells, emailCells, addressCells, workSectionCells, socialCells, birthdayCells]
+        
+        for arrays in self.datasourceCells {
+            for classObj in arrays {
+                
+                let _ = self.tableView.registerReusable(cellClass: classObj)
+            }
+        }
     }
     
     // MARK: - Actions
@@ -133,7 +109,8 @@ extension GKAccountViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: self.datasourceCells[indexPath.section][indexPath.row], for: indexPath)
+        let identifier = self.datasourceCells[indexPath.section][indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier.reuseIdentifier, for: indexPath)
         
         return cell
     }
