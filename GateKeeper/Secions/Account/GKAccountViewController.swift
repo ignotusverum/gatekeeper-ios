@@ -56,7 +56,14 @@ class GKAccountViewController: UIViewController {
         for arrays in self.datasourceCells {
             for classObj in arrays {
                 
-                let _ = self.tableView.registerReusable(cellClass: classObj)
+                if classObj is GKAccountTableViewCell {
+                    
+                    let accountCellNib = UINib(nibName: "GKAccountTableViewCell", bundle: nil)
+                    self.tableView.register(accountCellNib, forCellReuseIdentifier: classObj.reuseIdentifier)
+                }
+                else {
+                    
+                }
             }
         }
     }

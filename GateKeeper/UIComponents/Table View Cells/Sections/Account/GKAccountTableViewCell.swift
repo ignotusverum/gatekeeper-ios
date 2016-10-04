@@ -26,14 +26,10 @@ class GKAccountTableViewCell: UITableViewCell {
         return ""
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         self.customInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     func customInit() {
