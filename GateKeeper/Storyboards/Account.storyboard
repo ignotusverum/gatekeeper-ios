@@ -387,7 +387,7 @@
                                             <frame key="frameInset" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-N1-Bi9">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-N1-Bi9">
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -436,8 +436,32 @@
                                             <outlet property="textField" destination="0xO-r3-kw9" id="b46-pB-beQ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKSocialCell" rowHeight="60" id="Hz4-M2-2Pr" userLabel="GKSocialCell" customClass="GKSocialCell" customModule="GateKeeper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKTitleCell" rowHeight="60" id="tKE-zN-H5i" userLabel="GKTitleCell" customClass="GKTitleCell" customModule="GateKeeper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="688" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tKE-zN-H5i" id="a68-U0-vAv">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8J-MZ-78H">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="A8J-MZ-78H" secondAttribute="bottom" constant="-8" id="7iV-iN-1rx"/>
+                                                <constraint firstAttribute="trailing" secondItem="A8J-MZ-78H" secondAttribute="trailing" constant="44" id="PXW-Ok-fcb"/>
+                                                <constraint firstItem="A8J-MZ-78H" firstAttribute="top" secondItem="a68-U0-vAv" secondAttribute="topMargin" constant="-8" id="jfZ-Us-ceV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="A8J-MZ-78H" id="uhc-oh-noB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKSocialCell" rowHeight="60" id="Hz4-M2-2Pr" userLabel="GKSocialCell" customClass="GKSocialCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="748" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hz4-M2-2Pr" id="XJ6-9V-d8b">
                                             <frame key="frameInset" width="375" height="60"/>
@@ -482,7 +506,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKBirthdayCell" rowHeight="60" id="mho-AK-FBk" userLabel="GKBirthdayCell" customClass="GKBirthdayCell" customModule="GateKeeper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="748" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="808" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mho-AK-FBk" id="3mA-9A-AyW">
                                             <frame key="frameInset" width="375" height="60"/>
