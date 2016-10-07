@@ -94,18 +94,23 @@ extension GKAccountViewController: UITableViewDataSource {
             
             return 1
         }
+            // Number of email
+        else if section == 2 {
+            
+            return 1
+        }
             // Number of addresses
-        else if section == 2, let addresses = self.tempUser?.addresses {
+        else if section == 3, let addresses = self.tempUser?.addresses {
             
             return addresses.count * 6
         }
             // Company - Company name / Title
-        else if section == 3 {
+        else if section == 4 {
             
             return 2
         }
             // Social
-        else if section == 4, let social = self.tempUser?.socials {
+        else if section == 5, let social = self.tempUser?.socials {
             
             return social.count + 1
         }
