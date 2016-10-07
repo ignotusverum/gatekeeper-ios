@@ -291,7 +291,18 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
         // Track selected cell
         self.selectedCell = cell
         
-        cell.textField?.becomeFirstResponder()
+        if cell is GKPhoneCell {
+            let phoneCell = cell as! GKPhoneCell
+            phoneCell.phoneNumberInput.becomeFirstResponder()
+            
+            phoneCell.phoneNumberInput.addTarget(self, action: #selector(GKAccountViewController.textfieldDidChange(_:)), for: .editingChanged)
+        }
+        else {
+            
+            cell.textField?.becomeFirstResponder()
+            
+            cell.textField?.addTarget(self, action: #selector(GKAccountViewController.textfieldDidChange(_:)), for: .editingChanged)
+        }
     }
     
     func addActionButtonPressed(_ cell: GKAccountTableViewCell) {

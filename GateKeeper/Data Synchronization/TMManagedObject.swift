@@ -3,7 +3,7 @@
 //  consumer
 //
 //  Created by Vladislav Zagorodnyuk on 2/3/16.
-//  Copyright © 2016 Human Ventures Co. All rights reserved.
+//  Copyright © 2016 Vlad Zagorodnyuk. All rights reserved.
 //
 
 import CoreData
