@@ -37,7 +37,6 @@ class GKTermsViewController: UIViewController {
     }
     
     // MARK: - UI Setup
-    
     // Scroll to bottom of textView
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -56,13 +55,19 @@ class GKTermsViewController: UIViewController {
         }
         else {
          
+            GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
+            
             GKCongif.fetchTerms().then { resultString-> Void in
                 
                 self.termsTextView.text = resultString
                 
+                GMDCircleLoader.hide(from: self.view, animated: true)
+                
                 }.catch { error in
                     
                     self.termsTextView.text = ""
+                    
+                    GMDCircleLoader.hide(from: self.view, animated: true)
             }
         }
     }
