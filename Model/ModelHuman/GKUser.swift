@@ -21,12 +21,25 @@ struct TempUser {
     var prefix: String?
     
     var phoneNumber: PhoneNumber
+    var phoneNumberString: String? {
+        didSet {
+            
+            if let phoneNumberString = phoneNumberString {
+                do {
+                    let phoneNumber = try PhoneNumber(rawNumber: phoneNumberString)
+                    
+                    self.phoneNumber = phoneNumber
+                }
+                catch { }
+            }
+        }
+    }
     
     var emails = [String]()
     
     var addresses = [Address]()
     
-    var works = [Work]()
+    var work = Work()
     
     var socials = [String]()
     

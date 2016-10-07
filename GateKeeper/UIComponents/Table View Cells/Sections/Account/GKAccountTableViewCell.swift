@@ -10,10 +10,10 @@ import UIKit
 
 protocol GKAccountTableViewCellDelegate {
     
-    func cellPressed(_ cell: UITableViewCell)
+    func cellPressed(_ cell: GKAccountTableViewCell)
     
-    func addActionButtonPressed(_ cell: UITableViewCell)
-    func closeActionButtonPressed(_ cell: UITableViewCell)
+    func addActionButtonPressed(_ cell: GKAccountTableViewCell)
+    func closeActionButtonPressed(_ cell: GKAccountTableViewCell)
 }
 
 class GKAccountTableViewCell: UITableViewCell {

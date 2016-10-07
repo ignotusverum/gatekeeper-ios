@@ -16,6 +16,9 @@ class GKAccountViewController: UIViewController {
     // User tableview data
     @IBOutlet weak var tableView: UITableView!
     
+    // Selected cell
+    var selectedCell: GKAccountTableViewCell?
+    
     // Cell Identifiers
     let profileSectionCells: [Reusable.Type] = [GKFirstNameCell.self, GKLastNameCell.self, GKPrefixCell.self]
     
@@ -134,6 +137,8 @@ extension GKAccountViewController: UITableViewDataSource {
         
         cell.customInit()
         
+        cell.delegate = self
+        
         return cell
     }
 }
@@ -149,10 +154,151 @@ extension GKAccountViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - MARK: TextField Delegate
+// MARK: - TextField Delegate
 extension GKAccountViewController: UITextFieldDelegate {
     
     func textfieldDidChange(_ textField: UITextField) {
+     
+        let selectedCellIdentifier = self.selectedCell?.reuseIdentifier
+        let selectedIndexPath = self.selectedCell?.indexPath
+        
+        // First name
+        if selectedCellIdentifier == GKFirstNameCell.reuseIdentifier {
+            
+            self.tempUser?.firstName = textField.text
+        }
+        // Last name
+        else if selectedCellIdentifier == GKLastNameCell.reuseIdentifier {
+            
+            self.tempUser?.lastName = textField.text
+        }
+        // Prefix
+        else if selectedCellIdentifier == GKPrefixCell.reuseIdentifier {
+            
+            self.tempUser?.prefix = textField.text
+        }
+        // Phones
+        else if selectedCellIdentifier == GKPhoneCell.reuseIdentifier {
+            
+            let phoneCell = self.selectedCell as! GKPhoneCell
+            
+            self.tempUser?.phoneNumberString = phoneCell.phoneNumberInput.text
+        }
+        // Emails
+        else if selectedCellIdentifier == GKEmailCell.reuseIdentifier {
+            
+            if var emails = self.tempUser?.emails {
+                if emails.count > 0 {
+                  
+                    emails[selectedIndexPath!.row] = textField.text!
+                }
+                else {
+                    
+                    emails.append(textField.text!)
+                }
+            }
+        }
+        // Addresses
+        if let selectedIndexPath = selectedIndexPath {
+            if selectedIndexPath.section == 3 {
+                
+                var address = Address()
+                if self.tempUser!.addresses.count > 0 {
+                    
+                    address = self.tempUser!.addresses[selectedIndexPath.row]
+                }
+                
+                if selectedCellIdentifier == GKStreet1Cell.reuseIdentifier {
+                    
+                    address.street1 = textField.text
+                }
+                else if selectedCellIdentifier == GKStreet2Cell.reuseIdentifier {
+                    
+                    address.street2 = textField.text
+                }
+                else if selectedCellIdentifier == GKCityCell.reuseIdentifier {
+                    
+                    address.city = textField.text
+                }
+                else if selectedCellIdentifier == GKStateCell.reuseIdentifier {
+                    
+                    address.state = textField.text
+                }
+                else if selectedCellIdentifier == GKCountryCell.reuseIdentifier {
+                    
+                    address.country = textField.text
+                }
+                else if selectedCellIdentifier == GKZipCell.reuseIdentifier {
+                    
+                    address.zip = textField.text
+                }
+                
+                if self.tempUser!.addresses.count > 0 {
+                    
+                    self.tempUser!.addresses[selectedIndexPath.row] = address
+                }
+                else {
+                    
+                    self.tempUser?.addresses.append(address)
+                }
+            }
+            // Work
+            if selectedIndexPath.section == 4 {
+             
+                var work = Work()
+                if let userWork = self.tempUser?.work {
+                    work = userWork
+                }
+                
+                if selectedCellIdentifier == GKCompanyCell.reuseIdentifier {
+                    
+                    work.company = textField.text
+                }
+                else if selectedCellIdentifier == GKTitleCell.reuseIdentifier {
+                    
+                    work.Title = textField.text
+                }
+                
+                self.tempUser?.work = work
+            }
+            // Social
+            if selectedIndexPath.section == 5 {
+                
+                if var socials = self.tempUser?.socials {
+                    if socials.count > 0 {
+                        
+                        socials[selectedIndexPath.row] = textField.text!
+                    }
+                    else {
+                        
+                        socials.append(textField.text!)
+                    }
+                }
+            }
+            // Birthday
+            // TODO: Handle birthday
+        }
+        
+        print(self.tempUser)
+    }
+}
+
+// MARK: - GKAccountTableViewCellDelegate
+extension GKAccountViewController: GKAccountTableViewCellDelegate {
+    
+    func cellPressed(_ cell: GKAccountTableViewCell) {
+        
+        // Track selected cell
+        self.selectedCell = cell
+        
+        cell.textField?.becomeFirstResponder()
+    }
+    
+    func addActionButtonPressed(_ cell: GKAccountTableViewCell) {
+        
+    }
+    
+    func closeActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
     }
 }
