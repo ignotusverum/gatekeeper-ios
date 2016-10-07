@@ -185,7 +185,7 @@
                                                         <constraint firstAttribute="width" constant="25" id="jUT-ph-e6E"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-9z-tWN">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-9z-tWN" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -215,7 +215,7 @@
                                         <connections>
                                             <outlet property="actionButton" destination="G5P-09-Gs7" id="dwC-S9-PC1"/>
                                             <outlet property="iconImageView" destination="aNd-Xo-WII" id="fHm-cc-ilg"/>
-                                            <outlet property="textField" destination="eo7-9z-tWN" id="yeX-tT-OQm"/>
+                                            <outlet property="phoneNumberInput" destination="eo7-9z-tWN" id="x5B-3X-Id5"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKEmailCell" rowHeight="60" id="Hej-yW-SjM" userLabel="GKEmailCell" customClass="GKEmailCell" customModule="GateKeeper" customModuleProvider="target">

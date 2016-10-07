@@ -11,7 +11,7 @@ import UIKit
 class GKAccountTableViewCell: UITableViewCell {
 
     // Text Input
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField?
     
     // Icon Image
     @IBOutlet weak var iconImageView: UIImageView?
@@ -38,6 +38,6 @@ class GKAccountTableViewCell: UITableViewCell {
         self.iconImageView?.image = UIImage(named: iconImageName)
         
         // Set placeholder
-        self.textField.placeholder = self.placeholderString
+        self.textField?.placeholder = self.placeholderString
     }
 }

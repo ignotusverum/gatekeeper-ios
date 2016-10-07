@@ -14,7 +14,7 @@ class GKBirthdayCell: GKAccountTableViewCell {
         super.awakeFromNib()
         
         // Disable input
-        self.textField.isUserInteractionEnabled = false
+        self.textField?.isUserInteractionEnabled = false
     }
     
     // Override Placeholder

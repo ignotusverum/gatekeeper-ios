@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import PhoneNumberKit
 
 class GKPhoneCell: GKActionAccountTableViewCell {
 
+    // Phone input textField
+    @IBOutlet weak var phoneNumberInput: PhoneNumberTextField!
+    
     // Overriding icon name
     override public var iconImageName: String {
         return "ico_phone"

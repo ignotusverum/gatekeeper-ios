@@ -127,8 +127,10 @@ extension GKAccountViewController: UITableViewDataSource {
         // Phone population
         if identifier.reuseIdentifier == phoneCells.first?.reuseIdentifier {
             
-            cell.textField.text = tempUser?.phoneNumber.toE164()
+            cell.textField?.text = tempUser?.phoneNumber.toE164()
         }
+        
+        cell.textField?.delegate = self
         
         cell.customInit()
         
@@ -143,6 +145,14 @@ extension GKAccountViewController: UITableViewDelegate {
     
         // Text field in cell become responder
         let cell = tableView.cellForRow(at: indexPath) as? GKAccountTableViewCell
-        cell?.textField.becomeFirstResponder()
+        cell?.textField?.becomeFirstResponder()
+    }
+}
+
+// MARK: - MARK: TextField Delegate
+extension GKAccountViewController: UITextFieldDelegate {
+    
+    func textfieldDidChange(_ textField: UITextField) {
+        
     }
 }
