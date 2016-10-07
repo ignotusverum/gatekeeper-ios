@@ -14,7 +14,7 @@ class GKAccountTableViewCell: UITableViewCell {
     @IBOutlet weak var textField: UITextField!
     
     // Icon Image
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView?
     
     // Icon image name
     public var iconImageName: String {
@@ -35,7 +35,7 @@ class GKAccountTableViewCell: UITableViewCell {
     func customInit() {
      
         // Set icon image view
-        self.iconImageView.image = UIImage(named: iconImageName)
+        self.iconImageView?.image = UIImage(named: iconImageName)
         
         // Set placeholder
         self.textField.placeholder = self.placeholderString

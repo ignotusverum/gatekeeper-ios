@@ -17,7 +17,7 @@ class GKAccountViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // Cell Identifiers
-    let profileSectionCells: [Reusable.Type] = [GKFirstNameCell.self, GKLastNameCell.self, GKPlaceholderCell.self]
+    let profileSectionCells: [Reusable.Type] = [GKFirstNameCell.self, GKLastNameCell.self, GKPrefixCell.self]
     
     let phoneCells = [GKPhoneCell.self]
     
@@ -117,7 +117,9 @@ extension GKAccountViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let identifier = self.datasourceCells[indexPath.section][indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier.reuseIdentifier, for: indexPath) as! GKAccountTableViewCell
+        
+        cell.customInit()
         
         return cell
     }

@@ -23,17 +23,17 @@ class GKActionAccountTableViewCell: GKAccountTableViewCell {
             // If first row - update button icons
             if indexPath?.row == 0 {
                 
-                self.actionButton.setImage(UIImage(named: "Add"), for: .normal)
+                self.actionButton?.setImage(UIImage(named: "Add"), for: .normal)
                 
                 return
             }
             
-            self.actionButton.setImage(UIImage(named: "Close"), for: .normal)
+            self.actionButton?.setImage(UIImage(named: "Close"), for: .normal)
         }
     }
     
     // Add / Remove Button
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var actionButton: UIButton?
 
     // Delegate
     var delegate: GKActionAccountTableViewCellDelegate?
@@ -44,7 +44,7 @@ class GKActionAccountTableViewCell: GKAccountTableViewCell {
         // Setting image only if index == 0
         if self.indexPath?.row == 0 {
             
-            self.iconImageView.image = UIImage(named: iconImageName)
+            self.iconImageView?.image = UIImage(named: iconImageName)
         }
     }
     

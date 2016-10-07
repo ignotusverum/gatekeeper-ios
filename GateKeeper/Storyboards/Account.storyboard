@@ -9,6 +9,9 @@
         <array key="ProximaNova-Light.ttf">
             <string>ProximaNova-Light</string>
         </array>
+        <array key="ProximaNova-Reg.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Account View Controller-->
@@ -77,21 +80,21 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agw-sX-jSR">
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKActionAccountTableViewCell" rowHeight="60" id="q5w-rC-vcQ" userLabel="GKActionAccountTableViewCell" customClass="GKActionAccountTableViewCell" customModule="GateKeeper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKFirstNameCell" rowHeight="60" id="q5w-rC-vcQ" userLabel="GKFirstNameCell" customClass="GKFirstNameCell" customModule="GateKeeper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q5w-rC-vcQ" id="hsA-q1-Wj9">
                                             <frame key="frameInset" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MtC-Kr-0Wi">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_user" translatesAutoresizingMaskIntoConstraints="NO" id="MtC-Kr-0Wi">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="39.5" id="Z5F-IH-RSc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-DI-fH5">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-DI-fH5">
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS3-KF-uyq">
@@ -116,43 +119,398 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="actionButton" destination="dS3-KF-uyq" id="SS5-9P-CJB"/>
                                             <outlet property="iconImageView" destination="MtC-Kr-0Wi" id="ZJd-pY-ohp"/>
                                             <outlet property="textField" destination="Lkd-DI-fH5" id="FMh-5m-Bdq"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKAccountTableViewCell" rowHeight="60" id="pA4-O5-4Qx" userLabel="GKActionAccountTableViewCell" customClass="GKAccountTableViewCell" customModule="GateKeeper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKLastNameCell" rowHeight="60" id="pA4-O5-4Qx" userLabel="GKLastNameCell" customClass="GKLastNameCell" customModule="GateKeeper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pA4-O5-4Qx" id="YnJ-TM-bTL">
                                             <frame key="frameInset" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWS-kn-O6f">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="39.5" id="9HB-yX-7Fa"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBq-Ii-k3d">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBq-Ii-k3d">
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="PWS-kn-O6f" secondAttribute="bottom" id="5Qs-gH-QtR"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="gBq-Ii-k3d" secondAttribute="bottom" constant="-8" id="9oN-FY-2xg"/>
-                                                <constraint firstItem="PWS-kn-O6f" firstAttribute="leading" secondItem="YnJ-TM-bTL" secondAttribute="leadingMargin" constant="7" id="Fms-i7-dWd"/>
+                                                <constraint firstItem="gBq-Ii-k3d" firstAttribute="leading" secondItem="YnJ-TM-bTL" secondAttribute="leadingMargin" constant="54.5" id="HfL-MX-nZa"/>
                                                 <constraint firstItem="gBq-Ii-k3d" firstAttribute="top" secondItem="YnJ-TM-bTL" secondAttribute="topMargin" constant="-8" id="TEV-Br-dkN"/>
-                                                <constraint firstItem="gBq-Ii-k3d" firstAttribute="leading" secondItem="PWS-kn-O6f" secondAttribute="trailing" constant="8" id="TEs-qS-Sae"/>
-                                                <constraint firstItem="PWS-kn-O6f" firstAttribute="top" secondItem="YnJ-TM-bTL" secondAttribute="topMargin" constant="-1" id="dir-MW-oYA"/>
                                                 <constraint firstAttribute="trailing" secondItem="gBq-Ii-k3d" secondAttribute="trailing" constant="44" id="vT0-Dr-Q61"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="iconImageView" destination="PWS-kn-O6f" id="VgS-hc-Zzv"/>
                                             <outlet property="textField" destination="gBq-Ii-k3d" id="vBu-83-UGP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKPrefixCell" rowHeight="60" id="3IC-T2-Ssb" userLabel="GKPrefixCell" customClass="GKPrefixCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="148" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3IC-T2-Ssb" id="BEo-Ry-k6w">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Prefix" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6v-b9-65u">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="m6v-b9-65u" firstAttribute="leading" secondItem="BEo-Ry-k6w" secondAttribute="leadingMargin" constant="54.5" id="HuO-i5-Q5L"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="m6v-b9-65u" secondAttribute="bottom" constant="-8" id="JJG-bm-wMJ"/>
+                                                <constraint firstItem="m6v-b9-65u" firstAttribute="top" secondItem="BEo-Ry-k6w" secondAttribute="topMargin" constant="-8" id="RHS-Pr-1t9"/>
+                                                <constraint firstAttribute="trailing" secondItem="m6v-b9-65u" secondAttribute="trailing" constant="44" id="zU2-bu-Zc5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="m6v-b9-65u" id="RPP-NB-lrm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKPhoneCell" rowHeight="60" id="KPz-ds-4Zz" userLabel="GKPhoneCell" customClass="GKPhoneCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KPz-ds-4Zz" id="5kH-C4-nXh">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_phone" translatesAutoresizingMaskIntoConstraints="NO" id="aNd-Xo-WII">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39.5" id="jUT-ph-e6E"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-9z-tWN">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5P-09-Gs7">
+                                                    <state key="normal" image="Add"/>
+                                                    <connections>
+                                                        <action selector="actionButtonPressed:" destination="KPz-ds-4Zz" eventType="touchUpInside" id="jOw-kh-7fM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="top" secondItem="eo7-9z-tWN" secondAttribute="top" id="1np-vw-CJ6"/>
+                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="leading" secondItem="5kH-C4-nXh" secondAttribute="leadingMargin" constant="7" id="MOf-Qo-30q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eo7-9z-tWN" secondAttribute="bottom" constant="-8" id="Mlh-ph-OXv"/>
+                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="bottom" secondItem="eo7-9z-tWN" secondAttribute="bottom" id="NEP-X8-0a3"/>
+                                                <constraint firstAttribute="trailing" secondItem="G5P-09-Gs7" secondAttribute="trailing" id="QYN-32-Vo5"/>
+                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="leading" secondItem="aNd-Xo-WII" secondAttribute="trailing" constant="8" id="W0m-Mo-1o3"/>
+                                                <constraint firstAttribute="trailing" secondItem="eo7-9z-tWN" secondAttribute="trailing" constant="44" id="YUs-Uy-un4"/>
+                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="top" secondItem="5kH-C4-nXh" secondAttribute="topMargin" constant="-8" id="Z9U-cC-GSS"/>
+                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="top" secondItem="5kH-C4-nXh" secondAttribute="topMargin" constant="-1" id="s6R-e4-qkK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aNd-Xo-WII" secondAttribute="bottom" id="wjM-2E-ruU"/>
+                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="leading" secondItem="eo7-9z-tWN" secondAttribute="trailing" id="zZo-2B-jgM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actionButton" destination="G5P-09-Gs7" id="dwC-S9-PC1"/>
+                                            <outlet property="iconImageView" destination="aNd-Xo-WII" id="fHm-cc-ilg"/>
+                                            <outlet property="textField" destination="eo7-9z-tWN" id="yeX-tT-OQm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKEmailCell" rowHeight="60" id="Hej-yW-SjM" userLabel="GKEmailCell" customClass="GKEmailCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="268" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hej-yW-SjM" id="aGq-EX-eWn">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_email" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-n1-2rK">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39.5" id="H3E-pT-e9I"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-PR-HbY">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZA-SZ-BbK">
+                                                    <state key="normal" image="Add"/>
+                                                    <connections>
+                                                        <action selector="actionButtonPressed:" destination="Hej-yW-SjM" eventType="touchUpInside" id="1qx-mA-eyo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="bottom" secondItem="2Zs-PR-HbY" secondAttribute="bottom" id="EXu-iZ-z9E"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aVY-n1-2rK" secondAttribute="bottom" id="Jm4-ut-FMd"/>
+                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="top" secondItem="2Zs-PR-HbY" secondAttribute="top" id="WMf-DE-EnX"/>
+                                                <constraint firstAttribute="trailing" secondItem="IZA-SZ-BbK" secondAttribute="trailing" id="Yy2-I9-ePR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2Zs-PR-HbY" secondAttribute="bottom" constant="-8" id="cAP-vO-DbE"/>
+                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="top" secondItem="aGq-EX-eWn" secondAttribute="topMargin" constant="-8" id="gZG-0u-lye"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Zs-PR-HbY" secondAttribute="trailing" constant="44" id="giO-9y-bSv"/>
+                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="leading" secondItem="aVY-n1-2rK" secondAttribute="trailing" constant="8" id="koZ-cM-DwZ"/>
+                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="top" secondItem="aGq-EX-eWn" secondAttribute="topMargin" constant="-1" id="v2I-ta-sqU"/>
+                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="leading" secondItem="aGq-EX-eWn" secondAttribute="leadingMargin" constant="7" id="vmA-9q-8Iu"/>
+                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="leading" secondItem="2Zs-PR-HbY" secondAttribute="trailing" id="vvO-Qf-Axk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actionButton" destination="IZA-SZ-BbK" id="gSD-eL-RlH"/>
+                                            <outlet property="iconImageView" destination="aVY-n1-2rK" id="LyK-eu-ucF"/>
+                                            <outlet property="textField" destination="2Zs-PR-HbY" id="uob-7r-cjD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKStreet1Cell" rowHeight="60" id="pud-Wa-u0W" userLabel="GKStreet1Cell" customClass="GKStreet1Cell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="328" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pud-Wa-u0W" id="098-yA-1vF">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_loc" translatesAutoresizingMaskIntoConstraints="NO" id="6rd-Yi-t0W">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39.5" id="ol3-i9-hZQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street 1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3E-pu-06j">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-NS-8dU">
+                                                    <state key="normal" image="Add"/>
+                                                    <connections>
+                                                        <action selector="actionButtonPressed:" destination="pud-Wa-u0W" eventType="touchUpInside" id="2gP-bC-S97"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="C3E-pu-06j" secondAttribute="bottom" constant="-8" id="3f3-fK-spc"/>
+                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="top" secondItem="098-yA-1vF" secondAttribute="topMargin" constant="-1" id="Btt-QE-770"/>
+                                                <constraint firstItem="C3E-pu-06j" firstAttribute="leading" secondItem="6rd-Yi-t0W" secondAttribute="trailing" constant="8" id="UDH-VP-qqT"/>
+                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="leading" secondItem="C3E-pu-06j" secondAttribute="trailing" id="UKJ-9h-1BH"/>
+                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="leading" secondItem="098-yA-1vF" secondAttribute="leadingMargin" constant="7" id="Wym-4z-BGG"/>
+                                                <constraint firstAttribute="trailing" secondItem="JuF-NS-8dU" secondAttribute="trailing" id="cDP-nR-fUH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6rd-Yi-t0W" secondAttribute="bottom" id="gNy-Wy-mP5"/>
+                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="top" secondItem="C3E-pu-06j" secondAttribute="top" id="hkc-xX-IJh"/>
+                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="bottom" secondItem="C3E-pu-06j" secondAttribute="bottom" id="mOi-we-uGE"/>
+                                                <constraint firstItem="C3E-pu-06j" firstAttribute="top" secondItem="098-yA-1vF" secondAttribute="topMargin" constant="-8" id="rxY-6r-IVB"/>
+                                                <constraint firstAttribute="trailing" secondItem="C3E-pu-06j" secondAttribute="trailing" constant="44" id="swJ-u0-647"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actionButton" destination="JuF-NS-8dU" id="xwB-b5-lUi"/>
+                                            <outlet property="iconImageView" destination="6rd-Yi-t0W" id="hkN-Y6-i27"/>
+                                            <outlet property="textField" destination="C3E-pu-06j" id="U9x-BF-Mos"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKStreet2Cell" rowHeight="60" id="6wj-HA-Alk" userLabel="GKStreet2Cell" customClass="GKStreet2Cell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="388" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6wj-HA-Alk" id="1qq-Jg-faa">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street 2" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="StO-ta-wRS">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="StO-ta-wRS" secondAttribute="trailing" constant="44" id="0zg-bl-prx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="StO-ta-wRS" secondAttribute="bottom" constant="-8" id="241-ke-qSH"/>
+                                                <constraint firstItem="StO-ta-wRS" firstAttribute="top" secondItem="1qq-Jg-faa" secondAttribute="topMargin" constant="-8" id="crP-dv-RfJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="StO-ta-wRS" id="xHn-fv-pjm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKCityCell" rowHeight="60" id="9Xp-xk-J9x" userLabel="GKCityCell" customClass="GKCityCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="448" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Xp-xk-J9x" id="HLw-ma-coJ">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3z-J3-BP3">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Z3z-J3-BP3" firstAttribute="top" secondItem="HLw-ma-coJ" secondAttribute="topMargin" constant="-8" id="giP-yE-s2F"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z3z-J3-BP3" secondAttribute="trailing" constant="44" id="u5l-76-jEB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Z3z-J3-BP3" secondAttribute="bottom" constant="-8" id="zoz-fT-L0o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="Z3z-J3-BP3" id="IRW-61-sZO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKStateCell" rowHeight="60" id="pL5-RV-NRE" userLabel="GKStateCell" customClass="GKStateCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="508" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pL5-RV-NRE" id="qBS-8k-7Xk">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjR-LP-VKq">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="XjR-LP-VKq" firstAttribute="top" secondItem="qBS-8k-7Xk" secondAttribute="topMargin" constant="-8" id="Fu2-kz-qKH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XjR-LP-VKq" secondAttribute="bottom" constant="-8" id="KZd-dB-GWx"/>
+                                                <constraint firstAttribute="trailing" secondItem="XjR-LP-VKq" secondAttribute="trailing" constant="44" id="isg-CW-k9L"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="XjR-LP-VKq" id="8wU-w8-JPT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKCompanyCell" rowHeight="60" id="z3F-ol-giN" userLabel="GKCompanyCell" customClass="GKCompanyCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="568" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z3F-ol-giN" id="9mu-9T-fgu">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-N1-Bi9">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_org" translatesAutoresizingMaskIntoConstraints="NO" id="zDr-Kt-jcE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="S71-Gb-LjS"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="bottom" secondItem="9mu-9T-fgu" secondAttribute="bottomMargin" id="8qo-c1-Zuh"/>
+                                                <constraint firstAttribute="bottom" secondItem="9bS-N1-Bi9" secondAttribute="bottom" id="SHy-kg-b5N"/>
+                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="centerY" secondItem="9bS-N1-Bi9" secondAttribute="centerY" id="UvL-yH-B29"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9bS-N1-Bi9" secondAttribute="trailing" constant="36" id="gzq-Cw-10S"/>
+                                                <constraint firstItem="9bS-N1-Bi9" firstAttribute="top" secondItem="9mu-9T-fgu" secondAttribute="top" id="w1H-Ox-6ol"/>
+                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="leading" secondItem="9mu-9T-fgu" secondAttribute="leadingMargin" constant="7" id="ysj-Vk-Lmu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="9bS-N1-Bi9" id="Y5F-xz-pDH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKZipCell" rowHeight="60" id="Ldt-25-lTZ" userLabel="GKZipCell" customClass="GKZipCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="628" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ldt-25-lTZ" id="MJa-Nf-8vX">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xO-r3-kw9">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="0xO-r3-kw9" firstAttribute="top" secondItem="MJa-Nf-8vX" secondAttribute="topMargin" constant="-8" id="V9H-hY-uX7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0xO-r3-kw9" secondAttribute="bottom" constant="-8" id="xFr-h1-fs6"/>
+                                                <constraint firstAttribute="trailing" secondItem="0xO-r3-kw9" secondAttribute="trailing" constant="44" id="z83-HR-Y4l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="0xO-r3-kw9" id="b46-pB-beQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKSocialCell" rowHeight="60" id="Hz4-M2-2Pr" userLabel="GKSocialCell" customClass="GKSocialCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="688" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hz4-M2-2Pr" id="XJ6-9V-d8b">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_web" translatesAutoresizingMaskIntoConstraints="NO" id="tUh-sf-RkJ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39.5" id="JX3-Vy-yly"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Website" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uho-qG-aME">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs6-nS-Fxf">
+                                                    <state key="normal" image="Add"/>
+                                                    <connections>
+                                                        <action selector="actionButtonPressed:" destination="Hz4-M2-2Pr" eventType="touchUpInside" id="YPj-sV-tOi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="top" secondItem="uho-qG-aME" secondAttribute="top" id="2dX-9z-JFZ"/>
+                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="leading" secondItem="XJ6-9V-d8b" secondAttribute="leadingMargin" constant="7" id="6gK-66-MdI"/>
+                                                <constraint firstAttribute="trailing" secondItem="uho-qG-aME" secondAttribute="trailing" constant="44" id="BFh-Ac-g4Q"/>
+                                                <constraint firstItem="uho-qG-aME" firstAttribute="top" secondItem="XJ6-9V-d8b" secondAttribute="topMargin" constant="-8" id="COk-p6-ibR"/>
+                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="top" secondItem="XJ6-9V-d8b" secondAttribute="topMargin" constant="-1" id="FZ3-8K-Tyb"/>
+                                                <constraint firstAttribute="trailing" secondItem="rs6-nS-Fxf" secondAttribute="trailing" id="HVk-zh-kWk"/>
+                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="leading" secondItem="uho-qG-aME" secondAttribute="trailing" id="HXd-WC-OI1"/>
+                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="bottom" secondItem="uho-qG-aME" secondAttribute="bottom" id="kS1-Yy-WxC"/>
+                                                <constraint firstItem="uho-qG-aME" firstAttribute="leading" secondItem="tUh-sf-RkJ" secondAttribute="trailing" constant="8" id="rLd-vf-eHH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tUh-sf-RkJ" secondAttribute="bottom" id="rPP-O4-xFd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uho-qG-aME" secondAttribute="bottom" constant="-8" id="rok-8U-PXi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actionButton" destination="rs6-nS-Fxf" id="kKm-k8-oVe"/>
+                                            <outlet property="iconImageView" destination="tUh-sf-RkJ" id="azi-dK-nMW"/>
+                                            <outlet property="textField" destination="uho-qG-aME" id="txV-Ry-FWw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GKBirthdayCell" rowHeight="60" id="mho-AK-FBk" userLabel="GKBirthdayCell" customClass="GKBirthdayCell" customModule="GateKeeper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="748" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mho-AK-FBk" id="3mA-9A-AyW">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birthday" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xK-zS-W3b">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_date" translatesAutoresizingMaskIntoConstraints="NO" id="bnZ-tz-x2d">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="CgW-6y-3Dz"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="centerY" secondItem="7xK-zS-W3b" secondAttribute="centerY" id="SvB-JK-KBy"/>
+                                                <constraint firstItem="7xK-zS-W3b" firstAttribute="top" secondItem="3mA-9A-AyW" secondAttribute="top" id="Tgm-Qm-WVm"/>
+                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="bottom" secondItem="3mA-9A-AyW" secondAttribute="bottomMargin" id="V07-H3-KPW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7xK-zS-W3b" secondAttribute="trailing" constant="36" id="fI4-1O-Qbj"/>
+                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="leading" secondItem="3mA-9A-AyW" secondAttribute="leadingMargin" constant="7" id="lqI-xo-E6e"/>
+                                                <constraint firstAttribute="bottom" secondItem="7xK-zS-W3b" secondAttribute="bottom" id="wif-k5-9Ba"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="7xK-zS-W3b" id="lr5-YR-Pk3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -210,7 +568,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="17" height="17"/>
         <image name="backButton" width="24" height="15"/>
+        <image name="ico_date" width="19" height="21"/>
+        <image name="ico_email" width="23" height="19"/>
+        <image name="ico_loc" width="19" height="27"/>
+        <image name="ico_org" width="20" height="19"/>
+        <image name="ico_phone" width="19" height="18"/>
+        <image name="ico_user" width="15" height="15"/>
+        <image name="ico_web" width="19" height="17"/>
         <image name="profilePlace" width="160" height="160"/>
     </resources>
 </document>
