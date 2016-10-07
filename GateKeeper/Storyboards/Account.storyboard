@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GrZ-pl-gXu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -89,29 +90,43 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_user" translatesAutoresizingMaskIntoConstraints="NO" id="MtC-Kr-0Wi">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="Z5F-IH-RSc"/>
+                                                        <constraint firstAttribute="width" constant="25" id="8xA-e4-jHc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-DI-fH5">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-DI-fH5">
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS3-KF-uyq"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS3-KF-uyq">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="XDh-Bo-ksg"/>
+                                                    </constraints>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25G-Jx-82f" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="q5w-rC-vcQ" eventType="touchUpInside" id="7TA-lC-31R"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="Lkd-DI-fH5" firstAttribute="leading" secondItem="MtC-Kr-0Wi" secondAttribute="trailing" constant="28" id="1E7-5E-h6X"/>
-                                                <constraint firstAttribute="trailing" secondItem="dS3-KF-uyq" secondAttribute="trailing" id="38z-sU-F05"/>
-                                                <constraint firstItem="dS3-KF-uyq" firstAttribute="top" secondItem="Lkd-DI-fH5" secondAttribute="top" id="7hE-kw-LNE"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Lkd-DI-fH5" secondAttribute="bottom" constant="-8" id="TId-1b-eYz"/>
-                                                <constraint firstItem="dS3-KF-uyq" firstAttribute="bottom" secondItem="Lkd-DI-fH5" secondAttribute="bottom" id="YiV-Qa-BnC"/>
-                                                <constraint firstItem="MtC-Kr-0Wi" firstAttribute="top" secondItem="hsA-q1-Wj9" secondAttribute="topMargin" constant="9" id="hKg-QI-fib"/>
-                                                <constraint firstItem="MtC-Kr-0Wi" firstAttribute="leading" secondItem="hsA-q1-Wj9" secondAttribute="leadingMargin" constant="2" id="hrT-XX-AWc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="MtC-Kr-0Wi" secondAttribute="bottom" constant="10" id="nJr-cl-1BH"/>
-                                                <constraint firstItem="dS3-KF-uyq" firstAttribute="leading" secondItem="Lkd-DI-fH5" secondAttribute="trailing" id="rdf-9D-rpO"/>
-                                                <constraint firstItem="Lkd-DI-fH5" firstAttribute="top" secondItem="hsA-q1-Wj9" secondAttribute="topMargin" constant="-8" id="sVj-5o-tgx"/>
-                                                <constraint firstAttribute="trailing" secondItem="Lkd-DI-fH5" secondAttribute="trailing" constant="44" id="wBy-EH-K2Z"/>
+                                                <constraint firstItem="dS3-KF-uyq" firstAttribute="leading" secondItem="25G-Jx-82f" secondAttribute="trailing" id="7i5-Ij-Rjd"/>
+                                                <constraint firstItem="25G-Jx-82f" firstAttribute="top" secondItem="hsA-q1-Wj9" secondAttribute="top" id="FlU-UD-3kx"/>
+                                                <constraint firstItem="MtC-Kr-0Wi" firstAttribute="top" secondItem="hsA-q1-Wj9" secondAttribute="topMargin" constant="9" id="Gf2-jH-442"/>
+                                                <constraint firstItem="25G-Jx-82f" firstAttribute="top" secondItem="Lkd-DI-fH5" secondAttribute="top" id="IH3-LG-NxD"/>
+                                                <constraint firstItem="25G-Jx-82f" firstAttribute="firstBaseline" secondItem="dS3-KF-uyq" secondAttribute="firstBaseline" id="Mlo-t3-n8e"/>
+                                                <constraint firstItem="25G-Jx-82f" firstAttribute="leading" secondItem="hsA-q1-Wj9" secondAttribute="leading" id="PZc-aC-EV4"/>
+                                                <constraint firstItem="Lkd-DI-fH5" firstAttribute="bottom" secondItem="dS3-KF-uyq" secondAttribute="bottom" id="Ryk-eV-7aH"/>
+                                                <constraint firstAttribute="bottom" secondItem="25G-Jx-82f" secondAttribute="bottom" id="Vh9-c5-HhH"/>
+                                                <constraint firstItem="25G-Jx-82f" firstAttribute="bottom" secondItem="Lkd-DI-fH5" secondAttribute="bottom" id="aiy-X8-9KO"/>
+                                                <constraint firstItem="MtC-Kr-0Wi" firstAttribute="centerY" secondItem="Lkd-DI-fH5" secondAttribute="centerY" id="cci-n7-gSw"/>
+                                                <constraint firstItem="Lkd-DI-fH5" firstAttribute="top" secondItem="dS3-KF-uyq" secondAttribute="top" id="gZm-4O-2eX"/>
+                                                <constraint firstItem="Lkd-DI-fH5" firstAttribute="trailing" secondItem="25G-Jx-82f" secondAttribute="trailing" id="hc7-ZB-LOX"/>
+                                                <constraint firstItem="MtC-Kr-0Wi" firstAttribute="leading" secondItem="hsA-q1-Wj9" secondAttribute="leadingMargin" constant="2" id="lIx-l9-4TW"/>
+                                                <constraint firstItem="Lkd-DI-fH5" firstAttribute="leading" secondItem="MtC-Kr-0Wi" secondAttribute="trailing" constant="28" id="vEC-vr-Okg"/>
+                                                <constraint firstAttribute="trailing" secondItem="dS3-KF-uyq" secondAttribute="trailing" id="xEQ-HU-KC4"/>
+                                                <constraint firstItem="25G-Jx-82f" firstAttribute="baseline" secondItem="dS3-KF-uyq" secondAttribute="baseline" id="xmR-yE-6bI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -131,13 +146,22 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmv-bI-CFy" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="pA4-O5-4Qx" eventType="touchUpInside" id="Ztf-PC-FC1"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gBq-Ii-k3d" secondAttribute="bottom" constant="-8" id="9oN-FY-2xg"/>
-                                                <constraint firstItem="gBq-Ii-k3d" firstAttribute="leading" secondItem="YnJ-TM-bTL" secondAttribute="leadingMargin" constant="54.5" id="HfL-MX-nZa"/>
-                                                <constraint firstItem="gBq-Ii-k3d" firstAttribute="top" secondItem="YnJ-TM-bTL" secondAttribute="topMargin" constant="-8" id="TEV-Br-dkN"/>
-                                                <constraint firstAttribute="trailing" secondItem="gBq-Ii-k3d" secondAttribute="trailing" constant="44" id="vT0-Dr-Q61"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rmv-bI-CFy" secondAttribute="bottom" id="CGt-KY-9bb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Rmv-bI-CFy" secondAttribute="trailing" constant="36" id="LgY-BJ-qca"/>
+                                                <constraint firstItem="Rmv-bI-CFy" firstAttribute="bottom" secondItem="gBq-Ii-k3d" secondAttribute="bottom" id="NuO-Oc-DQZ"/>
+                                                <constraint firstItem="Rmv-bI-CFy" firstAttribute="top" secondItem="YnJ-TM-bTL" secondAttribute="top" id="UtR-vN-EFM"/>
+                                                <constraint firstItem="gBq-Ii-k3d" firstAttribute="leading" secondItem="YnJ-TM-bTL" secondAttribute="leadingMargin" constant="55" id="ZPv-f0-Gs6"/>
+                                                <constraint firstItem="Rmv-bI-CFy" firstAttribute="top" secondItem="gBq-Ii-k3d" secondAttribute="top" id="fSR-H2-0Xa"/>
+                                                <constraint firstItem="gBq-Ii-k3d" firstAttribute="trailing" secondItem="Rmv-bI-CFy" secondAttribute="trailing" id="gfG-om-uvg"/>
+                                                <constraint firstItem="Rmv-bI-CFy" firstAttribute="leading" secondItem="YnJ-TM-bTL" secondAttribute="leading" id="rg6-ol-GAB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -156,13 +180,22 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBe-rT-WZk" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="3IC-T2-Ssb" eventType="touchUpInside" id="TIq-Qf-KuB"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="m6v-b9-65u" firstAttribute="leading" secondItem="BEo-Ry-k6w" secondAttribute="leadingMargin" constant="54.5" id="HuO-i5-Q5L"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="m6v-b9-65u" secondAttribute="bottom" constant="-8" id="JJG-bm-wMJ"/>
-                                                <constraint firstItem="m6v-b9-65u" firstAttribute="top" secondItem="BEo-Ry-k6w" secondAttribute="topMargin" constant="-8" id="RHS-Pr-1t9"/>
-                                                <constraint firstAttribute="trailing" secondItem="m6v-b9-65u" secondAttribute="trailing" constant="44" id="zU2-bu-Zc5"/>
+                                                <constraint firstItem="rBe-rT-WZk" firstAttribute="top" secondItem="BEo-Ry-k6w" secondAttribute="top" id="0la-3O-C5A"/>
+                                                <constraint firstItem="m6v-b9-65u" firstAttribute="leading" secondItem="BEo-Ry-k6w" secondAttribute="leadingMargin" constant="55" id="2vG-Mb-R52"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m6v-b9-65u" secondAttribute="trailing" constant="36" id="6tW-ug-Ukn"/>
+                                                <constraint firstItem="rBe-rT-WZk" firstAttribute="bottom" secondItem="m6v-b9-65u" secondAttribute="bottom" id="9Tg-Xe-KHJ"/>
+                                                <constraint firstItem="rBe-rT-WZk" firstAttribute="top" secondItem="m6v-b9-65u" secondAttribute="top" id="9df-8c-nG8"/>
+                                                <constraint firstAttribute="bottom" secondItem="rBe-rT-WZk" secondAttribute="bottom" id="Rxr-ce-Jbt"/>
+                                                <constraint firstItem="rBe-rT-WZk" firstAttribute="leading" secondItem="BEo-Ry-k6w" secondAttribute="leading" id="SLg-xt-S28"/>
+                                                <constraint firstItem="rBe-rT-WZk" firstAttribute="trailing" secondItem="m6v-b9-65u" secondAttribute="trailing" id="mbq-Jg-HVT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -178,7 +211,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_phone" translatesAutoresizingMaskIntoConstraints="NO" id="aNd-Xo-WII">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="jUT-ph-e6E"/>
+                                                        <constraint firstAttribute="width" constant="25" id="1r7-2v-eI1"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-9z-tWN" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
@@ -187,25 +220,36 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5P-09-Gs7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="JGh-2O-9jo"/>
+                                                    </constraints>
                                                     <state key="normal" image="Add"/>
                                                     <connections>
                                                         <action selector="actionButtonPressed:" destination="KPz-ds-4Zz" eventType="touchUpInside" id="jOw-kh-7fM"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76O-mo-pWW" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="KPz-ds-4Zz" eventType="touchUpInside" id="uTj-sA-GoP"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="top" secondItem="eo7-9z-tWN" secondAttribute="top" id="1np-vw-CJ6"/>
-                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="leading" secondItem="5kH-C4-nXh" secondAttribute="leadingMargin" constant="7" id="MOf-Qo-30q"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eo7-9z-tWN" secondAttribute="bottom" constant="-8" id="Mlh-ph-OXv"/>
-                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="bottom" secondItem="eo7-9z-tWN" secondAttribute="bottom" id="NEP-X8-0a3"/>
-                                                <constraint firstAttribute="trailing" secondItem="G5P-09-Gs7" secondAttribute="trailing" id="QYN-32-Vo5"/>
-                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="leading" secondItem="aNd-Xo-WII" secondAttribute="trailing" constant="23" id="W0m-Mo-1o3"/>
-                                                <constraint firstAttribute="trailing" secondItem="eo7-9z-tWN" secondAttribute="trailing" constant="44" id="YUs-Uy-un4"/>
-                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="top" secondItem="5kH-C4-nXh" secondAttribute="topMargin" constant="-8" id="Z9U-cC-GSS"/>
-                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="top" secondItem="5kH-C4-nXh" secondAttribute="topMargin" constant="9" id="s6R-e4-qkK"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="aNd-Xo-WII" secondAttribute="bottom" constant="10" id="wjM-2E-ruU"/>
-                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="leading" secondItem="eo7-9z-tWN" secondAttribute="trailing" id="zZo-2B-jgM"/>
+                                                <constraint firstItem="76O-mo-pWW" firstAttribute="trailing" secondItem="eo7-9z-tWN" secondAttribute="trailing" id="5Pe-D2-xAk"/>
+                                                <constraint firstItem="76O-mo-pWW" firstAttribute="top" secondItem="eo7-9z-tWN" secondAttribute="top" id="5uK-if-oY2"/>
+                                                <constraint firstAttribute="bottom" secondItem="76O-mo-pWW" secondAttribute="bottom" id="6Tp-7B-ZU7"/>
+                                                <constraint firstItem="76O-mo-pWW" firstAttribute="bottom" secondItem="eo7-9z-tWN" secondAttribute="bottom" id="Ogc-mN-eCM"/>
+                                                <constraint firstAttribute="trailing" secondItem="G5P-09-Gs7" secondAttribute="trailing" id="SDw-WU-8VT"/>
+                                                <constraint firstItem="76O-mo-pWW" firstAttribute="top" secondItem="5kH-C4-nXh" secondAttribute="top" id="WuN-qF-GK5"/>
+                                                <constraint firstItem="76O-mo-pWW" firstAttribute="leading" secondItem="5kH-C4-nXh" secondAttribute="leading" id="aUz-RE-mCi"/>
+                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="top" secondItem="G5P-09-Gs7" secondAttribute="top" id="e1F-FB-JdH"/>
+                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="leading" secondItem="aNd-Xo-WII" secondAttribute="trailing" constant="23" id="fnc-PG-zLq"/>
+                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="top" secondItem="5kH-C4-nXh" secondAttribute="topMargin" constant="9" id="hOA-eY-5ve"/>
+                                                <constraint firstItem="eo7-9z-tWN" firstAttribute="bottom" secondItem="G5P-09-Gs7" secondAttribute="bottom" id="jt2-P8-iM1"/>
+                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="centerY" secondItem="eo7-9z-tWN" secondAttribute="centerY" id="nvq-9v-hFd"/>
+                                                <constraint firstItem="aNd-Xo-WII" firstAttribute="leading" secondItem="5kH-C4-nXh" secondAttribute="leadingMargin" constant="7" id="qjW-i6-PRg"/>
+                                                <constraint firstItem="G5P-09-Gs7" firstAttribute="leading" secondItem="eo7-9z-tWN" secondAttribute="trailing" id="xVU-LE-JCN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -223,7 +267,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_email" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-n1-2rK">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="H3E-pT-e9I"/>
+                                                        <constraint firstAttribute="width" constant="25" id="q6a-Ay-t54"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-PR-HbY">
@@ -232,25 +276,36 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZA-SZ-BbK">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="rEK-yB-roq"/>
+                                                    </constraints>
                                                     <state key="normal" image="Add"/>
                                                     <connections>
                                                         <action selector="actionButtonPressed:" destination="Hej-yW-SjM" eventType="touchUpInside" id="1qx-mA-eyo"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-Ia-9bj" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="Hej-yW-SjM" eventType="touchUpInside" id="ZyR-ba-SUK"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="bottom" secondItem="2Zs-PR-HbY" secondAttribute="bottom" id="EXu-iZ-z9E"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="aVY-n1-2rK" secondAttribute="bottom" constant="10" id="Jm4-ut-FMd"/>
-                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="top" secondItem="2Zs-PR-HbY" secondAttribute="top" id="WMf-DE-EnX"/>
-                                                <constraint firstAttribute="trailing" secondItem="IZA-SZ-BbK" secondAttribute="trailing" id="Yy2-I9-ePR"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="2Zs-PR-HbY" secondAttribute="bottom" constant="-8" id="cAP-vO-DbE"/>
-                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="top" secondItem="aGq-EX-eWn" secondAttribute="topMargin" constant="-8" id="gZG-0u-lye"/>
-                                                <constraint firstAttribute="trailing" secondItem="2Zs-PR-HbY" secondAttribute="trailing" constant="44" id="giO-9y-bSv"/>
-                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="leading" secondItem="aVY-n1-2rK" secondAttribute="trailing" constant="23" id="koZ-cM-DwZ"/>
-                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="top" secondItem="aGq-EX-eWn" secondAttribute="topMargin" constant="9" id="v2I-ta-sqU"/>
-                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="leading" secondItem="aGq-EX-eWn" secondAttribute="leadingMargin" constant="7" id="vmA-9q-8Iu"/>
-                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="leading" secondItem="2Zs-PR-HbY" secondAttribute="trailing" id="vvO-Qf-Axk"/>
+                                                <constraint firstAttribute="trailing" secondItem="IZA-SZ-BbK" secondAttribute="trailing" id="13a-24-Qch"/>
+                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="leading" secondItem="aGq-EX-eWn" secondAttribute="leadingMargin" constant="7" id="1NE-ni-dSe"/>
+                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="centerY" secondItem="2Zs-PR-HbY" secondAttribute="centerY" id="7i6-GO-OOJ"/>
+                                                <constraint firstItem="zMy-Ia-9bj" firstAttribute="bottom" secondItem="2Zs-PR-HbY" secondAttribute="bottom" id="T41-ST-zMC"/>
+                                                <constraint firstItem="zMy-Ia-9bj" firstAttribute="top" secondItem="2Zs-PR-HbY" secondAttribute="top" id="Tph-Bw-osQ"/>
+                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="trailing" secondItem="zMy-Ia-9bj" secondAttribute="trailing" id="eBy-xI-9lo"/>
+                                                <constraint firstItem="zMy-Ia-9bj" firstAttribute="leading" secondItem="aGq-EX-eWn" secondAttribute="leading" id="fPk-Zt-xiG"/>
+                                                <constraint firstAttribute="bottom" secondItem="zMy-Ia-9bj" secondAttribute="bottom" id="g6O-U2-9YQ"/>
+                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="bottom" secondItem="IZA-SZ-BbK" secondAttribute="bottom" id="jOa-nK-Fpz"/>
+                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="top" secondItem="IZA-SZ-BbK" secondAttribute="top" id="l7G-sE-52N"/>
+                                                <constraint firstItem="aVY-n1-2rK" firstAttribute="top" secondItem="aGq-EX-eWn" secondAttribute="topMargin" constant="9" id="lmR-A8-Zzh"/>
+                                                <constraint firstItem="2Zs-PR-HbY" firstAttribute="leading" secondItem="aVY-n1-2rK" secondAttribute="trailing" constant="23" id="nmr-sA-iWx"/>
+                                                <constraint firstItem="zMy-Ia-9bj" firstAttribute="top" secondItem="aGq-EX-eWn" secondAttribute="top" id="rKs-KV-SkS"/>
+                                                <constraint firstItem="IZA-SZ-BbK" firstAttribute="leading" secondItem="zMy-Ia-9bj" secondAttribute="trailing" id="rqV-dv-oLx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -268,7 +323,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_loc" translatesAutoresizingMaskIntoConstraints="NO" id="6rd-Yi-t0W">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="ol3-i9-hZQ"/>
+                                                        <constraint firstAttribute="width" constant="25" id="zWf-Ao-phL"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street 1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3E-pu-06j">
@@ -277,25 +332,36 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuF-NS-8dU">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="zuC-vy-Dfn"/>
+                                                    </constraints>
                                                     <state key="normal" image="Add"/>
                                                     <connections>
                                                         <action selector="actionButtonPressed:" destination="pud-Wa-u0W" eventType="touchUpInside" id="2gP-bC-S97"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyt-fu-aNR" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="pud-Wa-u0W" eventType="touchUpInside" id="a2X-0B-Him"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="C3E-pu-06j" secondAttribute="bottom" constant="-8" id="3f3-fK-spc"/>
-                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="top" secondItem="098-yA-1vF" secondAttribute="topMargin" constant="9" id="Btt-QE-770"/>
-                                                <constraint firstItem="C3E-pu-06j" firstAttribute="leading" secondItem="6rd-Yi-t0W" secondAttribute="trailing" constant="23" id="UDH-VP-qqT"/>
-                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="leading" secondItem="C3E-pu-06j" secondAttribute="trailing" id="UKJ-9h-1BH"/>
-                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="leading" secondItem="098-yA-1vF" secondAttribute="leadingMargin" constant="7" id="Wym-4z-BGG"/>
-                                                <constraint firstAttribute="trailing" secondItem="JuF-NS-8dU" secondAttribute="trailing" id="cDP-nR-fUH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="6rd-Yi-t0W" secondAttribute="bottom" constant="10" id="gNy-Wy-mP5"/>
-                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="top" secondItem="C3E-pu-06j" secondAttribute="top" id="hkc-xX-IJh"/>
-                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="bottom" secondItem="C3E-pu-06j" secondAttribute="bottom" id="mOi-we-uGE"/>
-                                                <constraint firstItem="C3E-pu-06j" firstAttribute="top" secondItem="098-yA-1vF" secondAttribute="topMargin" constant="-8" id="rxY-6r-IVB"/>
-                                                <constraint firstAttribute="trailing" secondItem="C3E-pu-06j" secondAttribute="trailing" constant="44" id="swJ-u0-647"/>
+                                                <constraint firstItem="vyt-fu-aNR" firstAttribute="top" secondItem="098-yA-1vF" secondAttribute="top" id="0qq-Ms-ubh"/>
+                                                <constraint firstItem="vyt-fu-aNR" firstAttribute="leading" secondItem="098-yA-1vF" secondAttribute="leading" id="7Vg-Li-sVf"/>
+                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="top" secondItem="098-yA-1vF" secondAttribute="topMargin" constant="9" id="Dgq-v5-g76"/>
+                                                <constraint firstItem="C3E-pu-06j" firstAttribute="leading" secondItem="6rd-Yi-t0W" secondAttribute="trailing" constant="23" id="Hrt-Sj-3xl"/>
+                                                <constraint firstAttribute="bottom" secondItem="vyt-fu-aNR" secondAttribute="bottom" id="LCH-zL-Owk"/>
+                                                <constraint firstItem="C3E-pu-06j" firstAttribute="top" secondItem="JuF-NS-8dU" secondAttribute="top" id="Lcf-fD-ilm"/>
+                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="centerY" secondItem="C3E-pu-06j" secondAttribute="centerY" id="M9C-b0-LOf"/>
+                                                <constraint firstItem="JuF-NS-8dU" firstAttribute="leading" secondItem="vyt-fu-aNR" secondAttribute="trailing" id="Phi-YA-xpw"/>
+                                                <constraint firstItem="C3E-pu-06j" firstAttribute="bottom" secondItem="JuF-NS-8dU" secondAttribute="bottom" id="UC4-5D-9Ch"/>
+                                                <constraint firstItem="vyt-fu-aNR" firstAttribute="top" secondItem="C3E-pu-06j" secondAttribute="top" id="a3y-F7-06z"/>
+                                                <constraint firstItem="6rd-Yi-t0W" firstAttribute="leading" secondItem="098-yA-1vF" secondAttribute="leadingMargin" constant="7" id="eYU-n8-Vh7"/>
+                                                <constraint firstItem="vyt-fu-aNR" firstAttribute="bottom" secondItem="C3E-pu-06j" secondAttribute="bottom" id="iAL-Tr-6la"/>
+                                                <constraint firstAttribute="trailing" secondItem="JuF-NS-8dU" secondAttribute="trailing" id="mqb-tr-knU"/>
+                                                <constraint firstItem="C3E-pu-06j" firstAttribute="trailing" secondItem="vyt-fu-aNR" secondAttribute="trailing" id="xeD-ma-eeY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -316,12 +382,21 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GX-Te-gmE" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="6wj-HA-Alk" eventType="touchUpInside" id="bTv-s5-ck3"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="StO-ta-wRS" secondAttribute="trailing" constant="44" id="0zg-bl-prx"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="StO-ta-wRS" secondAttribute="bottom" constant="-8" id="241-ke-qSH"/>
-                                                <constraint firstItem="StO-ta-wRS" firstAttribute="top" secondItem="1qq-Jg-faa" secondAttribute="topMargin" constant="-8" id="crP-dv-RfJ"/>
+                                                <constraint firstItem="6GX-Te-gmE" firstAttribute="top" secondItem="1qq-Jg-faa" secondAttribute="top" id="0o9-pL-ON7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6GX-Te-gmE" secondAttribute="trailing" constant="36" id="6yW-Bh-rYW"/>
+                                                <constraint firstItem="6GX-Te-gmE" firstAttribute="top" secondItem="StO-ta-wRS" secondAttribute="top" id="D5w-dw-5Ga"/>
+                                                <constraint firstItem="6GX-Te-gmE" firstAttribute="leading" secondItem="1qq-Jg-faa" secondAttribute="leading" id="DW4-vw-a39"/>
+                                                <constraint firstItem="6GX-Te-gmE" firstAttribute="bottom" secondItem="StO-ta-wRS" secondAttribute="bottom" id="EC6-BM-iw0"/>
+                                                <constraint firstAttribute="bottom" secondItem="6GX-Te-gmE" secondAttribute="bottom" id="gh6-YM-dkH"/>
+                                                <constraint firstItem="6GX-Te-gmE" firstAttribute="trailing" secondItem="StO-ta-wRS" secondAttribute="trailing" id="nJg-zO-jwY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -340,12 +415,21 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v1-Ka-Jok" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="9Xp-xk-J9x" eventType="touchUpInside" id="KxD-Pl-P1n"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="Z3z-J3-BP3" firstAttribute="top" secondItem="HLw-ma-coJ" secondAttribute="topMargin" constant="-8" id="giP-yE-s2F"/>
-                                                <constraint firstAttribute="trailing" secondItem="Z3z-J3-BP3" secondAttribute="trailing" constant="44" id="u5l-76-jEB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Z3z-J3-BP3" secondAttribute="bottom" constant="-8" id="zoz-fT-L0o"/>
+                                                <constraint firstAttribute="bottom" secondItem="3v1-Ka-Jok" secondAttribute="bottom" id="Kqp-i0-9ut"/>
+                                                <constraint firstItem="3v1-Ka-Jok" firstAttribute="bottom" secondItem="Z3z-J3-BP3" secondAttribute="bottom" id="PvC-TS-Ba6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Z3z-J3-BP3" secondAttribute="trailing" constant="35" id="QLG-nh-PGM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3v1-Ka-Jok" secondAttribute="trailing" constant="36" id="Qdq-6w-xyH"/>
+                                                <constraint firstItem="3v1-Ka-Jok" firstAttribute="leading" secondItem="HLw-ma-coJ" secondAttribute="leading" id="sTe-nk-EG8"/>
+                                                <constraint firstItem="3v1-Ka-Jok" firstAttribute="top" secondItem="HLw-ma-coJ" secondAttribute="top" id="vK9-uJ-A3f"/>
+                                                <constraint firstItem="3v1-Ka-Jok" firstAttribute="top" secondItem="Z3z-J3-BP3" secondAttribute="top" id="xFY-f1-Ib3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -364,12 +448,21 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rms-er-gz9" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="pL5-RV-NRE" eventType="touchUpInside" id="qEf-kh-mMC"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="XjR-LP-VKq" firstAttribute="top" secondItem="qBS-8k-7Xk" secondAttribute="topMargin" constant="-8" id="Fu2-kz-qKH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="XjR-LP-VKq" secondAttribute="bottom" constant="-8" id="KZd-dB-GWx"/>
-                                                <constraint firstAttribute="trailing" secondItem="XjR-LP-VKq" secondAttribute="trailing" constant="44" id="isg-CW-k9L"/>
+                                                <constraint firstItem="rms-er-gz9" firstAttribute="bottom" secondItem="XjR-LP-VKq" secondAttribute="bottom" id="5Xv-mO-mbk"/>
+                                                <constraint firstItem="rms-er-gz9" firstAttribute="top" secondItem="qBS-8k-7Xk" secondAttribute="top" id="8fC-ye-ykr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XjR-LP-VKq" secondAttribute="trailing" constant="36" id="8yb-dc-Q8H"/>
+                                                <constraint firstAttribute="bottom" secondItem="rms-er-gz9" secondAttribute="bottom" id="DCv-iN-3RW"/>
+                                                <constraint firstItem="rms-er-gz9" firstAttribute="top" secondItem="XjR-LP-VKq" secondAttribute="top" id="JnT-rf-Kwa"/>
+                                                <constraint firstItem="rms-er-gz9" firstAttribute="trailing" secondItem="XjR-LP-VKq" secondAttribute="trailing" id="Wfm-O9-CmI"/>
+                                                <constraint firstItem="rms-er-gz9" firstAttribute="leading" secondItem="qBS-8k-7Xk" secondAttribute="leading" id="boP-AF-hjG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -388,20 +481,29 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ4-PD-Xmc" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="z3F-ol-giN" eventType="touchUpInside" id="tbE-pP-w9e"/>
+                                                    </connections>
+                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_org" translatesAutoresizingMaskIntoConstraints="NO" id="zDr-Kt-jcE">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="S71-Gb-LjS"/>
+                                                        <constraint firstAttribute="width" constant="25" id="xBk-DC-Zx4"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="bottom" secondItem="9mu-9T-fgu" secondAttribute="bottomMargin" constant="-10" id="8qo-c1-Zuh"/>
-                                                <constraint firstAttribute="bottom" secondItem="9bS-N1-Bi9" secondAttribute="bottom" id="SHy-kg-b5N"/>
-                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="centerY" secondItem="9bS-N1-Bi9" secondAttribute="centerY" id="UvL-yH-B29"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9bS-N1-Bi9" secondAttribute="trailing" constant="36" id="gzq-Cw-10S"/>
-                                                <constraint firstItem="9bS-N1-Bi9" firstAttribute="top" secondItem="9mu-9T-fgu" secondAttribute="top" id="w1H-Ox-6ol"/>
-                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="leading" secondItem="9mu-9T-fgu" secondAttribute="leadingMargin" constant="7" id="ysj-Vk-Lmu"/>
+                                                <constraint firstItem="NJ4-PD-Xmc" firstAttribute="leading" secondItem="9mu-9T-fgu" secondAttribute="leading" id="1HA-mb-6yG"/>
+                                                <constraint firstItem="NJ4-PD-Xmc" firstAttribute="top" secondItem="9mu-9T-fgu" secondAttribute="top" id="Esi-nx-cCy"/>
+                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="top" secondItem="9mu-9T-fgu" secondAttribute="topMargin" constant="9" id="JjJ-fi-CIG"/>
+                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="centerY" secondItem="9bS-N1-Bi9" secondAttribute="centerY" id="MXE-xz-1RQ"/>
+                                                <constraint firstItem="NJ4-PD-Xmc" firstAttribute="bottom" secondItem="9bS-N1-Bi9" secondAttribute="bottom" id="WRX-tb-wiY"/>
+                                                <constraint firstAttribute="bottom" secondItem="NJ4-PD-Xmc" secondAttribute="bottom" id="aya-wP-tGN"/>
+                                                <constraint firstItem="NJ4-PD-Xmc" firstAttribute="top" secondItem="9bS-N1-Bi9" secondAttribute="top" id="bXp-Hg-Lsh"/>
+                                                <constraint firstItem="NJ4-PD-Xmc" firstAttribute="trailing" secondItem="9bS-N1-Bi9" secondAttribute="trailing" id="eQ4-HR-3oX"/>
+                                                <constraint firstItem="zDr-Kt-jcE" firstAttribute="leading" secondItem="9mu-9T-fgu" secondAttribute="leadingMargin" constant="7" id="hIW-hV-Kkr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9bS-N1-Bi9" secondAttribute="trailing" constant="36" id="nco-Rq-nei"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -420,12 +522,22 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVa-aL-lnL" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="Ldt-25-lTZ" eventType="touchUpInside" id="CdJ-4j-EiC"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="0xO-r3-kw9" firstAttribute="top" secondItem="MJa-Nf-8vX" secondAttribute="topMargin" constant="-8" id="V9H-hY-uX7"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="0xO-r3-kw9" secondAttribute="bottom" constant="-8" id="xFr-h1-fs6"/>
-                                                <constraint firstAttribute="trailing" secondItem="0xO-r3-kw9" secondAttribute="trailing" constant="44" id="z83-HR-Y4l"/>
+                                                <constraint firstItem="IVa-aL-lnL" firstAttribute="top" secondItem="MJa-Nf-8vX" secondAttribute="top" id="DeJ-2X-tqo"/>
+                                                <constraint firstAttribute="bottom" secondItem="IVa-aL-lnL" secondAttribute="bottom" id="MIn-Rl-sav"/>
+                                                <constraint firstItem="0xO-r3-kw9" firstAttribute="leading" secondItem="MJa-Nf-8vX" secondAttribute="leadingMargin" constant="14" id="Qez-Lq-pXd"/>
+                                                <constraint firstItem="IVa-aL-lnL" firstAttribute="top" secondItem="0xO-r3-kw9" secondAttribute="top" id="SY9-og-ZAy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IVa-aL-lnL" secondAttribute="trailing" constant="36" id="dgr-c2-zz3"/>
+                                                <constraint firstItem="IVa-aL-lnL" firstAttribute="bottom" secondItem="0xO-r3-kw9" secondAttribute="bottom" id="fox-8X-1lf"/>
+                                                <constraint firstItem="0xO-r3-kw9" firstAttribute="trailing" secondItem="IVa-aL-lnL" secondAttribute="trailing" id="jC1-5x-nMg"/>
+                                                <constraint firstItem="IVa-aL-lnL" firstAttribute="leading" secondItem="MJa-Nf-8vX" secondAttribute="leading" id="lSo-JB-A8a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -443,13 +555,22 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="tKE-zN-H5i" eventType="touchUpInside" id="hxc-cc-VeJ"/>
+                                                    </connections>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qer-li-IN0" userLabel="Did select"/>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="A8J-MZ-78H" secondAttribute="bottom" constant="-8" id="7iV-iN-1rx"/>
-                                                <constraint firstAttribute="trailing" secondItem="A8J-MZ-78H" secondAttribute="trailing" constant="44" id="PXW-Ok-fcb"/>
-                                                <constraint firstItem="A8J-MZ-78H" firstAttribute="top" secondItem="a68-U0-vAv" secondAttribute="topMargin" constant="-8" id="jfZ-Us-ceV"/>
+                                                <constraint firstItem="qer-li-IN0" firstAttribute="top" secondItem="A8J-MZ-78H" secondAttribute="top" id="0Bt-tI-llG"/>
+                                                <constraint firstAttribute="bottom" secondItem="qer-li-IN0" secondAttribute="bottom" id="96k-Nj-tCT"/>
+                                                <constraint firstItem="qer-li-IN0" firstAttribute="top" secondItem="a68-U0-vAv" secondAttribute="top" id="P4n-mx-NoC"/>
+                                                <constraint firstItem="A8J-MZ-78H" firstAttribute="trailing" secondItem="qer-li-IN0" secondAttribute="trailing" id="U1K-U2-phK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="A8J-MZ-78H" secondAttribute="trailing" constant="36" id="V1l-ui-rjN"/>
+                                                <constraint firstItem="qer-li-IN0" firstAttribute="leading" secondItem="a68-U0-vAv" secondAttribute="leading" id="d7b-oH-5M9"/>
+                                                <constraint firstItem="A8J-MZ-78H" firstAttribute="bottom" secondItem="qer-li-IN0" secondAttribute="bottom" id="kDH-pe-71o"/>
+                                                <constraint firstItem="qer-li-IN0" firstAttribute="leading" secondItem="A8J-MZ-78H" secondAttribute="leading" id="sks-mY-P39"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -465,7 +586,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_web" translatesAutoresizingMaskIntoConstraints="NO" id="tUh-sf-RkJ">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="JX3-Vy-yly"/>
+                                                        <constraint firstAttribute="width" constant="25" id="F2y-aD-vRj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Website" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uho-qG-aME">
@@ -473,7 +594,15 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIM-8G-IKt" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="Hz4-M2-2Pr" eventType="touchUpInside" id="awU-av-6Wd"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs6-nS-Fxf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="q0F-TE-pdQ"/>
+                                                    </constraints>
                                                     <state key="normal" image="Add"/>
                                                     <connections>
                                                         <action selector="actionButtonPressed:" destination="Hz4-M2-2Pr" eventType="touchUpInside" id="YPj-sV-tOi"/>
@@ -482,17 +611,20 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="top" secondItem="uho-qG-aME" secondAttribute="top" id="2dX-9z-JFZ"/>
-                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="leading" secondItem="XJ6-9V-d8b" secondAttribute="leadingMargin" constant="7" id="6gK-66-MdI"/>
-                                                <constraint firstAttribute="trailing" secondItem="uho-qG-aME" secondAttribute="trailing" constant="44" id="BFh-Ac-g4Q"/>
-                                                <constraint firstItem="uho-qG-aME" firstAttribute="top" secondItem="XJ6-9V-d8b" secondAttribute="topMargin" constant="-8" id="COk-p6-ibR"/>
-                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="top" secondItem="XJ6-9V-d8b" secondAttribute="topMargin" constant="9" id="FZ3-8K-Tyb"/>
-                                                <constraint firstAttribute="trailing" secondItem="rs6-nS-Fxf" secondAttribute="trailing" id="HVk-zh-kWk"/>
-                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="leading" secondItem="uho-qG-aME" secondAttribute="trailing" id="HXd-WC-OI1"/>
-                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="bottom" secondItem="uho-qG-aME" secondAttribute="bottom" id="kS1-Yy-WxC"/>
-                                                <constraint firstItem="uho-qG-aME" firstAttribute="leading" secondItem="tUh-sf-RkJ" secondAttribute="trailing" constant="22.5" id="rLd-vf-eHH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="tUh-sf-RkJ" secondAttribute="bottom" constant="10" id="rPP-O4-xFd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="uho-qG-aME" secondAttribute="bottom" constant="-8" id="rok-8U-PXi"/>
+                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="centerY" secondItem="uho-qG-aME" secondAttribute="centerY" id="13r-9X-0Jj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uho-qG-aME" secondAttribute="trailing" constant="35" id="65i-E8-hZ1"/>
+                                                <constraint firstItem="uho-qG-aME" firstAttribute="leading" secondItem="tUh-sf-RkJ" secondAttribute="trailing" constant="23" id="KYT-v7-QaA"/>
+                                                <constraint firstItem="nIM-8G-IKt" firstAttribute="top" secondItem="uho-qG-aME" secondAttribute="top" id="Wva-rk-9rb"/>
+                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="top" secondItem="XJ6-9V-d8b" secondAttribute="topMargin" constant="9" id="X2D-xU-gpL"/>
+                                                <constraint firstItem="uho-qG-aME" firstAttribute="top" secondItem="rs6-nS-Fxf" secondAttribute="top" id="cmu-C7-tmq"/>
+                                                <constraint firstItem="nIM-8G-IKt" firstAttribute="leading" secondItem="XJ6-9V-d8b" secondAttribute="leading" id="dtg-4f-iie"/>
+                                                <constraint firstItem="nIM-8G-IKt" firstAttribute="bottom" secondItem="uho-qG-aME" secondAttribute="bottom" id="gw2-pr-iYD"/>
+                                                <constraint firstItem="nIM-8G-IKt" firstAttribute="top" secondItem="XJ6-9V-d8b" secondAttribute="top" id="hyI-AR-tW0"/>
+                                                <constraint firstItem="uho-qG-aME" firstAttribute="bottom" secondItem="rs6-nS-Fxf" secondAttribute="bottom" id="jaG-1v-rUu"/>
+                                                <constraint firstAttribute="trailing" secondItem="rs6-nS-Fxf" secondAttribute="trailing" id="pMg-eM-LBT"/>
+                                                <constraint firstItem="rs6-nS-Fxf" firstAttribute="leading" secondItem="nIM-8G-IKt" secondAttribute="trailing" id="piA-vL-Yvh"/>
+                                                <constraint firstAttribute="bottom" secondItem="nIM-8G-IKt" secondAttribute="bottom" id="wyr-mb-1Fe"/>
+                                                <constraint firstItem="tUh-sf-RkJ" firstAttribute="leading" secondItem="XJ6-9V-d8b" secondAttribute="leadingMargin" constant="7" id="zlq-Qa-FfY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -513,20 +645,29 @@
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fop-7e-8HI" userLabel="Did select">
+                                                    <connections>
+                                                        <action selector="cellPressed:" destination="mho-AK-FBk" eventType="touchUpInside" id="0n1-G5-VOZ"/>
+                                                    </connections>
+                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_date" translatesAutoresizingMaskIntoConstraints="NO" id="bnZ-tz-x2d">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="CgW-6y-3Dz"/>
+                                                        <constraint firstAttribute="width" constant="25" id="4ZJ-TI-yy4"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="centerY" secondItem="7xK-zS-W3b" secondAttribute="centerY" id="SvB-JK-KBy"/>
-                                                <constraint firstItem="7xK-zS-W3b" firstAttribute="top" secondItem="3mA-9A-AyW" secondAttribute="top" id="Tgm-Qm-WVm"/>
-                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="bottom" secondItem="3mA-9A-AyW" secondAttribute="bottomMargin" constant="-10" id="V07-H3-KPW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7xK-zS-W3b" secondAttribute="trailing" constant="36" id="fI4-1O-Qbj"/>
-                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="leading" secondItem="3mA-9A-AyW" secondAttribute="leadingMargin" constant="7" id="lqI-xo-E6e"/>
-                                                <constraint firstAttribute="bottom" secondItem="7xK-zS-W3b" secondAttribute="bottom" id="wif-k5-9Ba"/>
+                                                <constraint firstItem="fop-7e-8HI" firstAttribute="leading" secondItem="3mA-9A-AyW" secondAttribute="leading" id="4IX-9u-krP"/>
+                                                <constraint firstAttribute="bottom" secondItem="fop-7e-8HI" secondAttribute="bottom" id="7cH-UU-rM9"/>
+                                                <constraint firstItem="fop-7e-8HI" firstAttribute="top" secondItem="7xK-zS-W3b" secondAttribute="top" id="Iv2-kl-GTb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7xK-zS-W3b" secondAttribute="trailing" constant="35" id="JOe-sk-184"/>
+                                                <constraint firstItem="fop-7e-8HI" firstAttribute="top" secondItem="3mA-9A-AyW" secondAttribute="top" id="MM1-v0-YGm"/>
+                                                <constraint firstItem="fop-7e-8HI" firstAttribute="bottom" secondItem="7xK-zS-W3b" secondAttribute="bottom" id="bHP-Fx-8vw"/>
+                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="leading" secondItem="3mA-9A-AyW" secondAttribute="leadingMargin" constant="7" id="nCO-am-xw8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fop-7e-8HI" secondAttribute="trailing" constant="36" id="vm1-N6-3Sf"/>
+                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="centerY" secondItem="7xK-zS-W3b" secondAttribute="centerY" id="xrL-oR-tDF"/>
+                                                <constraint firstItem="bnZ-tz-x2d" firstAttribute="top" secondItem="3mA-9A-AyW" secondAttribute="topMargin" constant="9" id="yrw-Ww-58w"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
