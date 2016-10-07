@@ -119,6 +119,12 @@ extension GKAccountViewController: UITableViewDataSource {
         let identifier = self.datasourceCells[indexPath.section][indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier.reuseIdentifier, for: indexPath) as! GKAccountTableViewCell
         
+        // Phone population
+        if identifier.reuseIdentifier == phoneCells.first?.reuseIdentifier {
+            
+            cell.textField.text = tempUser?.phoneNumber.toE164()
+        }
+        
         cell.customInit()
         
         return cell
