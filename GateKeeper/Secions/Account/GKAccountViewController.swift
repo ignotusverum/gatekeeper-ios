@@ -307,9 +307,11 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
     
     func addActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
+        GKModalView.showCustomLabel("Test")
     }
     
     func closeActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
+        GKModalView.showCustomLabel("Test")
     }
 }

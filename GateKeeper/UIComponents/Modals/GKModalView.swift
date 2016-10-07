@@ -11,10 +11,12 @@ import UIKit
 class GKModalView: UIView {
 
     // Datasource Array
-    var datasource = [String]()
-    
-    // Background
-    @IBOutlet weak var backgroundView: UIView!
+    var datasource = [String]() {
+        didSet {
+            // Reload tableView
+            self.tableView.reloadData()
+        }
+    }
     
     // Datasource
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +31,33 @@ class GKModalView: UIView {
         
         let modalCellNib = UINib(nibName: "GKModalTableViewCell", bundle: nil)
         self.tableView.register(modalCellNib, forCellReuseIdentifier: "GKModalTableViewCell")
+    }
+    
+    class func showCustomLabel(_ title: String) {
+        
+       let window = GKAppDelegate.shared!.window!
+        
+        let modalView = UINib(nibName: "GKModalView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GKModalView
+        
+        modalView.frame = window.frame
+        modalView.datasource = ["Test 1", "Test 2"]
+        modalView.backgroundImageView.alpha = 0.9
+        
+        window.addSubview(modalView)
+        
+        self.showAnimate(modalView)
+    }
+    
+    class func showAnimate(_ popView: UIView) {
+        
+        popView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        popView.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            popView.alpha = 1.0
+            popView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
     }
 }
 
