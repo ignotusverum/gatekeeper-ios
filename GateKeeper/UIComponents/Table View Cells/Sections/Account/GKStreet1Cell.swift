@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GKStreet1Cell: GKActionAccountTableViewCell {
+class GKStreet1Cell: GKAccountTableViewCell {
 
     // Overriding icon name
     override public var iconImageName: String {

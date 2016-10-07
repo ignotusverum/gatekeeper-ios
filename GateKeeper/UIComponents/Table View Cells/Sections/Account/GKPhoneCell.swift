@@ -9,7 +9,7 @@
 import UIKit
 import PhoneNumberKit
 
-class GKPhoneCell: GKActionAccountTableViewCell {
+class GKPhoneCell: GKAccountTableViewCell {
 
     // Phone input textField
     @IBOutlet weak var phoneNumberInput: PhoneNumberTextField!

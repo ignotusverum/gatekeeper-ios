@@ -80,8 +80,6 @@
 		F5DC7F271DA0620400CB048E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DC7F261DA0620400CB048E /* Account.storyboard */; };
 		F5DC7F2A1DA0624200CB048E /* GKAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F291DA0624200CB048E /* GKAccountViewController.swift */; };
 		F5DC7F2F1DA0651300CB048E /* GKAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F2E1DA0651300CB048E /* GKAccountTableViewCell.swift */; };
-		F5DC7F311DA0662800CB048E /* GKActionAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC7F301DA0662800CB048E /* GKActionAccountTableViewCell.swift */; };
-		F5DC7F351DA0692D00CB048E /* GKActionAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5DC7F341DA0692D00CB048E /* GKActionAccountTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,8 +148,6 @@
 		F5DC7F261DA0620400CB048E /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		F5DC7F291DA0624200CB048E /* GKAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAccountViewController.swift; sourceTree = "<group>"; };
 		F5DC7F2E1DA0651300CB048E /* GKAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAccountTableViewCell.swift; sourceTree = "<group>"; };
-		F5DC7F301DA0662800CB048E /* GKActionAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKActionAccountTableViewCell.swift; sourceTree = "<group>"; };
-		F5DC7F341DA0692D00CB048E /* GKActionAccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKActionAccountTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,8 +484,6 @@
 			children = (
 				F5DC7F2E1DA0651300CB048E /* GKAccountTableViewCell.swift */,
 				F519185B1DA1E322000D96D2 /* GKAccountTableViewCell.xib */,
-				F5DC7F301DA0662800CB048E /* GKActionAccountTableViewCell.swift */,
-				F5DC7F341DA0692D00CB048E /* GKActionAccountTableViewCell.xib */,
 				F525546A1DA192DC0089299F /* GKPhoneCell.swift */,
 				F525546C1DA192E80089299F /* GKEmailCell.swift */,
 				F51918571DA1D6ED000D96D2 /* GKSocialCell.swift */,
@@ -577,7 +571,6 @@
 				F5D60DEB1D90A831003E8F4A /* Assets.xcassets in Resources */,
 				F525545C1DA18C310089299F /* GKModalTableViewCell.xib in Resources */,
 				F5D60DFF1D90B130003E8F4A /* ProximaNova-Bold.ttf in Resources */,
-				F5DC7F351DA0692D00CB048E /* GKActionAccountTableViewCell.xib in Resources */,
 				F5D60E021D90B130003E8F4A /* ProximaNova-Sbold.ttf in Resources */,
 				F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */,
 				F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */,
@@ -679,7 +672,6 @@
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,
 				F5A011231D985833000C5904 /* GKFont.swift in Sources */,
 				F5DC7F221DA003F800CB048E /* GKPhoneValidationViewController.swift in Sources */,
-				F5DC7F311DA0662800CB048E /* GKActionAccountTableViewCell.swift in Sources */,
 				F525546B1DA192DC0089299F /* GKPhoneCell.swift in Sources */,
 				F52554511DA0DCF10089299F /* GKUser.swift in Sources */,
 				F519185E1DA1F244000D96D2 /* GKTableView.swift in Sources */,
