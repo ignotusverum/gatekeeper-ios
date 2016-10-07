@@ -47,7 +47,7 @@ class GKPhoneInputViewController: UIViewController {
     }
     
     // Response result - temporary user id
-    private var tempUserID: String?
+    private var tempUser: TempUser?
 
     // MARK: - Controller lifecycle
     override func viewDidLoad() {
@@ -113,7 +113,7 @@ class GKPhoneInputViewController: UIViewController {
             
             if let userID = result {
                 
-                self.tempUserID = userID
+                self.tempUser = TempUser(modelID: userID, phoneNumber: self.phoneNumber!)
                 
                 // Success - go to code validation
                 self.performSegue(withIdentifier: "phoneValidationSegue", sender: nil)
@@ -135,11 +135,11 @@ class GKPhoneInputViewController: UIViewController {
     
     // MARK: - Segue handling
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "phoneValidationSegue", let tempUserID = self.tempUserID {
+        if segue.identifier == "phoneValidationSegue" {
             
             // Passing user id
             let controller = segue.destination as? GKPhoneValidationViewController
-            controller?.tempUserID = tempUserID
+            controller?.tempUser = self.tempUser
         }
     }
 }

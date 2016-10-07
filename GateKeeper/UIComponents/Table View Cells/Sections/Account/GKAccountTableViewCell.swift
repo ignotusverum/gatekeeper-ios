@@ -8,11 +8,88 @@
 
 import UIKit
 
+protocol GKAccountTableViewCellDelegate {
+    
+    func cellPressed(_ cell: GKAccountTableViewCell)
+    
+    func addActionButtonPressed(_ cell: GKAccountTableViewCell)
+    func closeActionButtonPressed(_ cell: GKAccountTableViewCell)
+}
+
 class GKAccountTableViewCell: UITableViewCell {
 
+    // Delegate
+    var delegate: GKAccountTableViewCellDelegate?
+    
     // Text Input
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField?
     
     // Icon Image
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView?
+    
+    // Add / Remove Button
+    @IBOutlet weak var actionButton: UIButton?
+    
+    // Icon image name
+    public var iconImageName: String {
+        return ""
+    }
+    
+    // Placeholder String
+    public var placeholderString: String {
+        return ""
+    }
+    
+    // Is first - add button
+    var indexPath: IndexPath? {
+        didSet {
+            
+            // If first row - update button icons
+            if indexPath?.row == 0 {
+                
+                self.actionButton?.setImage(UIImage(named: "Add"), for: .normal)
+                
+                return
+            }
+            
+            self.actionButton?.setImage(UIImage(named: "Close"), for: .normal)
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.customInit()
+    }
+    
+    func customInit() {
+     
+        // Set icon image view
+        self.iconImageView?.image = UIImage(named: iconImageName)
+        
+        // Set placeholder
+        self.textField?.placeholder = self.placeholderString
+    }
+    
+    // MARK: - Action 
+    // Cell pressed
+    @IBAction func cellPressed(_ sender: UIButton) {
+        
+        self.delegate?.cellPressed(self)
+    }
+    
+    // Action
+    @IBAction func actionButtonPressed(_ sender: UIButton) {
+        
+        // First row = add
+        if self.indexPath?.row == 0 {
+            
+            self.delegate?.addActionButtonPressed(self)
+            
+            return
+        }
+        
+        // Remove
+        self.delegate?.closeActionButtonPressed(self)
+    }
 }

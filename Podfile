@@ -12,6 +12,8 @@ pod 'EZSwiftExtensions'
 # Networking
 pod 'Alamofire', '4.0.0'
 
+pod 'Sync', '~> 2'
+
 pod 'EZSwipeController', :git => 'git@github.com:pattogato/EZSwipeController.git', :branch => 'bugfix/swift-3-fixes'
 
 pod 'SwiftyJSON', :git => 'https://github.com/appsailor/SwiftyJSON.git', :branch => 'swift3'

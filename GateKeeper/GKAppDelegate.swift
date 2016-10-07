@@ -9,10 +9,23 @@
 import UIKit
 import UserNotifications
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+import DATAStack
 
+@UIApplicationMain
+class GKAppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+
+    // Shared delegate
+    static let shared = UIApplication.shared.delegate as? GKAppDelegate
+    
+    // Window
     var window: UIWindow?
+    
+    // Data stack
+    lazy var dataStack: DATAStack = {
+        let dataStack = DATAStack(modelName: "GKModel")
+        
+        return dataStack
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
      

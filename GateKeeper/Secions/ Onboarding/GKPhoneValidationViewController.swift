@@ -11,7 +11,7 @@ import UIKit
 class GKPhoneValidationViewController: UIViewController {
 
     // Temp user id
-    var tempUserID = ""
+    var tempUser: TempUser?
     
     // Phone Validation Field
     @IBOutlet weak var phoneValidationField: UITextField! {
@@ -64,38 +64,63 @@ class GKPhoneValidationViewController: UIViewController {
     func validatePhoneNumber() {
         
         // Text check
-        if let validationCode = self.phoneValidationField.text {
+//        if let validationCode = self.phoneValidationField.text {
             
-            // Validation request
-            GKUserAdapter.validate(validationCode, tempUserID: self.tempUserID).then { result-> Void in
-                
-                if let message = result?["message"].string {
-                    
-                    self.view.makeToast(message)
-                    return
-                }
-                
-                if let success = result?["success"].bool {
-                    if success == true {
-                        // Perform account segue
-                    }
-                }
-                
-                }.catch { error in
-             
-                    self.showError()
-            }
-        }
-        else {
-            
-            self.showError()
-        }
+//            GMDCircleLoader.setOn(self.view, withTitle: "", animated: true)
+//            
+//            // Validation request
+//            GKUserAdapter.validate(validationCode, tempUserID: self.tempUser!.modelID).then { result-> Void in
+//                
+//                GMDCircleLoader.hide(from: self.view, animated: true)
+//                
+//                // Success check
+//                if let success = result?["success"].bool {
+//                    if success == true {
+//                        
+//                        // Perform segue
+                        self.pushAccount()
+//                    }
+//                }
+//                else {
+//                    
+//                    // If message = error
+//                    if let message = result?["message"].string {
+//                        
+//                        self.view.makeToast(message)
+//                        return
+//                    }
+//                }
+//                
+//                }.catch { error in
+//             
+//                    self.showError()
+//            }
+//        }
+//        else {
+//            
+//            self.showError()
+//        }
     }
     
     // MARK: - Utilities
     func showError() {
         
         self.view.makeToast("Something went wrong, please try again.")
+    }
+    
+    func pushAccount() {
+        
+        // Get account storybard
+        let sb = UIStoryboard.init(name: "Account", bundle: nil)
+        
+        // init controller
+        let accountVC = sb.instantiateViewController(withIdentifier: "GKAccountViewController") as! GKAccountViewController
+        
+        // pass datasource
+        accountVC.tempUser = self.tempUser
+        
+        // Push controller
+        self.navigationController?.pushViewController(accountVC, animated: true)
     }
 }
 
