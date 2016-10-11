@@ -19,6 +19,9 @@ class GKDatePicker: UIView {
     // Backgound views
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    // Shared view
+    static let shared = UINib(nibName: "GKDatePicker", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GKDatePicker
+    
     // MARK: - View lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,18 +41,45 @@ class GKDatePicker: UIView {
         self.birthdayPickerView.maximumDate = todayDate
     }
     
-    class func showDatePicker() {
+    func showDatePicker() {
         
         let window = GKAppDelegate.shared!.window!
         
-        let modalView = UINib(nibName: "GKDatePicker", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GKDatePicker
+        let modalView = GKDatePicker.shared
         
         modalView.frame = window.frame
         modalView.backgroundImageView.alpha = 0.9
         
         window.addSubview(modalView)
         
-        GKModalView.showAnimate(modalView)
+        
+    }
+    
+    func showAnimate() {
+        
+        let sharedView = GKDatePicker.shared
+        
+        sharedView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        sharedView.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            sharedView.alpha = 1.0
+            sharedView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+    
+    func removeAnimate() {
+        
+        let sharedView = GKDatePicker.shared
+        
+        sharedView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        sharedView.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            sharedView.removeFromSuperview()
+        })
     }
     
     // MARK: - Actions
@@ -61,5 +91,7 @@ class GKDatePicker: UIView {
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         
         self.selectionHandler?(nil)
+        
+        self.removeAnimate()
     }
 }

@@ -18,6 +18,8 @@ class GKModalView: UIView {
         }
     }
     
+    static let shared = UINib(nibName: "GKModalView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GKModalView
+    
     // Datasource
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -33,30 +35,45 @@ class GKModalView: UIView {
         self.tableView.register(modalCellNib, forCellReuseIdentifier: "GKModalTableViewCell")
     }
     
-    class func showCustomLabel(_ title: String) {
+    func showCustomLabel() {
         
-       let window = GKAppDelegate.shared!.window!
+        let window = GKAppDelegate.shared!.window!
         
-        let modalView = UINib(nibName: "GKModalView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GKModalView
+        let sharedView = GKModalView.shared
         
-        modalView.frame = window.frame
-        modalView.datasource = ["Test 1", "Test 2"]
-        modalView.backgroundImageView.alpha = 0.9
+        sharedView.frame = window.frame
+        sharedView.datasource = ["Test 1", "Test 2"]
+        sharedView.backgroundImageView.alpha = 0.9
         
-        window.addSubview(modalView)
+        window.addSubview(sharedView)
         
-        self.showAnimate(modalView)
+        self.showAnimate()
     }
     
-    class func showAnimate(_ popView: UIView) {
+    func showAnimate() {
         
-        popView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        popView.alpha = 0.0
+        let sharedView = GKModalView.shared
+        
+        sharedView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        sharedView.alpha = 0.0
         
         UIView.animate(withDuration: 0.25, animations: {
             
-            popView.alpha = 1.0
-            popView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            sharedView.alpha = 1.0
+            sharedView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+    
+    func removeAnimate() {
+        
+        let sharedView = GKModalView.shared
+        
+        sharedView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        sharedView.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            sharedView.removeFromSuperview()
         })
     }
 }
