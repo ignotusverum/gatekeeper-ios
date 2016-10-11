@@ -12,6 +12,6 @@ class GKPrefixCell: GKAccountTableViewCell {
 
     // Override Placeholder
     override public var placeholderString: String {
-        return "Placeholder"
+        return "Prefix"
     }
 }

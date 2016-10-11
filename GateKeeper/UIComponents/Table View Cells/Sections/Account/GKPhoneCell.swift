@@ -14,6 +14,10 @@ class GKPhoneCell: GKAccountTableViewCell {
     // Phone input textField
     @IBOutlet weak var phoneNumberInput: PhoneNumberTextField!
     
+    override public var placeholderString: String {
+        return "Home"
+    }
+    
     // Overriding icon name
     override public var iconImageName: String {
         return "ico_phone"
