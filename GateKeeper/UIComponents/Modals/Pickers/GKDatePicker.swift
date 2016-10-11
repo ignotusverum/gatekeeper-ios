@@ -52,10 +52,10 @@ class GKDatePicker: UIView {
         
         window.addSubview(modalView)
         
-        
+        self.showAnimate()
     }
     
-    func showAnimate() {
+    private func showAnimate() {
         
         let sharedView = GKDatePicker.shared
         

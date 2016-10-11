@@ -35,7 +35,7 @@ class GKModalView: UIView {
         self.tableView.register(modalCellNib, forCellReuseIdentifier: "GKModalTableViewCell")
     }
     
-    func showCustomLabel() {
+    func showAnimate() {
         
         let window = GKAppDelegate.shared!.window!
         
@@ -47,10 +47,10 @@ class GKModalView: UIView {
         
         window.addSubview(sharedView)
         
-        self.showAnimate()
+        self.showAnimateLogic()
     }
     
-    func showAnimate() {
+    private func showAnimateLogic() {
         
         let sharedView = GKModalView.shared
         

@@ -299,7 +299,7 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
             
             // Birthday
             let sharedDatePicker = GKDatePicker.shared
-            sharedDatePicker.showAnimate()
+            sharedDatePicker.showDatePicker()
         }
         else {
             
