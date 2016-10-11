@@ -299,8 +299,15 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
             
             // Birthday
             let sharedDatePicker = GKDatePicker.shared
+            // Present picker with completion block
             sharedDatePicker.showDatePicker { result in
-                print(result)
+                
+                // safety check
+                if let result = result {
+                    
+                    // Setting date to string
+                    cell.textField?.text = result.toString(format: "MM-dd-yyyy")
+                }
             }
         }
         else {
@@ -316,6 +323,7 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
         let sharedModal = GKModalView.shared
         
         sharedModal.showAnimate { selected in
+            
             print(selected)
         }
     }
