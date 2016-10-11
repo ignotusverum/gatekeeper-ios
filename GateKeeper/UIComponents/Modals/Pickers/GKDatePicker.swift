@@ -41,7 +41,7 @@ class GKDatePicker: UIView {
         self.birthdayPickerView.maximumDate = todayDate
     }
     
-    func showDatePicker(completion: ((_ indexPath: IndexPath?) -> ())?) {
+    func showDatePicker(completion: ((_ date: Date?) -> ())?) {
         
         let window = GKAppDelegate.shared!.window!
         
