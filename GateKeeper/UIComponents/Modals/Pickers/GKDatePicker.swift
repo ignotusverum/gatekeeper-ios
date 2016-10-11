@@ -79,6 +79,7 @@ class GKDatePicker: UIView {
         UIView.animate(withDuration: 0.25, animations: {
             
             sharedView.removeFromSuperview()
+            sharedView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
     
