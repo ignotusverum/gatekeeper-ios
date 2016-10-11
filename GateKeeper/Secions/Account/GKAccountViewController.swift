@@ -299,7 +299,9 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
             
             // Birthday
             let sharedDatePicker = GKDatePicker.shared
-            sharedDatePicker.showDatePicker()
+            sharedDatePicker.showDatePicker { result in
+                print(result)
+            }
         }
         else {
             
@@ -312,12 +314,18 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
     func addActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
         let sharedModal = GKModalView.shared
-        sharedModal.showAnimate()
+        
+        sharedModal.showAnimate { selected in
+            print(selected)
+        }
     }
     
     func closeActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
         let sharedModal = GKModalView.shared
-        sharedModal.showAnimate()
+        sharedModal.showAnimate { selectedIndex in
+            
+            print(selectedIndex)
+        }
     }
 }

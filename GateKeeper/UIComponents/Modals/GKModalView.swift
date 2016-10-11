@@ -25,7 +25,7 @@ class GKModalView: UIView {
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     // Selection Handler
-    var selectionHandler: ((_ indexPath: IndexPath) -> Void)?
+    var selectionClosure: ((_ indexPath: IndexPath?) -> ())?
     
     // MARK: - View lifecycle
     override func awakeFromNib() {
@@ -35,7 +35,7 @@ class GKModalView: UIView {
         self.tableView.register(modalCellNib, forCellReuseIdentifier: "GKModalTableViewCell")
     }
     
-    func showAnimate() {
+    func showAnimate(completion: ((_ indexPath: IndexPath?) -> ())?) {
         
         let window = GKAppDelegate.shared!.window!
         
@@ -48,6 +48,8 @@ class GKModalView: UIView {
         window.addSubview(sharedView)
         
         self.showAnimateLogic()
+        
+        self.selectionClosure = completion
     }
     
     private func showAnimateLogic() {
@@ -104,6 +106,6 @@ extension GKModalView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Pass selectionHandler
-        self.selectionHandler?(indexPath)
+        self.selectionClosure?(indexPath)
     }
 }

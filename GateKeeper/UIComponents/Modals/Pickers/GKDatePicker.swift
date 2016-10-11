@@ -11,7 +11,7 @@ import UIKit
 class GKDatePicker: UIView {
 
     // Date Selection Handler
-    var selectionHandler: ((_ indexPath: Date?) -> Void)?
+    var selectionClosure: ((_ date: Date?) -> ())?
 
     // Actual Picker
     @IBOutlet weak var birthdayPickerView: UIDatePicker!
@@ -41,7 +41,7 @@ class GKDatePicker: UIView {
         self.birthdayPickerView.maximumDate = todayDate
     }
     
-    func showDatePicker() {
+    func showDatePicker(completion: ((_ indexPath: IndexPath?) -> ())?) {
         
         let window = GKAppDelegate.shared!.window!
         
@@ -86,12 +86,14 @@ class GKDatePicker: UIView {
     // MARK: - Actions
     @IBAction func doneButonPressed(_ sender: UIButton) {
         
-        self.selectionHandler?(self.birthdayPickerView.date)
+        self.selectionClosure?(self.birthdayPickerView.date)
+        
+        self.removeAnimate()
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         
-        self.selectionHandler?(nil)
+        self.selectionClosure?(nil)
         
         self.removeAnimate()
     }
