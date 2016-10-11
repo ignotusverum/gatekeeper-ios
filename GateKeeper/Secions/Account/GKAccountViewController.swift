@@ -275,8 +275,6 @@ extension GKAccountViewController: UITextFieldDelegate {
                     }
                 }
             }
-            // Birthday
-            // TODO: Handle birthday
         }
         
         print(self.tempUser)
@@ -297,6 +295,21 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
             
             phoneCell.phoneNumberInput.addTarget(self, action: #selector(GKAccountViewController.textfieldDidChange(_:)), for: .editingChanged)
         }
+        else if cell is GKBirthdayCell {
+            
+            // Birthday
+            let sharedDatePicker = GKDatePicker.shared
+            // Present picker with completion block
+            sharedDatePicker.showDatePicker { result in
+                
+                // safety check
+                if let result = result {
+                    
+                    // Setting date to string
+                    cell.textField?.text = result.toString(format: "MM-dd-yyyy")
+                }
+            }
+        }
         else {
             
             cell.textField?.becomeFirstResponder()
@@ -307,9 +320,20 @@ extension GKAccountViewController: GKAccountTableViewCellDelegate {
     
     func addActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
+        let sharedModal = GKModalView.shared
+        
+        sharedModal.showAnimate { selected in
+            
+            print(selected)
+        }
     }
     
     func closeActionButtonPressed(_ cell: GKAccountTableViewCell) {
         
+        let sharedModal = GKModalView.shared
+        sharedModal.showAnimate { selectedIndex in
+            
+            print(selectedIndex)
+        }
     }
 }

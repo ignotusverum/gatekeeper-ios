@@ -11,17 +11,21 @@ import UIKit
 class GKModalView: UIView {
 
     // Datasource Array
-    var datasource = [String]()
+    var datasource = [String]() {
+        didSet {
+            // Reload tableView
+            self.tableView.reloadData()
+        }
+    }
     
-    // Background
-    @IBOutlet weak var backgroundView: UIView!
+    static let shared = UINib(nibName: "GKModalView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! GKModalView
     
     // Datasource
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     // Selection Handler
-    var selectionHandler: ((_ indexPath: IndexPath) -> Void)?
+    var selectionClosure: ((_ indexPath: IndexPath?) -> ())?
     
     // MARK: - View lifecycle
     override func awakeFromNib() {
@@ -29,6 +33,50 @@ class GKModalView: UIView {
         
         let modalCellNib = UINib(nibName: "GKModalTableViewCell", bundle: nil)
         self.tableView.register(modalCellNib, forCellReuseIdentifier: "GKModalTableViewCell")
+    }
+    
+    func showAnimate(completion: ((_ indexPath: IndexPath?) -> ())?) {
+        
+        let window = GKAppDelegate.shared!.window!
+        
+        let sharedView = GKModalView.shared
+        
+        sharedView.frame = window.frame
+        sharedView.datasource = ["Test 1", "Test 2"]
+        sharedView.backgroundImageView.alpha = 0.9
+        
+        window.addSubview(sharedView)
+        
+        self.showAnimateLogic()
+        
+        self.selectionClosure = completion
+    }
+    
+    private func showAnimateLogic() {
+        
+        let sharedView = GKModalView.shared
+        
+        sharedView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        sharedView.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            sharedView.alpha = 1.0
+            sharedView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+    
+    func removeAnimate() {
+        
+        let sharedView = GKModalView.shared
+        
+        sharedView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        sharedView.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            
+            sharedView.removeFromSuperview()
+        })
     }
 }
 
@@ -58,6 +106,6 @@ extension GKModalView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Pass selectionHandler
-        self.selectionHandler?(indexPath)
+        self.selectionClosure?(indexPath)
     }
 }

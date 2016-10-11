@@ -14,4 +14,8 @@ class GKEmailCell: GKAccountTableViewCell {
     override public var iconImageName: String {
         return "ico_email"
     }
+    
+    override public var placeholderString: String {
+        return "Email"
+    }
 }
