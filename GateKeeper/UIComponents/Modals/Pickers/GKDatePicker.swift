@@ -53,6 +53,8 @@ class GKDatePicker: UIView {
         window.addSubview(modalView)
         
         self.showAnimate()
+
+        self.selectionClosure = completion
     }
     
     private func showAnimate() {
