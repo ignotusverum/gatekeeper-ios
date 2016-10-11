@@ -45,6 +45,8 @@
 		F525546D1DA192E80089299F /* GKEmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525546C1DA192E80089299F /* GKEmailCell.swift */; };
 		F525546F1DA197FD0089299F /* GKStreet2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525546E1DA197FD0089299F /* GKStreet2Cell.swift */; };
 		F52554711DA1989A0089299F /* GKCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52554701DA1989A0089299F /* GKCityCell.swift */; };
+		F5437D9F1DAC149200687B56 /* GKDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5437D9E1DAC149200687B56 /* GKDatePicker.swift */; };
+		F5437DA11DAC15FA00687B56 /* GKDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5437DA01DAC15FA00687B56 /* GKDatePicker.xib */; };
 		F5A011231D985833000C5904 /* GKFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011221D985833000C5904 /* GKFont.swift */; };
 		F5A011251D98599F000C5904 /* TMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011241D98599F000C5904 /* TMString.swift */; };
 		F5A011271D986180000C5904 /* GKSynchronizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */; };
@@ -109,6 +111,8 @@
 		F525546C1DA192E80089299F /* GKEmailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKEmailCell.swift; sourceTree = "<group>"; };
 		F525546E1DA197FD0089299F /* GKStreet2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKStreet2Cell.swift; sourceTree = "<group>"; };
 		F52554701DA1989A0089299F /* GKCityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKCityCell.swift; sourceTree = "<group>"; };
+		F5437D9E1DAC149200687B56 /* GKDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKDatePicker.swift; sourceTree = "<group>"; };
+		F5437DA01DAC15FA00687B56 /* GKDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDatePicker.xib; sourceTree = "<group>"; };
 		F5A011221D985833000C5904 /* GKFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFont.swift; sourceTree = "<group>"; };
 		F5A011241D98599F000C5904 /* TMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMString.swift; sourceTree = "<group>"; };
 		F5A011261D986180000C5904 /* GKSynchronizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKSynchronizerHandler.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 		F52554531DA189530089299F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				F5437D9D1DAC147D00687B56 /* Pickers */,
 				F52554561DA189B00089299F /* GKModalView.swift */,
 				F52554541DA1897F0089299F /* GKModalView.xib */,
 			);
@@ -246,6 +251,15 @@
 				F52554611DA18F470089299F /* GKPrefixCell.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		F5437D9D1DAC147D00687B56 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				F5437D9E1DAC149200687B56 /* GKDatePicker.swift */,
+				F5437DA01DAC15FA00687B56 /* GKDatePicker.xib */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 		F5A011311D99B365000C5904 /* Controllers */ = {
@@ -575,6 +589,7 @@
 				F5D60E011D90B130003E8F4A /* ProximaNova-Reg.ttf in Resources */,
 				F5D60DE61D90A831003E8F4A /* Main.storyboard in Resources */,
 				F5DC7F271DA0620400CB048E /* Account.storyboard in Resources */,
+				F5437DA11DAC15FA00687B56 /* GKDatePicker.xib in Resources */,
 				F52554551DA1897F0089299F /* GKModalView.xib in Resources */,
 				F5D60E1B1D90B6BC003E8F4A /* Onboarding.storyboard in Resources */,
 			);
@@ -667,6 +682,7 @@
 				F51918581DA1D6ED000D96D2 /* GKSocialCell.swift in Sources */,
 				F52554711DA1989A0089299F /* GKCityCell.swift in Sources */,
 				F5A011301D99B2FD000C5904 /* GKNavigationBar.swift in Sources */,
+				F5437D9F1DAC149200687B56 /* GKDatePicker.swift in Sources */,
 				F5D60E201D90E021003E8F4A /* GKTutorialContainerViewController.swift in Sources */,
 				F5A0112B1D996D35000C5904 /* GKCongif.swift in Sources */,
 				F5D60E121D90B501003E8F4A /* TMManagedObject.swift in Sources */,

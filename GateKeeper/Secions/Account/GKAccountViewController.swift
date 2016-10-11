@@ -276,7 +276,7 @@ extension GKAccountViewController: UITextFieldDelegate {
                 }
             }
             // Birthday
-            // TODO: Handle birthday
+            GKDatePicker.showDatePicker()
         }
         
         print(self.tempUser)

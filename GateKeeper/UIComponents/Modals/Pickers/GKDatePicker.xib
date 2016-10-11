@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Sbold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="k6E-ur-sXw" customClass="GKDatePicker" customModule="GateKeeper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xSC-CU-X0W">
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-Y5-H3n">
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NTM-4R-STE">
+                            <date key="date" timeIntervalSinceReferenceDate="475565410.16394502">
+                                <!--2016-01-27 05:30:10 +0000-->
+                            </date>
+                        </datePicker>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFL-J1-HYT">
+                            <color key="backgroundColor" red="0.0" green="0.37254902719999999" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="K4b-UV-2Bm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="501" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aut-ae-VHd">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="FL0-2E-MOM"/>
+                                <constraint firstAttribute="height" constant="36" id="UX5-Pv-rkH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="doneButonPressed:" destination="k6E-ur-sXw" eventType="touchUpInside" id="z4B-2X-M4P"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="502" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2x-6T-DMK">
+                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="k6E-ur-sXw" eventType="touchUpInside" id="gVd-JN-yvH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="eFL-J1-HYT" firstAttribute="centerX" secondItem="hYC-Y5-H3n" secondAttribute="centerX" id="Cn3-TO-bX1"/>
+                        <constraint firstItem="eFL-J1-HYT" firstAttribute="top" secondItem="hYC-Y5-H3n" secondAttribute="top" id="In8-c6-zme"/>
+                        <constraint firstItem="N2x-6T-DMK" firstAttribute="height" secondItem="Aut-ae-VHd" secondAttribute="height" id="RAz-0d-3yW"/>
+                        <constraint firstItem="N2x-6T-DMK" firstAttribute="width" secondItem="Aut-ae-VHd" secondAttribute="width" id="TWZ-0c-0RD"/>
+                        <constraint firstItem="N2x-6T-DMK" firstAttribute="leading" secondItem="eFL-J1-HYT" secondAttribute="leading" id="V36-F4-ceu"/>
+                        <constraint firstItem="Aut-ae-VHd" firstAttribute="trailing" secondItem="eFL-J1-HYT" secondAttribute="trailing" id="XW7-W8-Qwo"/>
+                        <constraint firstItem="N2x-6T-DMK" firstAttribute="trailing" secondItem="eFL-J1-HYT" secondAttribute="trailing" id="ZmY-fZ-RSe"/>
+                        <constraint firstItem="NTM-4R-STE" firstAttribute="width" secondItem="hYC-Y5-H3n" secondAttribute="width" id="Zrj-9q-HSv"/>
+                        <constraint firstItem="eFL-J1-HYT" firstAttribute="width" secondItem="hYC-Y5-H3n" secondAttribute="width" id="hjY-mi-sOU"/>
+                        <constraint firstItem="Aut-ae-VHd" firstAttribute="centerY" secondItem="eFL-J1-HYT" secondAttribute="centerY" id="ojB-u7-CLc"/>
+                        <constraint firstItem="NTM-4R-STE" firstAttribute="centerX" secondItem="hYC-Y5-H3n" secondAttribute="centerX" id="qLX-rn-SKG"/>
+                        <constraint firstAttribute="height" constant="250" id="rcS-oZ-otQ"/>
+                        <constraint firstAttribute="bottom" secondItem="NTM-4R-STE" secondAttribute="bottom" id="sFI-fR-eTZ"/>
+                        <constraint firstItem="N2x-6T-DMK" firstAttribute="centerY" secondItem="eFL-J1-HYT" secondAttribute="centerY" id="v7M-VV-0x8"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ZmY-fZ-RSe"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hYC-Y5-H3n" firstAttribute="centerX" secondItem="k6E-ur-sXw" secondAttribute="centerX" id="O15-PJ-mv7"/>
+                <constraint firstItem="xSC-CU-X0W" firstAttribute="width" secondItem="k6E-ur-sXw" secondAttribute="width" id="Xoa-PQ-EyS"/>
+                <constraint firstAttribute="bottom" secondItem="hYC-Y5-H3n" secondAttribute="bottom" id="fNW-kZ-xyf"/>
+                <constraint firstItem="xSC-CU-X0W" firstAttribute="centerX" secondItem="k6E-ur-sXw" secondAttribute="centerX" id="kms-1k-Vzu"/>
+                <constraint firstItem="hYC-Y5-H3n" firstAttribute="width" secondItem="k6E-ur-sXw" secondAttribute="width" id="nXT-Zk-tZy"/>
+                <constraint firstItem="xSC-CU-X0W" firstAttribute="centerY" secondItem="k6E-ur-sXw" secondAttribute="centerY" id="nxP-AZ-66l"/>
+                <constraint firstItem="xSC-CU-X0W" firstAttribute="height" secondItem="k6E-ur-sXw" secondAttribute="height" id="t84-8E-gRv"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImageView" destination="xSC-CU-X0W" id="UKj-ii-pPk"/>
+                <outlet property="birthdayPickerView" destination="NTM-4R-STE" id="2te-Ga-gmq"/>
+            </connections>
+        </view>
+    </objects>
+</document>
